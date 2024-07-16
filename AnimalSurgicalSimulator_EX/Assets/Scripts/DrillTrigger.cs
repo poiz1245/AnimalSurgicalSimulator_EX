@@ -13,8 +13,7 @@ public class DrillTrigger : MonoBehaviour
     [SerializeField] InputActionReference triggerButton;
     [SerializeField] XRBaseController rightController;
     [SerializeField] GameObject spinObject;
-    //[SerializeField] XRController leftController;
-    // Start is called before the first frame update
+    [SerializeField] XRGrabInteractable interactable;
 
     LayerMask currentTriggerMask;
     string currentTriggerLayerName;
@@ -36,17 +35,15 @@ public class DrillTrigger : MonoBehaviour
             currentTriggerLayerName = "null";
         }
 
-        if (buttonOn)
+        if (buttonOn && interactable.isSelected)
         {
             switch (currentTriggerLayerName)
             {
-                case "Bone1":
+                case "OutsideBone":
                     OnVibration(1f);
-                    print("Bone1");
                     break;
-                case "Bone2":
+                case "InsideBone":
                     OnVibration(0.7f);
-                    print("Bone2");
                     break;
                 case "null":
                     OnVibration(0.3f);
@@ -58,7 +55,7 @@ public class DrillTrigger : MonoBehaviour
     void TriggerButtonOn(InputAction.CallbackContext context)
     {
         buttonOn = true;
-        spinObject.transform.DOLocalRotate(new Vector3(0, 0, -1), 0.005f).SetEase(Ease.Linear).SetLoops(-1, LoopType.Incremental);
+        spinObject.transform.DOLocalRotate(new Vector3(0, 0, 10), 0.01f).SetEase(Ease.Linear).SetLoops(-1, LoopType.Incremental);
     }
     void TriggerButtonOff(InputAction.CallbackContext context)
     {
