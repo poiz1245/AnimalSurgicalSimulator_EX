@@ -4868,7 +4868,6 @@ GameObject:
   - component: {fileID: 1366425265}
   - component: {fileID: 1366425266}
   - component: {fileID: 1366425267}
-  - component: {fileID: 1366425268}
   m_Layer: 0
   m_Name: Right Controller
   m_TagString: Untagged
@@ -5264,20 +5263,6 @@ MonoBehaviour:
   handModelAttach: {fileID: 771801911}
   handModel: {fileID: 1565359470}
   grabInteractor: {fileID: 1228356075}
---- !u!114 &1366425268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1366425258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ce552b2fb9cdf34588b6055ecae8841, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 1366425258}
-  zPositionDelta: 0
 --- !u!1 &1390319509
 GameObject:
   m_ObjectHideFlags: 0
