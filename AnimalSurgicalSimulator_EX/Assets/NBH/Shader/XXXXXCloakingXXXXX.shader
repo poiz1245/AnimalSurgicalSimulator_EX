@@ -20,7 +20,7 @@ Shader "Custom/Cloaking"
 
         CGPROGRAM
 
-        #pragma surface surf CloakingLight noambient novertexlights noforwarded 
+        #pragma surface surf CloakingLight noambient novertexlights noforwardadd
         #pragma target 3.0
 
         sampler2D _GrabTexture; 

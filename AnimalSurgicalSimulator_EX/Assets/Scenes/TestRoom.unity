@@ -705,7 +705,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 245c302078cf21d42a13add4cfc2e12e, type: 2}
+  - {fileID: 2100000, guid: acfaa82ff9a663d46af591f68944cc41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -934,7 +934,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 245c302078cf21d42a13add4cfc2e12e, type: 2}
+  - {fileID: 2100000, guid: acfaa82ff9a663d46af591f68944cc41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2045,7 +2045,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 245c302078cf21d42a13add4cfc2e12e, type: 2}
+  - {fileID: 2100000, guid: acfaa82ff9a663d46af591f68944cc41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2340,7 +2340,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 245c302078cf21d42a13add4cfc2e12e, type: 2}
+  - {fileID: 2100000, guid: acfaa82ff9a663d46af591f68944cc41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3245,7 +3245,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 245c302078cf21d42a13add4cfc2e12e, type: 2}
+  - {fileID: 2100000, guid: acfaa82ff9a663d46af591f68944cc41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4362,6 +4362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 962896275}
   - component: {fileID: 962896274}
+  - component: {fileID: 962896276}
   m_Layer: 0
   m_Name: SM_Drill_Indicate
   m_TagString: Untagged
@@ -4418,6 +4419,18 @@ Transform:
   - {fileID: 720957615}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &962896276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962896273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db348dfc1c72b9047960de744507c5be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &967854263
 GameObject:
   m_ObjectHideFlags: 0
@@ -6846,7 +6859,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 245c302078cf21d42a13add4cfc2e12e, type: 2}
+  - {fileID: 2100000, guid: acfaa82ff9a663d46af591f68944cc41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7777,7 +7790,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 245c302078cf21d42a13add4cfc2e12e, type: 2}
+  - {fileID: 2100000, guid: acfaa82ff9a663d46af591f68944cc41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8286,7 +8299,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 245c302078cf21d42a13add4cfc2e12e, type: 2}
+  - {fileID: 2100000, guid: acfaa82ff9a663d46af591f68944cc41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10401,6 +10414,7 @@ GameObject:
   - component: {fileID: 171166006363467447}
   - component: {fileID: 7620626387809737534}
   - component: {fileID: 1228356075}
+  - component: {fileID: 8807880117498464597}
   m_Layer: 0
   m_Name: SM_Drill_01
   m_TagString: Untagged
@@ -10408,6 +10422,48 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8807880117498464597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8807880117498464596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aa799e006e2c90428c3b56e1d69b7d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnGrab:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 962896276}
+        m_TargetAssemblyTypeName: Indicate, Assembly-CSharp
+        m_MethodName: OnIndicate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnRelease:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 962896276}
+        m_TargetAssemblyTypeName: Indicate, Assembly-CSharp
+        m_MethodName: OffIndicate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8810702678349242025
 GameObject:
   m_ObjectHideFlags: 0
