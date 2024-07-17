@@ -27,7 +27,7 @@ public class AttachIndicator : MonoBehaviour
         else if (isAttach && grabInteractor.isSelected && distance <= 0.2f)
         {
             handModel.transform.position = new Vector3(indicatorAttach.transform.position.x, indicatorAttach.transform.position.y, gameObject.transform.position.z);
-            //handModel.transform.position = indicatorAttach.transform.position;
+            handModel.transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90));
         }
         else if ((isAttach && distance > 0.2f) || !grabInteractor.isSelected)
         {
