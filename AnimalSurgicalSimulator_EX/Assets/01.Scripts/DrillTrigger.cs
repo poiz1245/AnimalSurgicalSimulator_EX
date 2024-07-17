@@ -68,7 +68,6 @@ public class DrillTrigger : MonoBehaviour
         isTrigger = true;
         currentTriggerMask = 1 << other.gameObject.layer;
         currentTriggerLayerName = LayerMask.LayerToName((int)Mathf.Log(currentTriggerMask, 2));
-        print(currentTriggerLayerName);
     }
     private void OnTriggerExit(Collider other)
     {
