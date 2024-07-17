@@ -10,6 +10,7 @@ public class SetParent : MonoBehaviour
     {
         gameObject.transform.SetParent(rightHand);
         gameObject.transform.position = drillAttach.position;
+        gameObject.transform.rotation = drillAttach.rotation;
     }
     public void DeleteParent()
     {

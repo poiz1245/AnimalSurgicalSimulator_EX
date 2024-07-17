@@ -30,6 +30,12 @@ public class DrillTrigger : MonoBehaviour
 
     private void Update()
     {
+        Vibration();
+
+    }
+
+    private void Vibration()
+    {
         if (!isTrigger)
         {
             currentTriggerLayerName = "null";
@@ -50,8 +56,8 @@ public class DrillTrigger : MonoBehaviour
                     break;
             }
         }
-
     }
+
     void TriggerButtonOn(InputAction.CallbackContext context)
     {
         buttonOn = true;
