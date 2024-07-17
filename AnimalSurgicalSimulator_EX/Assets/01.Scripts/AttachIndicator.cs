@@ -22,6 +22,7 @@ public class AttachIndicator : MonoBehaviour
             indicator.SetActive(false);
 
             handModel.transform.position = indicatorAttach.transform.position;
+            handModel.transform.SetParent(null);
             isAttach = true;
         }
         else if (isAttach && grabInteractor.isSelected && distance <= 0.2f)
@@ -32,6 +33,7 @@ public class AttachIndicator : MonoBehaviour
         else if ((isAttach && distance > 0.2f) || !grabInteractor.isSelected)
         {
             indicator.SetActive(true);
+            handModel.transform.SetParent(gameObject.transform);
             handModel.transform.position = handModelAttach.position;
             isAttach = false;
         }
