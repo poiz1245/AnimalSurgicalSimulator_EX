@@ -9239,7 +9239,7 @@ PrefabInstance:
     - target: {fileID: 624903679979637305, guid: fb5f86bdec59d2b48af017fd1fa688c3,
         type: 3}
       propertyPath: m_TrackRotation
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 624903679979637305, guid: fb5f86bdec59d2b48af017fd1fa688c3,
         type: 3}
