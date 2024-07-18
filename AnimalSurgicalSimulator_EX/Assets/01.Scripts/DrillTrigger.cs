@@ -16,8 +16,8 @@ public class DrillTrigger : MonoBehaviour
     [SerializeField] XRGrabInteractable interactable;
 
     LayerMask currentTriggerMask;
-    string currentTriggerLayerName;
     bool isTrigger = false;
+    public string currentTriggerLayerName { get; private set; }
     public bool buttonOn { get; private set; } = false;
     void Start()
     {
@@ -48,10 +48,10 @@ public class DrillTrigger : MonoBehaviour
                     OnVibration(1f);
                     break;
                 case "InsideBone":
-                    OnVibration(0.7f);
+                    OnVibration(0.5f);
                     break;
                 case "null":
-                    OnVibration(0.3f);
+                    OnVibration(0.2f);
                     break;
             }
         }
@@ -83,5 +83,5 @@ public class DrillTrigger : MonoBehaviour
     {
         isTrigger = false;
     }
-   
+
 }

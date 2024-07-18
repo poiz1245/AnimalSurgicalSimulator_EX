@@ -8,54 +8,97 @@ public class HandModelControll : MonoBehaviour
 {
     [SerializeField] GameObject indicator;
     [SerializeField] GameObject handModel;
+    [SerializeField] GameObject grabObject;
 
     [SerializeField] Transform indicatorAttach;
     [SerializeField] Transform handModelAttach;
     [SerializeField] Transform moveEndPoint;
+    [SerializeField] Transform drillAttach;
 
     [SerializeField] XRGrabInteractable grabInteractor;
     [SerializeField] DrillTrigger drillTrigger;
 
+    float drillSpeed = 0.03f;
     bool isAttach = false;
 
+    public bool currentTaskComplete { get; private set; } = false;
     private void Update()
     {
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
-        AttachIndicator(distance);
-    }
 
-    private void AttachIndicator(float distance)
-    {
-        if (!isAttach && grabInteractor.isSelected && distance <= 0.2f)
+        if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.2f)
         {
             indicator.SetActive(false);
-
-            handModel.transform.position = indicatorAttach.position;
-            handModel.transform.SetParent(null);
-            isAttach = true;
+            Attach();
         }
         else if (isAttach && grabInteractor.isSelected && distance <= 0.2f)
         {
             handModel.transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90));
             Move();
-
         }
-        else if ((isAttach && distance > 0.2f))
+        else if (!currentTaskComplete && isAttach && distance > 0.2f)
         {
             indicator.SetActive(true);
-            handModel.transform.SetParent(gameObject.transform);
-            handModel.transform.position = handModelAttach.position;
-            handModel.transform.rotation = handModelAttach.rotation;
-            isAttach = false;
+            Detach();
         }
+    }
+    private void Attach()
+    {
+        grabInteractor.trackPosition = false;
+        grabInteractor.trackRotation = false;
+
+        grabObject.transform.SetParent(handModel.transform);
+        gameObject.transform.position = drillAttach.position;
+        gameObject.transform.rotation = drillAttach.rotation;
+
+        handModel.transform.SetParent(null);
+        handModel.transform.position = indicatorAttach.position;
+
+        isAttach = true;
+    }
+
+    private void Detach()
+    {
+        handModel.transform.SetParent(gameObject.transform);
+        handModel.transform.position = handModelAttach.position;
+        handModel.transform.rotation = handModelAttach.rotation;
+
+        grabObject.transform.SetParent(null);
+        grabInteractor.trackPosition = true;
+        grabInteractor.trackRotation = true;
+
+        isAttach = false;
     }
 
     void Move()
     {
-        if (drillTrigger.buttonOn)
+        if (drillTrigger.buttonOn) //자동으로 움직이는 기능
         {
-            handModel.transform.DOMove(moveEndPoint.position, 2).SetEase(Ease.InOutCirc);
+            if (drillTrigger.currentTriggerLayerName == "OutsideBone")
+            {
+                drillSpeed = 0.03f;
+            }
+            else if (drillTrigger.currentTriggerLayerName == "InsideBone")
+            {
+                drillSpeed = 0.06f;
+            }
+            else if (drillTrigger.currentTriggerLayerName == "EndLayer")
+            {
+                currentTaskComplete = true;
+                Detach();
+            }
+            handModel.transform.Translate(0, 0, drillSpeed * Time.deltaTime);
         }
-        //handModel.transform.position = new Vector3(indicatorAttach.position.x, indicatorAttach.position.y, gameObject.transform.position.z);
+
+        /*if (drillTrigger.buttonOn) // 직접 움직이는 기능
+        {
+            handModel.transform.position = new Vector3(indicatorAttach.position.x, indicatorAttach.position.y, gameObject.transform.position.z);
+
+            if (drillTrigger.currentTriggerLayerName == "EndLayer")
+            {
+                currentTaskComplete = true;
+                Detach();
+            }
+        }*/
     }
 }
