@@ -9,8 +9,9 @@ public class ObjectBlinker : MonoBehaviour
     [SerializeField] float blinkInterval = 0.5f; // 깜빡이는 간격
     [SerializeField] List<XRGrabInteractable> grabInteractors; // XRGrabInteractable 리스트
     [SerializeField] List<GameObject> objectsToBlink; // 깜빡이게 할 오브젝트 리스트
+    [SerializeField] HandModelControll handModelControll; // HandModelControll 인스턴스 참조
+    [SerializeField] List<SocketIndex> socketIndexes; // 각 소켓의 인덱스 리스트
 
-    bool isBlinking = false;
     bool isObjectInSocket = false;
     bool isGrabbed = false;
     int grabbedIndex = -1;
@@ -30,6 +31,9 @@ public class ObjectBlinker : MonoBehaviour
             grabInteractors[i].selectEntered.AddListener((args) => OnGrabbed(index));
             grabInteractors[i].selectExited.AddListener((args) => OnReleased(index));
         }
+
+        // HandModelControll의 TaskCompleted 이벤트 구독
+        handModelControll.IsTaskCompleted += OnTaskCompleted;
     }
 
     void Update()
@@ -42,25 +46,11 @@ public class ObjectBlinker : MonoBehaviour
             }
             return;
         }
-
-        // 소켓에 오브젝트가 있는지 확인
-        isObjectInSocket = socketInteractor.hasSelection;
-
-        // 소켓에 오브젝트가 없고 깜빡이는 중이 아니라면 깜빡이기 시작
-        if (!isObjectInSocket && !isBlinking)
-        {
-            objectsToBlink[grabbedIndex].SetActive(true);
-            StartCoroutine(BlinkObject(grabbedIndex));
-        }
-        else if (isObjectInSocket && !isBlinking)
-        {
-            objectsToBlink[grabbedIndex].SetActive(false);
-        }
     }
 
     private IEnumerator BlinkObject(int index)
     {
-        isBlinking = true;
+        Debug.Log("블링크");
 
         while (!isObjectInSocket)
         {
@@ -70,8 +60,7 @@ public class ObjectBlinker : MonoBehaviour
         }
 
         // 오브젝트가 소켓에 들어가면 깜빡이기 멈춤
-        objectsToBlink[index].SetActive(true);
-        isBlinking = false;
+        objectsToBlink[index].SetActive(false);
     }
 
     private void OnGrabbed(int index)
@@ -84,5 +73,32 @@ public class ObjectBlinker : MonoBehaviour
     {
         isGrabbed = false;
         grabbedIndex = -1;
+    }
+
+    // TaskCompleted 이벤트가 발생할 때 실행할 메서드
+    private void OnTaskCompleted(bool taskComplete)
+    {
+        if (taskComplete)
+        {
+            Debug.Log("Task is completed.");
+            // 여기에서 필요한 작업을 수행합니다.
+            if (grabbedIndex >= 0 && grabbedIndex < objectsToBlink.Count)
+            {
+                StartCoroutine(BlinkObject(grabbedIndex));
+            }
+        }
+    }
+
+    // 소켓 인덱스에 따라 포지션 값을 설정하는 메서드
+    public void SetSocketPosition(int index)
+    {
+        if (index >= 0 && index < socketIndexes.Count)
+        {
+            socketInteractor.transform.position = socketIndexes[index].transform.position;
+        }
+        else
+        {
+            Debug.LogWarning("잘못된 인덱스입니다.");
+        }
     }
 }
