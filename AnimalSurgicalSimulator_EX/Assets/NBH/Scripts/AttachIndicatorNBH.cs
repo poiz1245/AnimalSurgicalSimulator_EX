@@ -11,7 +11,15 @@ public class AttachIndicatorNBH : MonoBehaviour
     [SerializeField] GameObject handModel;
     [SerializeField] XRGrabInteractable grabInteractor;
 
+    /*오브젝트 깜빡이게 하는 변수*/
+    [SerializeField] XRBaseInteractor socketInteractor; // 소켓 인터렉터 참조
+    [SerializeField] GameObject objectToBlink; // 깜빡이게 할 오브젝트
+    [SerializeField] float blinkInterval = 0.5f; // 깜빡이는 간격
+
+
     bool isAttach = false;
+    bool isBlinking = false;
+    bool isObjectInSocket = false;
 
     private void Update()
     {
