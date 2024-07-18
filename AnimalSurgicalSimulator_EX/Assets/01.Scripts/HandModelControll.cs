@@ -58,7 +58,7 @@ public class HandModelControll : MonoBehaviour
 
     void Move()
     {
-        if (drillTrigger.buttonOn)
+        if (drillTrigger.buttonOn) //자동으로 움직이는 기능
         {
             if (drillTrigger.currentTriggerLayerName == "OutsideBone")
             {
@@ -74,8 +74,17 @@ public class HandModelControll : MonoBehaviour
                 Detach();
             }
             handModel.transform.Translate(0, 0, drillSpeed * Time.deltaTime);
-            //handModel.transform.DOMove(moveEndPoint.position, 3).SetEase(Ease.InOutCirc);
         }
-        //handModel.transform.position = new Vector3(indicatorAttach.position.x, indicatorAttach.position.y, gameObject.transform.position.z);
+
+        /*if (drillTrigger.buttonOn) // 직접 움직이는 기능
+        {
+            handModel.transform.position = new Vector3(indicatorAttach.position.x, indicatorAttach.position.y, gameObject.transform.position.z);
+
+            if (drillTrigger.currentTriggerLayerName == "EndLayer")
+            {
+                currentTaskComplete = true;
+                Detach();
+            }
+        }*/
     }
 }
