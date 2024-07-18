@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Indicate : MonoBehaviour
 {
+    [SerializeField] HandModelControll controller;
     public void OnIndicate()
     {
-        gameObject.SetActive(true);
+        if (!controller.currentTaskComplete)
+        {
+            gameObject.SetActive(true);
+        }
     }
 
     public void OffIndicate()

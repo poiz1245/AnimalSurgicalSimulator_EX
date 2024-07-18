@@ -16,23 +16,18 @@ public class HandModelControll : MonoBehaviour
     [SerializeField] XRGrabInteractable grabInteractor;
     [SerializeField] DrillTrigger drillTrigger;
 
+    float drillSpeed;
     bool isAttach = false;
 
+    public bool currentTaskComplete { get; private set; } = false;
     private void Update()
     {
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
-        AttachIndicator(distance);
-    }
 
-    private void AttachIndicator(float distance)
-    {
-        if (!isAttach && grabInteractor.isSelected && distance <= 0.2f)
+        if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.2f)
         {
             indicator.SetActive(false);
-
-            handModel.transform.position = indicatorAttach.position;
-            handModel.transform.SetParent(null);
-            isAttach = true;
+            Attach();
         }
         else if (isAttach && grabInteractor.isSelected && distance <= 0.2f)
         {
@@ -40,21 +35,46 @@ public class HandModelControll : MonoBehaviour
             Move();
 
         }
-        else if ((isAttach && distance > 0.2f))
+        else if (!currentTaskComplete && isAttach && distance > 0.2f)
         {
             indicator.SetActive(true);
-            handModel.transform.SetParent(gameObject.transform);
-            handModel.transform.position = handModelAttach.position;
-            handModel.transform.rotation = handModelAttach.rotation;
-            isAttach = false;
+            Detach();
         }
+    }
+    private void Attach()
+    {
+        handModel.transform.position = indicatorAttach.position;
+        handModel.transform.SetParent(null);
+        isAttach = true;
+    }
+
+    private void Detach()
+    {
+        handModel.transform.SetParent(gameObject.transform);
+        handModel.transform.position = handModelAttach.position;
+        handModel.transform.rotation = handModelAttach.rotation;
+        isAttach = false;
     }
 
     void Move()
     {
         if (drillTrigger.buttonOn)
         {
-            handModel.transform.DOMove(moveEndPoint.position, 2).SetEase(Ease.InOutCirc);
+            if (drillTrigger.currentTriggerLayerName == "OutsideBone")
+            {
+                drillSpeed = 0.03f;
+            }
+            else if (drillTrigger.currentTriggerLayerName == "InsideBone")
+            {
+                drillSpeed = 0.06f;
+            }
+            else if (drillTrigger.currentTriggerLayerName == "EndLayer")
+            {
+                currentTaskComplete = true;
+                Detach();
+            }
+            handModel.transform.Translate(0, 0, drillSpeed * Time.deltaTime);
+            //handModel.transform.DOMove(moveEndPoint.position, 3).SetEase(Ease.InOutCirc);
         }
         //handModel.transform.position = new Vector3(indicatorAttach.position.x, indicatorAttach.position.y, gameObject.transform.position.z);
     }

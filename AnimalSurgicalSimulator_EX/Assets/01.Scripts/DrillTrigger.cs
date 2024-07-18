@@ -16,8 +16,8 @@ public class DrillTrigger : MonoBehaviour
     [SerializeField] XRGrabInteractable interactable;
 
     LayerMask currentTriggerMask;
-    string currentTriggerLayerName;
     bool isTrigger = false;
+    public string currentTriggerLayerName { get; private set; }
     public bool buttonOn { get; private set; } = false;
     void Start()
     {
@@ -83,5 +83,5 @@ public class DrillTrigger : MonoBehaviour
     {
         isTrigger = false;
     }
-   
+
 }
