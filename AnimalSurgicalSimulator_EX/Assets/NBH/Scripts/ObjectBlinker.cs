@@ -10,7 +10,6 @@ public class ObjectBlinker : MonoBehaviour
     [SerializeField] List<XRGrabInteractable> grabInteractors; // XRGrabInteractable 리스트
     [SerializeField] List<GameObject> objectsToBlink; // 깜빡이게 할 오브젝트 리스트
     [SerializeField] HandModelControll handModelControll; // HandModelControll 인스턴스 참조
-    [SerializeField] List<SocketIndex> socketIndexes; // 각 소켓의 인덱스 리스트
 
     bool isObjectInSocket = false;
     bool isGrabbed = false;
@@ -89,16 +88,16 @@ public class ObjectBlinker : MonoBehaviour
         }
     }
 
-    // 소켓 인덱스에 따라 포지션 값을 설정하는 메서드
-    public void SetSocketPosition(int index)
-    {
-        if (index >= 0 && index < socketIndexes.Count)
-        {
-            socketInteractor.transform.position = socketIndexes[index].transform.position;
-        }
-        else
-        {
-            Debug.LogWarning("잘못된 인덱스입니다.");
-        }
-    }
+    //// 소켓 인덱스에 따라 포지션 값을 설정하는 메서드
+    //public void SetSocketPosition(int index)
+    //{
+    //    if (index >= 0 && index < socketIndexes.Count)
+    //    {
+    //        socketInteractor.transform.position = socketIndexes[index].transform.position;
+    //    }
+    //    else
+    //    {
+    //        Debug.LogWarning("잘못된 인덱스입니다.");
+    //    }
+    //}
 }

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class SocketIndex : MonoBehaviour
 {
-    [SerializeField] int index; // 家南 牢郸胶
+   public int index; // 家南 牢郸胶
 }
