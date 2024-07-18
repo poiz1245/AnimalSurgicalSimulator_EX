@@ -35,26 +35,28 @@ public class DrillTrigger : MonoBehaviour
 
     private void Vibration()
     {
-        if (!isTrigger)
+        if (!isTrigger || currentTriggerLayerName == "EndLayer")
         {
             currentTriggerLayerName = "null";
         }
 
         if (buttonOn && interactable.isSelected)
         {
-            switch (currentTriggerLayerName)
+            if (currentTriggerLayerName == "OutsideBone")
             {
-                case "OutsideBone":
-                    OnVibration(1f);
-                    break;
-                case "InsideBone":
-                    OnVibration(0.5f);
-                    break;
-                case "null":
-                    OnVibration(0.2f);
-                    break;
+                OnVibration(1f);
+            }
+            else if (currentTriggerLayerName == "InsideBone")
+            {
+                OnVibration(0.5f);
+            }
+            else
+            {
+                OnVibration(0.2f);
             }
         }
+
+        print(currentTriggerLayerName);
     }
 
     void TriggerButtonOn(InputAction.CallbackContext context)
