@@ -18,7 +18,7 @@ public class DrillTrigger : MonoBehaviour
     LayerMask currentTriggerMask;
     string currentTriggerLayerName;
     bool isTrigger = false;
-    bool buttonOn = false;
+    public bool buttonOn { get; private set; } = false;
     void Start()
     {
         triggerButton.action.started += TriggerButtonOn;
@@ -31,7 +31,6 @@ public class DrillTrigger : MonoBehaviour
     private void Update()
     {
         Vibration();
-
     }
 
     private void Vibration()
@@ -69,6 +68,11 @@ public class DrillTrigger : MonoBehaviour
         spinObject.transform.DOKill();
         OnVibration(0);
     }
+    void OnVibration(float amplitude)
+    {
+        rightController.SendHapticImpulse(amplitude, 0.1f);
+
+    }
     private void OnTriggerEnter(Collider other)
     {
         isTrigger = true;
@@ -79,9 +83,5 @@ public class DrillTrigger : MonoBehaviour
     {
         isTrigger = false;
     }
-    void OnVibration(float amplitude)
-    {
-        rightController.SendHapticImpulse(amplitude, 0.1f);
-
-    }
+   
 }
