@@ -5,13 +5,11 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class AttachIndicatorNBH : MonoBehaviour
 {
-    [SerializeField] Rigidbody drill;
     [SerializeField] GameObject indicator;
     [SerializeField] GameObject indicatorAttach;
     [SerializeField] Transform handModelAttach;
     [SerializeField] GameObject handModel;
     [SerializeField] XRGrabInteractable grabInteractor;
-
 
     bool isAttach = false;
 
@@ -24,19 +22,19 @@ public class AttachIndicatorNBH : MonoBehaviour
             indicator.SetActive(false);
 
             handModel.transform.position = indicatorAttach.transform.position;
+            handModel.transform.SetParent(null);
             isAttach = true;
         }
         else if (isAttach && grabInteractor.isSelected && distance <= 0.2f)
         {
             handModel.transform.position = new Vector3(indicatorAttach.transform.position.x, indicatorAttach.transform.position.y, gameObject.transform.position.z);
             handModel.transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90));
-            drill.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY;
         }
         else if ((isAttach && distance > 0.2f) || !grabInteractor.isSelected)
         {
             indicator.SetActive(true);
+            handModel.transform.SetParent(gameObject.transform);
             handModel.transform.position = handModelAttach.position;
-            drill.constraints = RigidbodyConstraints.None;
             isAttach = false;
         }
     }
