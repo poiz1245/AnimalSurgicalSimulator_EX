@@ -48,10 +48,10 @@ public class DrillTrigger : MonoBehaviour
                     OnVibration(1f);
                     break;
                 case "InsideBone":
-                    OnVibration(0.7f);
+                    OnVibration(0.5f);
                     break;
                 case "null":
-                    OnVibration(0.3f);
+                    OnVibration(0.2f);
                     break;
             }
         }

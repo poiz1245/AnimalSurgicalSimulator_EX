@@ -8,15 +8,17 @@ public class HandModelControll : MonoBehaviour
 {
     [SerializeField] GameObject indicator;
     [SerializeField] GameObject handModel;
+    [SerializeField] GameObject grabObject;
 
     [SerializeField] Transform indicatorAttach;
     [SerializeField] Transform handModelAttach;
     [SerializeField] Transform moveEndPoint;
+    [SerializeField] Transform drillAttach;
 
     [SerializeField] XRGrabInteractable grabInteractor;
     [SerializeField] DrillTrigger drillTrigger;
 
-    float drillSpeed;
+    float drillSpeed = 0.03f;
     bool isAttach = false;
 
     public bool currentTaskComplete { get; private set; } = false;
@@ -33,7 +35,6 @@ public class HandModelControll : MonoBehaviour
         {
             handModel.transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90));
             Move();
-
         }
         else if (!currentTaskComplete && isAttach && distance > 0.2f)
         {
@@ -43,8 +44,16 @@ public class HandModelControll : MonoBehaviour
     }
     private void Attach()
     {
-        handModel.transform.position = indicatorAttach.position;
+        grabInteractor.trackPosition = false;
+        grabInteractor.trackRotation = false;
+
+        grabObject.transform.SetParent(handModel.transform);
+        gameObject.transform.position = drillAttach.position;
+        gameObject.transform.rotation = drillAttach.rotation;
+
         handModel.transform.SetParent(null);
+        handModel.transform.position = indicatorAttach.position;
+
         isAttach = true;
     }
 
@@ -53,6 +62,11 @@ public class HandModelControll : MonoBehaviour
         handModel.transform.SetParent(gameObject.transform);
         handModel.transform.position = handModelAttach.position;
         handModel.transform.rotation = handModelAttach.rotation;
+
+        grabObject.transform.SetParent(null);
+        grabInteractor.trackPosition = true;
+        grabInteractor.trackRotation = true;
+
         isAttach = false;
     }
 
