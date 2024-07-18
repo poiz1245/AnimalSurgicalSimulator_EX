@@ -12,7 +12,6 @@ public class HandModelControll : MonoBehaviour
 
     [SerializeField] Transform indicatorAttach;
     [SerializeField] Transform handModelAttach;
-    [SerializeField] Transform moveEndPoint;
     [SerializeField] Transform drillAttach;
 
     [SerializeField] XRGrabInteractable grabInteractor;
@@ -22,6 +21,14 @@ public class HandModelControll : MonoBehaviour
     bool isAttach = false;
 
     public bool currentTaskComplete { get; private set; } = false;
+
+    public delegate void TaskCompleted(bool taskComplete);
+    public event TaskCompleted IsTaskCompleted;
+
+    private void Start()
+    {
+        IsTaskCompleted += TaskComplete;
+    }
     private void Update()
     {
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
@@ -33,7 +40,7 @@ public class HandModelControll : MonoBehaviour
         }
         else if (isAttach && grabInteractor.isSelected && distance <= 0.2f)
         {
-            handModel.transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90));
+            handModel.transform.rotation = Quaternion.Euler(new Vector3(90, -90, 0));
             Move();
         }
         else if (!currentTaskComplete && isAttach && distance > 0.2f)
@@ -85,6 +92,7 @@ public class HandModelControll : MonoBehaviour
             else if (drillTrigger.currentTriggerLayerName == "EndLayer")
             {
                 currentTaskComplete = true;
+                IsTaskCompleted?.Invoke(currentTaskComplete);
                 Detach();
             }
             handModel.transform.Translate(0, 0, drillSpeed * Time.deltaTime);
@@ -92,13 +100,19 @@ public class HandModelControll : MonoBehaviour
 
         /*if (drillTrigger.buttonOn) // 직접 움직이는 기능
         {
-            handModel.transform.position = new Vector3(indicatorAttach.position.x, indicatorAttach.position.y, gameObject.transform.position.z);
+            handModel.transform.position = new Vector3(indicatorAttach.position.x, gameObject.transform.position.y, indicatorAttach.position.z);
 
             if (drillTrigger.currentTriggerLayerName == "EndLayer")
             {
                 currentTaskComplete = true;
+                IsTaskCompleted?.Invoke(currentTaskComplete);
                 Detach();
             }
         }*/
+    }
+
+    void TaskComplete(bool taskComplete)
+    {
+        TaskManager.instance.digComplete.TaskComplete();
     }
 }
