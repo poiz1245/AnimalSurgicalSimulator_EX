@@ -6,23 +6,29 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ObjectBlinker : MonoBehaviour
 {
     [SerializeField] XRBaseInteractor socketInteractor; // 소켓 인터렉터 참조
-    [SerializeField] GameObject objectToBlink; // 깜빡이게 할 오브젝트
     [SerializeField] float blinkInterval = 0.5f; // 깜빡이는 간격
     [SerializeField] List<XRGrabInteractable> grabInteractors; // XRGrabInteractable 리스트
+    [SerializeField] List<GameObject> objectsToBlink; // 깜빡이게 할 오브젝트 리스트
 
     bool isBlinking = false;
     bool isObjectInSocket = false;
     bool isGrabbed = false;
+    int grabbedIndex = -1;
 
     void Start()
     {
-        objectToBlink.SetActive(false);
+        // 모든 오브젝트를 비활성화
+        foreach (var obj in objectsToBlink)
+        {
+            obj.SetActive(false);
+        }
 
         // 각 grabInteractor에 대해 SelectEntered 이벤트를 등록
-        foreach (var grabInteractor in grabInteractors)
+        for (int i = 0; i < grabInteractors.Count; i++)
         {
-            grabInteractor.selectEntered.AddListener(OnGrabbed);
-            grabInteractor.selectExited.AddListener(OnReleased);
+            int index = i; // 캡처된 인덱스
+            grabInteractors[i].selectEntered.AddListener((args) => OnGrabbed(index));
+            grabInteractors[i].selectExited.AddListener((args) => OnReleased(index));
         }
     }
 
@@ -30,7 +36,10 @@ public class ObjectBlinker : MonoBehaviour
     {
         if (!isGrabbed)
         {
-            objectToBlink.SetActive(false);
+            if (grabbedIndex >= 0 && grabbedIndex < objectsToBlink.Count)
+            {
+                objectsToBlink[grabbedIndex].SetActive(false);
+            }
             return;
         }
 
@@ -40,38 +49,40 @@ public class ObjectBlinker : MonoBehaviour
         // 소켓에 오브젝트가 없고 깜빡이는 중이 아니라면 깜빡이기 시작
         if (!isObjectInSocket && !isBlinking)
         {
-            objectToBlink.SetActive(true);
-            StartCoroutine(BlinkObject());
+            objectsToBlink[grabbedIndex].SetActive(true);
+            StartCoroutine(BlinkObject(grabbedIndex));
         }
         else if (isObjectInSocket && !isBlinking)
         {
-            objectToBlink.SetActive(false);
+            objectsToBlink[grabbedIndex].SetActive(false);
         }
     }
 
-    private IEnumerator BlinkObject()
+    private IEnumerator BlinkObject(int index)
     {
         isBlinking = true;
 
         while (!isObjectInSocket)
         {
-            objectToBlink.SetActive(!objectToBlink.activeSelf);
+            objectsToBlink[index].SetActive(!objectsToBlink[index].activeSelf);
             yield return new WaitForSeconds(blinkInterval);
             isObjectInSocket = socketInteractor.hasSelection;
         }
 
         // 오브젝트가 소켓에 들어가면 깜빡이기 멈춤
-        objectToBlink.SetActive(true);
+        objectsToBlink[index].SetActive(true);
         isBlinking = false;
     }
 
-    private void OnGrabbed(SelectEnterEventArgs args)
+    private void OnGrabbed(int index)
     {
         isGrabbed = true;
+        grabbedIndex = index;
     }
 
-    private void OnReleased(SelectExitEventArgs args)
+    private void OnReleased(int index)
     {
         isGrabbed = false;
+        grabbedIndex = -1;
     }
 }
