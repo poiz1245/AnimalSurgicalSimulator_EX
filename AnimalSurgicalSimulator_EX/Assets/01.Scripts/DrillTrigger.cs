@@ -56,7 +56,6 @@ public class DrillTrigger : MonoBehaviour
             }
         }
 
-        print(currentTriggerLayerName);
     }
 
     void TriggerButtonOn(InputAction.CallbackContext context)
