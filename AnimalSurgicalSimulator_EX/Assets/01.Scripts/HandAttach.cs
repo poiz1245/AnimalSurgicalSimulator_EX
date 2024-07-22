@@ -1,21 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Hands.Samples.VisualizerSample;
 using UnityEngine.XR.Interaction.Toolkit;
-using DG.Tweening;
 
-public class HandModelControll : MonoBehaviour
+public class HandAttach : MonoBehaviour
 {
     [SerializeField] GameObject indicator;
     [SerializeField] GameObject handModel;
     [SerializeField] GameObject grabObject;
 
     [SerializeField] Transform indicatorAttach;
-    [SerializeField] Transform handModelAttach;
     [SerializeField] Transform drillAttach;
 
-    [SerializeField] XRGrabInteractable grabInteractor;
+    [SerializeField] XRSocketInteractor socketInteractor;
     [SerializeField] DrillTrigger drillTrigger;
+
+    [SerializeField] HandVisualizer handVisualizer;
 
     float drillSpeed = 0.03f;
     bool isAttach = false;
@@ -35,12 +36,13 @@ public class HandModelControll : MonoBehaviour
 
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
 
-        if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.2f)
+
+        if (!currentTaskComplete && !isAttach && socketInteractor.enabled && distance <= 0.2f)
         {
             indicator.SetActive(false);
             Attach();
         }
-        else if (isAttach && grabInteractor.isSelected && distance <= 0.2f)
+        else if (isAttach && socketInteractor.enabled && distance <= 0.2f)
         {
             handModel.transform.rotation = Quaternion.Euler(new Vector3(90, -90, 0));
             Move();
@@ -53,28 +55,28 @@ public class HandModelControll : MonoBehaviour
     }
     private void Attach()
     {
-        grabInteractor.trackPosition = false;
-        grabInteractor.trackRotation = false;
+        socketInteractor.enabled = false;
+        handVisualizer.drawMeshes = false;
 
+        handModel.SetActive(true);
         grabObject.transform.SetParent(handModel.transform);
-        //gameObject.transform.position = drillAttach.position;
-        //gameObject.transform.rotation = drillAttach.rotation;
-
-        handModel.transform.SetParent(null);
         handModel.transform.position = indicatorAttach.position;
+
+        grabObject.transform.position = drillAttach.transform.position;
+        grabObject.transform.rotation = drillAttach.transform.rotation;
+
+        
 
         isAttach = true;
     }
 
     private void Detach()
     {
-        handModel.transform.SetParent(gameObject.transform);
-        handModel.transform.position = handModelAttach.position;
-        handModel.transform.rotation = handModelAttach.rotation;
+        socketInteractor.socketActive = true;
+        handVisualizer.drawMeshes = true;
 
-        grabObject.transform.SetParent(null);
-        grabInteractor.trackPosition = true;
-        grabInteractor.trackRotation = true;
+        handModel.SetActive(false);
+        grabObject.transform.SetParent(null) ;
 
         isAttach = false;
     }

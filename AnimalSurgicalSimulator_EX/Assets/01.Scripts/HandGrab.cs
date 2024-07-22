@@ -6,22 +6,14 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class HandGrab : MonoBehaviour
 {
-    XRSocketInteractor socketInteractor;
-    XRGrabInteractable grabinteractable;
-
-    void Start()
-    {
-        socketInteractor = GetComponent<XRSocketInteractor>();
-        grabinteractable = GetComponent<XRGrabInteractable>();
-    }
-
-    void Update()
-    {
-        //grabinteractable.enabled = true;
-    }
-
+    [SerializeField] XRSocketInteractor socketInteractor;
     public void OnGripAction()
     {
-        print("aa");
+        socketInteractor.enabled = true;
+    }
+
+    public void OffGripAction()
+    {
+        socketInteractor.enabled = false;
     }
 }
