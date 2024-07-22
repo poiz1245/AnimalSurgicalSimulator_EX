@@ -42,7 +42,7 @@ public class HandTrackingModelControll : MonoBehaviour
             indicator.SetActive(false);
             Attach();
         }
-        else if (isAttach && socketInteractor.enabled && distance <= 0.2f)
+        else if (isAttach && !socketInteractor.socketActive && distance <= 0.2f)
         {
             handModel.transform.rotation = Quaternion.Euler(new Vector3(90, -90, 0));
             Move();
@@ -55,7 +55,6 @@ public class HandTrackingModelControll : MonoBehaviour
     }
     private void Attach()
     {
-        socketInteractor.enabled = false;
         handVisualizer.drawMeshes = false;
 
         handModel.SetActive(true);
@@ -65,18 +64,19 @@ public class HandTrackingModelControll : MonoBehaviour
         grabObject.transform.position = drillAttach.transform.position;
         grabObject.transform.rotation = drillAttach.transform.rotation;
 
-        
+
+        socketInteractor.socketActive = false;
 
         isAttach = true;
     }
 
     private void Detach()
     {
-        socketInteractor.enabled = true;
+        socketInteractor.socketActive = true;
         handVisualizer.drawMeshes = true;
 
         handModel.SetActive(false);
-        grabObject.transform.SetParent(null) ;
+        grabObject.transform.SetParent(null);
         grabObject.transform.position = socketInteractor.transform.position;
 
         isAttach = false;

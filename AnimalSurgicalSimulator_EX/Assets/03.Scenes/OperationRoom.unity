@@ -4130,7 +4130,7 @@ MonoBehaviour:
   m_RightHandMesh: {fileID: 919132149155446097, guid: 56186ccf27ad7864681108ed88349071,
     type: 3}
   m_HandMeshMaterial: {fileID: 2100000, guid: c3c3dc929f54f0e44ae20bbd684a4757, type: 2}
-  m_DrawMeshes: 1
+  m_DrawMeshes: 0
   m_DebugDrawPrefab: {fileID: 6507399986997092475, guid: 254b742d65a15d14b9df756ae77de868,
     type: 3}
   m_DebugDrawJoints: 1
