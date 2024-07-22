@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.XR.Hands.Samples.VisualizerSample;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class HandAttach : MonoBehaviour
+public class HandTrackingModelControll : MonoBehaviour
 {
     [SerializeField] GameObject indicator;
     [SerializeField] GameObject handModel;
@@ -14,7 +14,7 @@ public class HandAttach : MonoBehaviour
     [SerializeField] Transform drillAttach;
 
     [SerializeField] XRSocketInteractor socketInteractor;
-    [SerializeField] DrillTrigger drillTrigger;
+    [SerializeField] HandTrackingDrillTrigger drillTrigger;
 
     [SerializeField] HandVisualizer handVisualizer;
 
@@ -72,11 +72,12 @@ public class HandAttach : MonoBehaviour
 
     private void Detach()
     {
-        socketInteractor.socketActive = true;
+        socketInteractor.enabled = true;
         handVisualizer.drawMeshes = true;
 
         handModel.SetActive(false);
         grabObject.transform.SetParent(null) ;
+        grabObject.transform.position = socketInteractor.transform.position;
 
         isAttach = false;
     }
@@ -99,6 +100,7 @@ public class HandAttach : MonoBehaviour
                 IsTaskCompleted?.Invoke(currentTaskComplete);
                 Detach();
             }
+
             handModel.transform.Translate(0, 0, drillSpeed * Time.deltaTime);
         }
 

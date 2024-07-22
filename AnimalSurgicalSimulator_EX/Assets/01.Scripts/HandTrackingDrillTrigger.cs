@@ -34,15 +34,18 @@ public class HandTrackingDrillTrigger : MonoBehaviour
 
             if (currentTriggerLayerName == "OutsideBone")
             {
-                OnVibration(1f);
+                HapticsTest.instance.CustomBasic(1, 0.1f);
+                //OnVibration(1f);
             }
             else if (currentTriggerLayerName == "InsideBone")
             {
-                OnVibration(0.5f);
+                HapticsTest.instance.CustomBasic(0.5f, 0.1f);
+                //OnVibration(0.5f);
             }
             else
             {
-                OnVibration(0.2f);
+                HapticsTest.instance.CustomBasic(0.2f, 0.1f);
+                //OnVibration(0.2f);
             }
         }
 
