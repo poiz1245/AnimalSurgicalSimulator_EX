@@ -25,12 +25,14 @@ public class HandModelControll : MonoBehaviour
     public delegate void TaskCompleted(bool taskComplete);
     public event TaskCompleted IsTaskCompleted;
 
+
     private void Start()
     {
         IsTaskCompleted += TaskComplete;
     }
     private void Update()
     {
+
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
 
         if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.2f)
@@ -83,11 +85,11 @@ public class HandModelControll : MonoBehaviour
         {
             if (drillTrigger.currentTriggerLayerName == "OutsideBone")
             {
-                drillSpeed = 0.03f;
+                drillSpeed = 0.005f;
             }
             else if (drillTrigger.currentTriggerLayerName == "InsideBone")
             {
-                drillSpeed = 0.06f;
+                drillSpeed = 0.02f;
             }
             else if (drillTrigger.currentTriggerLayerName == "EndLayer")
             {
