@@ -11,6 +11,7 @@ public class ObjectBlinker : MonoBehaviour
     [SerializeField] List<XRGrabInteractable> grabInteractors; // XRGrabInteractable 리스트
     [SerializeField] List<GameObject> objectsToBlink; // 깜빡이게 할 오브젝트 리스트
     [SerializeField] HandModelControll handModelControll; // HandModelControll 인스턴스 참조
+    [SerializeField] HandTrackingModelControll handTrackingModelControll; // HandModelControll 인스턴스 참조
 
     bool isObjectInSocket = false;
     bool isGrabbed = false;
@@ -34,6 +35,7 @@ public class ObjectBlinker : MonoBehaviour
 
         // HandModelControll의 TaskCompleted 이벤트 구독
         handModelControll.IsTaskCompleted += OnTaskCompleted;
+        handTrackingModelControll.IsTaskCompleted += OnTaskCompleted;
     }
 
     void Update()
@@ -50,8 +52,6 @@ public class ObjectBlinker : MonoBehaviour
 
     private IEnumerator BlinkObject(int index)
     {
-        Debug.Log("블링크");
-
         while (!isObjectInSocket)
         {
             objectsToBlink[index].SetActive(!objectsToBlink[index].activeSelf);

@@ -1369,6 +1369,7 @@ MonoBehaviour:
   objectsToBlink:
   - {fileID: 115061488}
   handModelControll: {fileID: 1502207232}
+  handTrackingModelControll: {fileID: 2059901799}
 --- !u!65 &350884598
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7775,12 +7776,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 5686134208280550364}
+        m_TargetAssemblyTypeName: HandTrackingHandAnimatorControll, Assembly-CSharp
+        m_MethodName: OnDrillTrigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_GestureEnded:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1785801881}
         m_TargetAssemblyTypeName: HandTrackingDrillTrigger, Assembly-CSharp
         m_MethodName: TriggerButtonOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5686134208280550364}
+        m_TargetAssemblyTypeName: HandTrackingHandAnimatorControll, Assembly-CSharp
+        m_MethodName: OffDrillTrigger
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8313,7 +8338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5686134208273363981}
   - component: {fileID: 5686134208280550363}
-  - component: {fileID: 6563136633943455303}
+  - component: {fileID: 5686134208280550364}
   m_Layer: 0
   m_Name: Right Hand Model
   m_TagString: Untagged
@@ -9002,7 +9027,7 @@ Animator:
   m_GameObject: {fileID: 5686134208273262701}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: d0c255d07fd68f14b94e55d388e7e6bb, type: 3}
-  m_Controller: {fileID: 9100000, guid: 3338dde1ae80a3b43826deca5c238356, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5f59bbd3c74715e4fa113823dfe70d69, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -9013,6 +9038,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5686134208280550364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5686134208273262701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 374c1493df15f5d449ae428dba4e40f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5776575495651911926
 Transform:
   m_ObjectHideFlags: 0
@@ -9352,44 +9389,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1101003588}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6563136633943455303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5686134208273262701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aff69c997baa634b9561625cedd64f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Trigger
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 0cc17748-51e2-4110-8aa8-ca4c1c148314
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
-  grabAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Grab
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: ce68a898-ea39-4296-87d0-4fd1cc5871fa
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
 --- !u!4 &6741855274927477379
 Transform:
   m_ObjectHideFlags: 0
