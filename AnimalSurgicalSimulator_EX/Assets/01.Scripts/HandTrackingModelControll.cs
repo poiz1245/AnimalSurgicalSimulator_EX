@@ -14,6 +14,7 @@ public class HandTrackingModelControll : MonoBehaviour
     [SerializeField] Transform drillAttach;
 
     [SerializeField] XRSocketInteractor socketInteractor;
+    [SerializeField] XRGrabInteractable grabInteractor;
     [SerializeField] HandTrackingDrillTrigger drillTrigger;
 
     [SerializeField] HandVisualizer handVisualizer;
@@ -37,12 +38,12 @@ public class HandTrackingModelControll : MonoBehaviour
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
 
 
-        if (!currentTaskComplete && !isAttach && socketInteractor.enabled && distance <= 0.2f)
+        if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.2f)
         {
             indicator.SetActive(false);
             Attach();
         }
-        else if (isAttach && !socketInteractor.socketActive && distance <= 0.2f)
+        else if (isAttach && grabInteractor.isSelected && distance <= 0.2f)
         {
             handModel.transform.rotation = Quaternion.Euler(new Vector3(90, -90, 0));
             Move();
@@ -56,26 +57,36 @@ public class HandTrackingModelControll : MonoBehaviour
     private void Attach()
     {
         handVisualizer.drawMeshes = false;
-
         handModel.SetActive(true);
-        grabObject.transform.SetParent(handModel.transform);
-        handModel.transform.position = indicatorAttach.position;
+        //handModel.transform.position = indicator.transform.position;
 
+        socketInteractor.transform.SetParent(handModel.transform);
+        socketInteractor.transform.position = handModel.transform.position;
+        socketInteractor.transform.rotation= handModel.transform.rotation;
+
+        //socketInteractor.socketActive = false;
+
+        //handModel.transform.position = indicatorAttach.position;
+
+        grabObject.transform.SetParent(handModel.transform);
         grabObject.transform.position = drillAttach.transform.position;
         grabObject.transform.rotation = drillAttach.transform.rotation;
 
 
-        socketInteractor.socketActive = false;
 
         isAttach = true;
     }
 
     private void Detach()
     {
-        socketInteractor.socketActive = true;
+        //socketInteractor.socketActive = true;
         handVisualizer.drawMeshes = true;
-
         handModel.SetActive(false);
+
+        socketInteractor.transform.SetParent(gameObject.transform);
+        socketInteractor.transform.position = gameObject.transform.position;
+        socketInteractor.transform.rotation = gameObject.transform.rotation;
+
         grabObject.transform.SetParent(null);
         grabObject.transform.position = socketInteractor.transform.position;
 
