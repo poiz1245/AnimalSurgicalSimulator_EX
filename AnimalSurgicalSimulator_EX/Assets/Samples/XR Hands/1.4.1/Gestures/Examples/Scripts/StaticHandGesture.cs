@@ -17,9 +17,9 @@ namespace UnityEngine.XR.Hands.Samples.GestureSample
         [Tooltip("The hand shape or pose that must be detected for the gesture to be performed.")]
         ScriptableObject m_HandShapeOrPose;
 
-        [SerializeField]
-        [Tooltip("The target Transform to user for target conditions in the hand shape or pose.")]
-        Transform m_TargetTransform;
+        //[SerializeField]
+        //[Tooltip("The target Transform to user for target conditions in the hand shape or pose.")]
+        //Transform m_TargetTransform;
 
         [SerializeField]
         [Tooltip("The image component that draws the background for gesture icons.")]
@@ -79,11 +79,11 @@ namespace UnityEngine.XR.Hands.Samples.GestureSample
         /// <summary>
         /// The target Transform to user for target conditions in the hand shape or pose.
         /// </summary>
-        public Transform targetTransform
+        /*public Transform targetTransform
         {
             get => m_TargetTransform;
             set => m_TargetTransform = value;
-        }
+        }*/
 
         /// <summary>
         /// The image component that draws the background for gesture icons.
@@ -168,8 +168,8 @@ namespace UnityEngine.XR.Hands.Samples.GestureSample
 
             m_HandShape = m_HandShapeOrPose as XRHandShape;
             m_HandPose = m_HandShapeOrPose as XRHandPose;
-            if (m_HandPose != null && m_HandPose.relativeOrientation != null)
-                m_HandPose.relativeOrientation.targetTransform = m_TargetTransform;
+           /* if (m_HandPose != null && m_HandPose.relativeOrientation != null)
+                m_HandPose.relativeOrientation.targetTransform = m_TargetTransform;*/
         }
 
         void OnDisable() => m_HandTrackingEvents.jointsUpdated.RemoveListener(OnJointsUpdated);

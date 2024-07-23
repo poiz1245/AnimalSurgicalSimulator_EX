@@ -1,0 +1,540 @@
+2024-07-23 09:48:41.216 [1] WARN BhapticsPlayer.Window.PortalWindow..ctor(): PortalWindow
+2024-07-23 09:48:42.244 [1] WARN BhapticsPlayer.Window.PortalWindow+<<-ctor>b__8_0>d.MoveNext(): PortalWindow Loaded
+2024-07-23 09:48:42.376 [1] WARN BhapticsPlayer.Internal.LocalDbRepository.InitializeDatabase(): InitializeDatabase
+2024-07-23 09:48:42.750 [1] EROR BhapticsPlayer.Utils.WindowsUtils.GetBluetoothVersion(): GetBluetoothVersion error No Radio.
+2024-07-23 09:48:43.463 [1] EROR BhapticsPlayer.Audio.UserService.GetUser(): User not ready.
+2024-07-23 09:48:43.465 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 09:48:43.468 [1] EROR BhapticsPlayer.Audio.UserService.GetUser(): User not ready.
+2024-07-23 09:48:43.471 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 09:48:43.889 [1] EROR BhapticsPlayer.Utils.WindowsUtils.GetBluetoothVersion(): GetBluetoothVersion error No Radio.
+2024-07-23 09:48:43.890 [1] WARN BhapticsPlayer.Window.PortalWindow+<SetPlayerData>d__14.MoveNext(): Bluetooth Version: Unknown
+2024-07-23 09:48:47.883 [7] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 09:48:47.915 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 09:48:48.708 [14] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 09:48:48.709 [14] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 09:49:39.383 [1] EROR BhapticsPlayer.ViewModel.BluetoothCSViewModel+<GetFirstDongleCheck>d__137.MoveNext(): GetFirstDongleCheck OUR_DONGLE_NOT_FOUND
+2024-07-23 09:49:49.068 [1] WARN BhapticsPlayer.Window.PortalWindow..ctor(): PortalWindow
+2024-07-23 09:49:49.438 [1] WARN BhapticsPlayer.Window.PortalWindow+<<-ctor>b__8_0>d.MoveNext(): PortalWindow Loaded
+2024-07-23 09:49:49.455 [1] WARN BhapticsPlayer.Internal.LocalDbRepository.InitializeDatabase(): InitializeDatabase
+2024-07-23 09:49:49.680 [1] EROR BhapticsPlayer.Utils.WindowsUtils.GetBluetoothVersion(): GetBluetoothVersion error No Radio.
+2024-07-23 09:49:49.936 [1] EROR BhapticsPlayer.Audio.UserService.GetUser(): User not ready.
+2024-07-23 09:49:49.941 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 09:49:49.944 [1] EROR BhapticsPlayer.Audio.UserService.GetUser(): User not ready.
+2024-07-23 09:49:49.946 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 09:49:50.049 [1] EROR BhapticsPlayer.ViewModel.PortalMenuViewModel.InitRestMenus(): InitRestMenus
+2024-07-23 09:49:50.062 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 09:49:50.107 [7] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 09:49:50.107 [7] WARN BhapticsPlayer.Repository.ContentReviewRepository+<GetMySaveList>d__14.MoveNext(): GetMySaveList user null
+2024-07-23 09:49:50.152 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 09:49:50.620 [7] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 09:49:50.651 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 09:49:50.663 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 09:49:50.892 [1] WARN BhapticsPlayer.View.PortalWindowMainView+<<-ctor>b__1_0>d.MoveNext(): PortalWindowMainView Loaded
+2024-07-23 09:49:50.963 [1] EROR BhapticsPlayer.Utils.WindowsUtils.GetBluetoothVersion(): GetBluetoothVersion error No Radio.
+2024-07-23 09:49:50.964 [1] WARN BhapticsPlayer.Window.PortalWindow+<SetPlayerData>d__14.MoveNext(): Bluetooth Version: Unknown
+2024-07-23 09:49:51.026 [1] WARN BhapticsPlayer.View.PortalWindowMainView+<<-ctor>b__1_0>d.MoveNext(): LastVersion: 41
+2024-07-23 09:49:51.301 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 09:49:51.364 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 09:49:51.378 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 09:49:51.384 [1] EROR BhapticsPlayer.ViewModel.ProfileMyViewModel+<>c__DisplayClass106_0.<Init>b__0(System.Object, System.ComponentModel.PropertyChangedEventArgs): Changed Settings
+2024-07-23 09:49:51.387 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 09:49:51.388 [1] EROR BhapticsPlayer.ViewModel.ProfileMyViewModel+<>c__DisplayClass106_0.<Init>b__0(System.Object, System.ComponentModel.PropertyChangedEventArgs): Changed IsEnable
+2024-07-23 09:49:51.389 [1] EROR BhapticsPlayer.ViewModel.ProfileMyViewModel+<>c__DisplayClass106_0.<Init>b__0(System.Object, System.ComponentModel.PropertyChangedEventArgs): Changed CanHapticResolution
+2024-07-23 09:49:51.431 [1] WARN BhapticsPlayer.Repository.AccountRepository+<GetMyPlayedProfiles>d__14.MoveNext(): GetMyPlayedProfiles token null
+2024-07-23 09:49:52.488 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 09:49:52.489 [1] WARN BhapticsPlayer.Repository.ContentReviewRepository+<GetMySaveList>d__14.MoveNext(): GetMySaveList user null
+2024-07-23 09:49:54.146 [1] EROR BhapticsPlayer.Window.PortalWindow.Window_Closing(System.Object, System.ComponentModel.CancelEventArgs): Window_Closing
+2024-07-23 09:49:54.662 [7] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 09:49:54.692 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 09:49:55.152 [7] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 09:49:55.153 [7] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 09:53:16.075 [65] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 09:53:16.093 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 09:53:16.608 [65] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 09:53:16.608 [65] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 09:54:36.997 [30] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 09:54:37.014 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 09:54:37.280 [41] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 09:54:37.280 [41] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 09:58:32.075 [72] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 09:58:32.094 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 09:58:32.625 [33] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 09:58:32.626 [33] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 10:03:53.556 [26] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 10:03:53.574 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 10:03:54.242 [26] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 10:03:54.243 [26] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 10:06:02.458 [55] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 10:06:02.473 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 10:06:02.994 [55] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 10:06:02.995 [55] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 10:08:11.527 [73] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 10:08:11.534 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 10:08:12.076 [73] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 10:08:12.076 [73] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 10:10:21.646 [49] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 10:10:21.653 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 10:10:22.163 [49] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 10:10:22.164 [49] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 10:12:43.529 [59] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 10:12:43.534 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 10:12:44.248 [59] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 10:12:44.249 [59] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 10:15:21.904 [35] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 10:15:21.914 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 10:15:22.746 [49] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 10:15:22.747 [49] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 10:19:12.674 [39] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 10:19:12.693 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 10:19:13.216 [39] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 10:19:13.216 [39] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 10:20:38.650 [3] EROR BhapticsPlayer.App.<RegisterNamedPipeServer>b__8_0(System.Object): Deep link command line args: 
+
+2024-07-23 10:20:45.593 [1] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 1,1,0,0,0,0,109,5,159,102,0,0,0,0,0,0,0,0,0,0, 20, 6e400011-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:20:45.710 [1] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e400011-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:20:45.832 [1] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 100,4,1, 3, 6e400005-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:20:46.075 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:15.576 [34] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 10:21:15.593 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 10:21:16.228 [34] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 10:21:16.229 [34] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 10:21:37.633 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:37.673 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:37.713 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:37.754 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:37.813 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:37.853 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:37.893 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:37.973 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:38.033 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:38.073 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:38.113 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:38.153 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 72,72,72,72,72,72,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:38.213 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 69,69,69,69,69,69,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:38.253 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 72,72,72,72,72,72,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:38.293 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 69,69,69,69,69,69,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:38.493 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 72,72,72,72,72,72,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:38.526 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 69,69,69,69,69,69,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:38.573 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 28,27,28,27,27,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:38.613 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 35,34,35,34,34,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:38.655 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 37,36,37,36,36,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:38.694 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 35,34,35,34,34,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:38.913 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 37,36,37,36,36,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:38.993 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 28,27,28,27,27,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:39.054 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 35,34,35,34,34,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:39.374 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 37,36,37,36,36,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:39.433 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 35,34,35,34,34,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:39.473 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 37,36,37,36,36,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:39.513 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 35,34,35,34,34,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:39.773 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 38,37,38,37,37,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:39.813 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 34,33,34,33,33,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:39.893 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 37,36,37,36,36,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:39.933 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 34,33,34,33,33,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:39.973 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 18,17,18,17,17,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:40.013 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:40.053 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:40.093 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:40.153 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:40.194 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:40.254 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:40.293 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:40.354 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:40.393 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:40.453 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:40.494 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:40.553 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:40.593 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:40.653 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:40.693 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 2,1,2,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:40.733 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:41.533 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:41.573 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:41.653 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:41.693 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:41.733 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:41.794 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:41.834 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:41.873 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:41.913 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:41.953 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:41.993 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:42.034 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:42.093 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:42.153 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:42.193 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:42.253 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:42.293 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 7,6,7,6,6,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:42.333 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:43.696 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:43.726 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:43.773 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:43.813 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:43.853 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:43.913 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:44.014 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:44.073 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:44.113 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:44.173 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:44.213 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:44.273 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:44.314 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:44.354 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:44.393 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 2,1,2,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:44.433 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:47.513 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:47.553 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:47.593 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:47.633 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:47.673 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:47.733 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:47.814 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:47.854 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:47.933 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:47.993 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:48.033 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:48.073 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 2,1,2,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:48.113 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:48.513 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:48.633 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:48.693 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:48.766 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:48.793 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:48.833 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:48.893 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:48.933 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:48.993 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:49.033 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:49.073 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 18,17,18,17,17,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:49.113 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:49.153 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 11,10,11,10,10,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:49.193 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 2,1,2,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:49.233 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:49.393 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:49.433 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:49.493 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:49.533 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:49.573 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:49.634 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:49.674 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:49.713 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 18,17,18,17,17,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:49.754 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:49.793 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 9,8,9,8,8,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:49.853 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:49.993 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:50.033 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:50.094 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:50.153 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 18,17,18,17,17,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:50.193 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:50.253 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:50.314 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:50.373 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:50.414 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 2,1,2,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:50.453 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:50.533 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:50.573 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:50.614 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:50.673 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:50.713 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:50.773 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 18,17,18,17,17,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:50.814 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:50.854 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 6,5,6,5,5,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:21:50.893 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:00.853 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:00.893 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:00.954 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:00.993 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:01.053 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:01.086 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:01.133 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:01.213 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:01.273 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:01.313 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:01.353 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:01.393 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:01.453 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:01.493 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:01.573 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:01.614 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:01.673 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:01.733 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:01.773 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:01.814 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:01.874 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:01.933 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:01.994 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:02.033 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:02.074 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:02.113 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:02.193 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:02.253 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:02.293 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:02.333 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:02.373 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 2,1,2,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:02.414 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:02.653 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:02.693 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:02.733 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:02.773 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:02.814 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:02.853 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:02.913 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:02.953 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:02.993 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:03.034 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:03.073 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:03.113 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:03.153 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:03.194 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:03.233 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:03.294 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:03.333 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:03.393 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:03.433 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:03.495 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:03.533 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:03.593 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:03.633 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 2,1,2,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:03.673 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:03.873 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:03.914 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:03.953 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:03.993 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:04.033 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:04.073 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:04.114 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 6,5,6,5,5,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:04.153 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:04.433 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:04.473 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:04.513 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:04.553 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:04.593 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:04.633 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 7,6,7,6,6,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:04.673 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.053 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.093 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 11,10,11,10,10,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.144 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 18,17,18,17,17,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.173 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.213 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.253 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.293 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.333 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.374 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.413 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.453 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.493 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.533 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 2,1,2,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.573 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.693 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.733 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.773 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.833 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.873 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.933 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:06.974 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:07.034 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:07.074 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:07.153 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:07.193 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 5,4,5,4,4,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:07.233 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:07.413 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:07.453 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:07.493 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:07.614 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:07.653 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:07.733 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:07.773 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:07.813 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:07.853 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 2,1,2,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:22:07.893 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:23:49.741 [53] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 10:23:49.743 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 10:23:50.272 [53] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 10:23:50.272 [53] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 10:23:52.713 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:23:52.773 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:23:52.813 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:23:52.853 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 7,6,7,6,6,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:23:52.893 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:04.974 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:05.033 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:05.093 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:05.133 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:05.214 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:05.253 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:05.294 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:05.333 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:05.373 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:05.413 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:05.453 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:05.514 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:05.553 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:05.593 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:05.633 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:05.713 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:05.773 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:05.813 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 2,1,2,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:05.853 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:06.513 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:06.553 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:06.593 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:06.653 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:06.733 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:06.774 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:06.833 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:06.873 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:06.933 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:06.974 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:07.014 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:07.053 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:07.094 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:07.134 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 2,1,2,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:07.173 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:07.553 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:07.593 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:07.633 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:07.673 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:07.753 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:07.793 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:07.934 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:07.973 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:08.014 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:08.053 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:08.094 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 11,10,11,10,10,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:08.153 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:14.173 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:14.213 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:14.273 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:14.334 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:14.373 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:14.413 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:14.453 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:14.553 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:14.613 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:14.654 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:14.694 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:14.733 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:14.793 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:14.833 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:14.893 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 18,17,18,17,17,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:14.934 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:14.974 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:15.053 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:15.113 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:15.153 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:15.203 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:15.293 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:15.333 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:15.393 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 18,17,18,17,17,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:15.433 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:15.473 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:15.514 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:15.553 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:15.594 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:15.633 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 10,9,10,9,9,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:24:15.693 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:14.006 [13] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 10:26:14.014 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 10:26:14.705 [13] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 10:26:14.706 [13] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 10:26:32.713 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:32.753 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 11,10,11,10,10,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:32.793 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:32.834 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:32.874 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:32.974 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:33.013 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:33.053 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:33.093 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:33.133 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:33.173 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 11,10,11,10,10,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:33.233 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:33.273 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:33.313 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 18,17,18,17,17,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:33.353 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:33.393 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 11,10,11,10,10,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:33.433 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 2,1,2,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:33.473 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:40.013 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:40.053 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 18,17,18,17,17,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:40.094 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:40.133 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:40.174 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:40.233 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:40.274 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:40.334 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:40.373 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:40.413 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:40.453 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:40.513 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:40.553 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 7,6,7,6,6,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:40.594 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:41.413 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:41.453 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:41.493 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:41.533 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:41.573 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:41.613 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:41.653 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 5,4,5,4,4,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:41.693 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:41.853 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:41.893 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:41.934 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:41.973 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:42.013 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:42.074 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:42.113 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:42.153 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 72,72,72,72,72,72,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:42.173 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 54,54,54,54,54,54,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:42.214 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 69,69,69,69,69,69,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:42.453 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 51,51,51,51,51,51,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:42.513 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 35,34,35,34,34,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:42.773 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 37,36,37,36,36,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:42.814 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 34,33,34,33,33,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:42.853 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 28,27,28,27,27,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:42.893 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 38,37,38,37,37,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:42.934 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 37,36,37,36,36,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:42.974 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 34,33,34,33,33,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:43.013 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 28,27,28,27,27,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:43.054 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 35,34,35,34,34,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:43.093 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 37,36,37,36,36,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:43.134 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 35,34,35,34,34,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:43.613 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 37,36,37,36,36,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:43.673 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 35,34,35,34,34,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:43.714 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 37,36,37,36,36,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:43.753 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 26,25,26,25,25,26,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:43.793 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 35,34,35,34,34,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:43.853 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 25,24,25,24,24,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:43.893 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:43.933 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:43.993 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:44.033 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 17,16,17,16,16,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:44.093 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:44.153 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:44.193 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:44.233 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:44.273 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:44.353 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:44.407 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:44.473 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:44.513 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:44.553 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 11,10,11,10,10,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:44.593 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:44.634 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:44.693 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:44.734 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:44.813 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 16,15,16,15,15,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:44.854 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:44.893 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 6,5,6,5,5,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:44.934 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:45.553 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 13,12,13,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:45.594 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:45.633 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 11,10,11,10,10,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:45.713 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:45.753 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:45.773 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:45.834 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 11,10,11,10,10,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:45.873 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 15,14,15,14,14,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:45.913 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 14,13,14,13,13,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:45.953 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 11,10,11,10,10,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:45.993 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 2,1,2,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 10:26:46.013 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
