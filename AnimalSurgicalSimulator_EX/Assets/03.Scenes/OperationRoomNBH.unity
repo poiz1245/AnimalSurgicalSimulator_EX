@@ -3861,7 +3861,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &963315792
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4827,7 +4827,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1166916049
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4930,10 +4930,8 @@ MonoBehaviour:
   blinkInterval: 0.5
   grabInteractors:
   - {fileID: 849566905}
-  - {fileID: 1616890304}
   objectsToBlink:
   - {fileID: 5852843275225793654}
-  - {fileID: 450528535}
   handModelControll: {fileID: 1707029267}
   handTrackingModelControllNBH: {fileID: 1605055713}
 --- !u!114 &1166916054
@@ -8414,7 +8412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1636937069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8431,9 +8429,6 @@ MonoBehaviour:
   - socket: {fileID: 1166916054}
     allowedObjects:
     - {fileID: 849566903}
-  - socket: {fileID: 963315796}
-    allowedObjects:
-    - {fileID: 1616890303}
 --- !u!4 &1636937070
 Transform:
   m_ObjectHideFlags: 0

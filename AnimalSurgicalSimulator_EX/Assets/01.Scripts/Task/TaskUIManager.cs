@@ -25,6 +25,7 @@ public class TaskUIManager : MonoBehaviour
     {
         if (currentTaskIndex < taskCompleteUI.Length)
         {
+            Debug.Log("Open UI");
             taskCompleteUI[currentTaskIndex].SetActive(true); // 현재 작업 UI 활성화
             currentTaskIndex++; // 다음 작업으로 이동
         }
@@ -32,8 +33,10 @@ public class TaskUIManager : MonoBehaviour
 
     public void CloseTaskCompleteUI()
     {
+        taskCompleteUI[currentTaskIndex].SetActive(false); // 현재 작업 UI 비활성화
         if (currentTaskIndex > 0)
         {
+            Debug.Log("Close UI");
             currentTaskIndex--; // 이전 작업으로 이동
             taskCompleteUI[currentTaskIndex].SetActive(false); // 현재 작업 UI 비활성화
         }

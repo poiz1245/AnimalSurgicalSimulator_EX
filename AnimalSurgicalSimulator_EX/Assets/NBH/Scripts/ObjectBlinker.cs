@@ -19,10 +19,10 @@ public class ObjectBlinker : MonoBehaviour
     void Start()
     {
         // 모든 오브젝트를 비활성화
-        foreach (var obj in objectsToBlink)
-        {
-            obj.SetActive(false);
-        }
+        //foreach (var obj in objectsToBlink)
+        //{
+        //    obj.SetActive(false);
+        //}
 
         // 각 grabInteractor에 대해 SelectEntered 이벤트를 등록
         for (int i = 0; i < grabInteractors.Count; i++)

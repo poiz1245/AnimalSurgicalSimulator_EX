@@ -25,6 +25,7 @@ public class HandModelControllNBH : MonoBehaviour
     bool isAttach = false;
 
     public bool currentTaskComplete { get; private set; } = false;
+    public bool currentUITaskComplete { get; private set; } = false;
 
     private void Start()
     {
@@ -36,9 +37,13 @@ public class HandModelControllNBH : MonoBehaviour
     {
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
 
+            if(!currentUITaskComplete && !isAttach && grabInteractor.isSelected)
+            {
+                currentUITaskComplete = true;
+                TaskCompleted?.Invoke(currentUITaskComplete);
+            }
             if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.2f)
             {
-                TaskCompleted?.Invoke(false); // 두 번째 UI 활성화
                 indicator.SetActive(false);
                 Attach();
             }
@@ -51,7 +56,6 @@ public class HandModelControllNBH : MonoBehaviour
             {
                 indicator.SetActive(true);
                 Detach();
-                TaskCompleted?.Invoke(true); // 세 번째 UI 활성화
             }
         
     }
@@ -84,10 +88,10 @@ public class HandModelControllNBH : MonoBehaviour
 
         isAttach = false;
 
-        if (isAttach)
-        {
-            TaskCompleted?.Invoke(true); // 세 번째 UI 활성화
-        }
+        //if (isAttach)
+        //{
+        //    TaskCompleted?.Invoke(true); // 세 번째 UI 활성화
+        //}
     }
 
     void Move()
