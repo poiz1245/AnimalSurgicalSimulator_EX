@@ -8011,6 +8011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1502207232}
+  hadnTrackingController: {fileID: 2059901799}
 --- !u!1 &9011485695721672874
 GameObject:
   m_ObjectHideFlags: 0
