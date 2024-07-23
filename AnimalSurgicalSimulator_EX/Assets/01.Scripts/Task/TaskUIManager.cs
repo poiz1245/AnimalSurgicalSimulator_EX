@@ -4,31 +4,23 @@ using UnityEngine;
 
 public class TaskUIManager : MonoBehaviour
 {
+    public static TaskUIManager instance;
+
     [SerializeField] GameObject[] taskCompleteUI; // 작업 완료 UI 요소
-    [SerializeField] HandModelControll handModelControll;
     private int currentTaskIndex = 0; // 현재 표시할 작업 인덱스
 
-    private void Start()
+    private void Awake()
     {
-        handModelControll.IsTaskCompleted += uiTaskCompleted;
-    }
-
-    public void uiTaskCompleted(bool isTaskCompleted)
-    {
-        Debug.Log(isTaskCompleted);
-        if (isTaskCompleted)
+        if (instance == null)
         {
-            Debug.Log("Close UI");
-            CloseTaskCompleteUI();
+            instance = this;
         }
         else
         {
-            Debug.Log("Show UI");
-            ShowTaskCompleteUI();
+            Destroy(gameObject);
         }
     }
 
-    // 작업 완료 UI 표시
     public void ShowTaskCompleteUI()
     {
         if (currentTaskIndex < taskCompleteUI.Length)

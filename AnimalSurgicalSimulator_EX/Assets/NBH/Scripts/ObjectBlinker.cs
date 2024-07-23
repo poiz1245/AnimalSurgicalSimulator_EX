@@ -9,7 +9,8 @@ public class ObjectBlinker : MonoBehaviour
     [SerializeField] float blinkInterval = 0.5f; // 깜빡이는 간격
     [SerializeField] List<XRGrabInteractable> grabInteractors; // XRGrabInteractable 리스트
     [SerializeField] List<GameObject> objectsToBlink; // 깜빡이게 할 오브젝트 리스트
-    [SerializeField] HandModelControll handModelControll; // HandModelControll 인스턴스 참조
+    [SerializeField] HandModelControllNBH handModelControll; // HandModelControll 인스턴스 참조
+    [SerializeField] HandTrackingModelControllNBH handTrackingModelControllNBH;
 
     bool isObjectInSocket = false;
     bool isGrabbed = false;
