@@ -5,9 +5,10 @@ using UnityEngine;
 public class Indicate : MonoBehaviour
 {
     [SerializeField] HandModelControll controller;
+    [SerializeField] HandTrackingModelControll hadnTrackingController;
     public void OnIndicate()
     {
-        if (!controller.currentTaskComplete)
+        if (!controller.currentTaskComplete && !hadnTrackingController.currentTaskComplete)
         {
             gameObject.SetActive(true);
         }

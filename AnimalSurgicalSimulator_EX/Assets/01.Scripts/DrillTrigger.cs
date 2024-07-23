@@ -42,25 +42,27 @@ public class DrillTrigger : MonoBehaviour
 
         if (buttonOn && interactable.isSelected)
         {
-            switch (currentTriggerLayerName)
+            spinObject.transform.DOLocalRotate(new Vector3(0, 0, 10), 0.01f).SetEase(Ease.Linear).SetLoops(-1, LoopType.Incremental);
+
+            if (currentTriggerLayerName == "OutsideBone")
             {
-                case "OutsideBone":
-                    OnVibration(1f);
-                    break;
-                case "InsideBone":
-                    OnVibration(0.5f);
-                    break;
-                case "null":
-                    OnVibration(0.2f);
-                    break;
+                OnVibration(1f);
+            }
+            else if (currentTriggerLayerName == "InsideBone")
+            {
+                OnVibration(0.5f);
+            }
+            else
+            {
+                OnVibration(0.2f);
             }
         }
+
     }
 
     void TriggerButtonOn(InputAction.CallbackContext context)
     {
         buttonOn = true;
-        spinObject.transform.DOLocalRotate(new Vector3(0, 0, 10), 0.01f).SetEase(Ease.Linear).SetLoops(-1, LoopType.Incremental);
     }
     void TriggerButtonOff(InputAction.CallbackContext context)
     {

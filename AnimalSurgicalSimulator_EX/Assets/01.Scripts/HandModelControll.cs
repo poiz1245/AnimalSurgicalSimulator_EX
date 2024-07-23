@@ -25,12 +25,15 @@ public class HandModelControll : MonoBehaviour
     public delegate void TaskCompleted(bool taskComplete);
     public event TaskCompleted IsTaskCompleted;
 
+
     private void Start()
     {
         IsTaskCompleted += TaskComplete;
+        
     }
     private void Update()
     {
+
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
 
         if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.2f)
@@ -55,8 +58,8 @@ public class HandModelControll : MonoBehaviour
         grabInteractor.trackRotation = false;
 
         grabObject.transform.SetParent(handModel.transform);
-        gameObject.transform.position = drillAttach.position;
-        gameObject.transform.rotation = drillAttach.rotation;
+        //gameObject.transform.position = drillAttach.position;
+        //gameObject.transform.rotation = drillAttach.rotation;
 
         handModel.transform.SetParent(null);
         handModel.transform.position = indicatorAttach.position;
@@ -83,11 +86,11 @@ public class HandModelControll : MonoBehaviour
         {
             if (drillTrigger.currentTriggerLayerName == "OutsideBone")
             {
-                drillSpeed = 0.03f;
+                drillSpeed = 0.005f;
             }
             else if (drillTrigger.currentTriggerLayerName == "InsideBone")
             {
-                drillSpeed = 0.06f;
+                drillSpeed = 0.02f;
             }
             else if (drillTrigger.currentTriggerLayerName == "EndLayer")
             {
@@ -95,6 +98,7 @@ public class HandModelControll : MonoBehaviour
                 IsTaskCompleted?.Invoke(currentTaskComplete);
                 Detach();
             }
+
             handModel.transform.Translate(0, 0, drillSpeed * Time.deltaTime);
         }
 
