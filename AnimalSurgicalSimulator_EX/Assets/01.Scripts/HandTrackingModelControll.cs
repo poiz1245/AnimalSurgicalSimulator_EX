@@ -34,9 +34,7 @@ public class HandTrackingModelControll : MonoBehaviour
     }
     private void Update()
     {
-
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
-
 
         if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.2f)
         {
