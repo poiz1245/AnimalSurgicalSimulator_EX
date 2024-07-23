@@ -2585,3 +2585,51 @@
 2024-07-23 18:01:41.273 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
 2024-07-23 18:01:41.313 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 2,1,2,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
 2024-07-23 18:01:41.353 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 18:05:34.203 [53] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:05:34.214 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 18:05:34.738 [53] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 18:05:34.738 [53] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 18:06:15.133 [59] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:06:15.133 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 18:06:15.415 [55] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 18:06:15.416 [55] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 18:06:53.373 [45] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:06:53.393 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 18:06:53.652 [30] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 18:06:53.653 [30] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 18:18:36.785 [30] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:18:36.793 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 18:18:37.504 [52] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 18:18:37.505 [52] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 18:21:28.359 [48] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:21:28.373 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 18:21:28.866 [48] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 18:21:28.867 [48] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 18:23:16.515 [4] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:23:16.533 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 18:23:17.027 [4] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 18:23:17.028 [4] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 18:23:56.558 [26] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:23:56.573 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 18:23:56.863 [34] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 18:23:56.863 [34] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 18:24:24.079 [13] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:24:24.094 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 18:24:24.381 [13] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 18:24:24.382 [13] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 18:25:47.945 [13] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:25:47.953 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 18:25:48.242 [57] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 18:25:48.243 [57] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 18:27:03.689 [46] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:27:03.693 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 18:27:03.981 [46] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 18:27:03.983 [46] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 18:27:48.563 [30] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:27:48.573 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 18:27:48.895 [30] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 18:27:48.896 [30] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 18:29:48.315 [44] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:29:48.333 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 18:29:49.015 [44] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 18:29:49.016 [44] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
