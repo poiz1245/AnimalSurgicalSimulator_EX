@@ -13,10 +13,16 @@ public class HandTrackingHandAnimatorControll : MonoBehaviour
     }
     public void OnDrillTrigger()
     {
-        anim.SetBool("Trigger", true);
+        if (anim != null)
+        {
+            anim.SetBool("Trigger", true);
+        }
     }
     public void OffDrillTrigger()
     {
-        anim.SetBool("Trigger", false);
+        if (anim != null)
+        {
+            anim.SetBool("Trigger", false);
+        }
     }
 }
