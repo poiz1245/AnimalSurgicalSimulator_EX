@@ -1982,3 +1982,11 @@
 2024-07-23 17:13:16.025 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
 2024-07-23 17:13:16.537 [39] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
 2024-07-23 17:13:16.537 [39] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 17:19:13.747 [27] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 17:19:13.767 [11] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 17:19:14.374 [26] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 17:19:14.374 [26] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
+2024-07-23 17:23:33.879 [1] EROR BhapticsPlayer.Bluetooth.TactosyDevice+<Connect>d__243.MoveNext(): Services Found but not Assigned (TactGlove (R), 230288908876199, Unreachable)
+2024-07-23 17:23:33.976 [1] EROR BhapticsPlayer.Device.TactGloveDevice+<Connect>d__4.MoveNext(): Connect() - 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+2024-07-23 17:23:39.445 [1] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 1,1,0,0,0,0,139,104,159,102,0,0,0,0,0,0,0,0,0,0, 20, 6e400011-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 17:23:39.566 [1] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 100,4,1, 3, 6e400005-b5a3-f393-e0a9-e50e24dcca9e
