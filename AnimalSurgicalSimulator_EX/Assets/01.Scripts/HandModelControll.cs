@@ -97,6 +97,7 @@ public class HandModelControll : MonoBehaviour
                 IsTaskCompleted?.Invoke(currentTaskComplete);
                 Detach();
             }
+
             handModel.transform.Translate(0, 0, drillSpeed * Time.deltaTime);
         }
 

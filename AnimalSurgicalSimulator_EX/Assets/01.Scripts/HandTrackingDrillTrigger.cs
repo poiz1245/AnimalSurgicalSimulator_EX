@@ -9,7 +9,7 @@ public class HandTrackingDrillTrigger : MonoBehaviour
 {
     [SerializeField] XRBaseController rightController;
     [SerializeField] GameObject spinObject;
-    [SerializeField] XRSocketInteractor interactable;
+    [SerializeField] XRGrabInteractable interactable;
 
     LayerMask currentTriggerMask;
     bool isTrigger = false;
@@ -28,21 +28,24 @@ public class HandTrackingDrillTrigger : MonoBehaviour
             currentTriggerLayerName = "null";
         }
 
-        if (buttonOn && interactable.enabled)
+        if (buttonOn && interactable.isSelected)
         {
             spinObject.transform.DOLocalRotate(new Vector3(0, 0, 10), 0.01f).SetEase(Ease.Linear).SetLoops(-1, LoopType.Incremental);
 
             if (currentTriggerLayerName == "OutsideBone")
             {
-                OnVibration(1f);
+                HapticsTest.instance.CustomBasic(1, 0.1f);
+                //OnVibration(1f);
             }
             else if (currentTriggerLayerName == "InsideBone")
             {
-                OnVibration(0.5f);
+                HapticsTest.instance.CustomBasic(0.5f, 0.1f);
+                //OnVibration(0.5f);
             }
             else
             {
-                OnVibration(0.2f);
+                HapticsTest.instance.CustomBasic(0.2f, 0.1f);
+                //OnVibration(0.2f);
             }
         }
 
