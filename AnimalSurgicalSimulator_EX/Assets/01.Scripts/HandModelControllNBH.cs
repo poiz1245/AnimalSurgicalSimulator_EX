@@ -18,7 +18,6 @@ public class HandModelControllNBH : MonoBehaviour
     [SerializeField] DrillTrigger drillTrigger;
 
     public delegate void TaskCompletedEventHandler(bool taskComplete);
-    public event TaskCompletedEventHandler TaskCompleted;
     public event TaskCompleted IsTaskCompleted;
 
     float drillSpeed = 0.03f;
@@ -28,7 +27,6 @@ public class HandModelControllNBH : MonoBehaviour
 
     private void Start()
     {
-        //TaskCompleted += UpdateTaskUI; // UI 업데이트 메서드 구독
         IsTaskCompleted += TaskComplete;
     }
 
@@ -36,27 +34,29 @@ public class HandModelControllNBH : MonoBehaviour
     {
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
 
-        if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.2f)
-        {
-            indicator.SetActive(false);
-            Attach();
-            TaskCompleted?.Invoke(false); // 두 번째 UI 활성화
-        }
-        else if (isAttach && grabInteractor.isSelected && distance <= 0.2f)
-        {
-            handModel.transform.rotation = Quaternion.Euler(new Vector3(90, -90, 0));
-            Move();
-        }
-        else if (!currentTaskComplete && isAttach && distance > 0.2f)
-        {
-            indicator.SetActive(true);
-            Detach();
-            TaskCompleted?.Invoke(true); // 세 번째 UI 활성화
-        }
+            
+
+            if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.2f)
+            {
+                indicator.SetActive(false);
+                Attach();
+            }
+            else if (isAttach && grabInteractor.isSelected && distance <= 0.2f)
+            {
+                handModel.transform.rotation = Quaternion.Euler(new Vector3(90, -90, 0));
+                Move();
+            }
+            else if (!currentTaskComplete && isAttach && distance > 0.2f)
+            {
+                indicator.SetActive(true);
+                Detach();
+            }
+        
     }
 
     private void Attach()
     {
+        
         grabInteractor.trackPosition = false;
         grabInteractor.trackRotation = false;
 
@@ -81,6 +81,7 @@ public class HandModelControllNBH : MonoBehaviour
         grabInteractor.trackRotation = true;
 
         isAttach = false;
+
     }
 
     void Move()
@@ -98,7 +99,6 @@ public class HandModelControllNBH : MonoBehaviour
             else if (drillTrigger.currentTriggerLayerName == "EndLayer")
             {
                 currentTaskComplete = true;
-                TaskComplete(currentTaskComplete); // 작업 완료 처리
                 IsTaskCompleted?.Invoke(currentTaskComplete);
                 Detach();
             }
@@ -110,17 +110,4 @@ public class HandModelControllNBH : MonoBehaviour
     {
         TaskManager.instance.digComplete.TaskComplete(); // 작업 완료 처리
     }
-
-    //void UpdateTaskUI(bool taskComplete)
-    //{
-    //    if (taskComplete)
-    //    {
-    //        TaskManager.instance.taskUIManager.CloseTaskCompleteUI(); // 이전 UI 비활성화
-    //        TaskManager.instance.taskUIManager.ShowTaskCompleteUI(); // 네 번째 UI 활성화
-    //    }
-    //    else
-    //    {
-    //        TaskManager.instance.taskUIManager.ShowTaskCompleteUI(); // 두 번째 UI 활성화
-    //    }
-    //}
 }
