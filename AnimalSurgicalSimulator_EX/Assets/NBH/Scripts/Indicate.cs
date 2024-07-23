@@ -1,16 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Indicate : MonoBehaviour
 {
     [SerializeField] HandModelControll controller;
-    [SerializeField] HandTrackingModelControll hadnTrackingController;
+    [SerializeField] HandTrackingModelControll handTrackingController;
+    [SerializeField] XRSocketInteractor handSocketInteractor;
     public void OnIndicate()
     {
-        if (!controller.currentTaskComplete && !hadnTrackingController.currentTaskComplete)
+        if (!controller.currentTaskComplete && !handTrackingController.currentTaskComplete)
         {
+            //if (handSocketInteractor.enabled || handTrackingController.currentTaskComplete)
+            //{
             gameObject.SetActive(true);
+            //}
         }
     }
 

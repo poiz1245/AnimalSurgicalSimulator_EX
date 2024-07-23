@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class CustomSocket : XRSocketInteractor
+public class CustomSocketNBH : XRSocketInteractor
 {
     public List<GameObject> allowedObjects = new List<GameObject>();
 
