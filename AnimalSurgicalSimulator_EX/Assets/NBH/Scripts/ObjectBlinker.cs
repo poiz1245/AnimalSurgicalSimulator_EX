@@ -5,11 +5,13 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ObjectBlinker : MonoBehaviour
 {
-    [SerializeField] XRBaseInteractor socketInteractor; // 소켓 인터렉터 참조
+    //[SerializeField] XRBaseInteractor socketInteractor; // 소켓 인터렉터 참조
+    [SerializeField] CustomSocket socket;
     [SerializeField] float blinkInterval = 0.5f; // 깜빡이는 간격
     [SerializeField] List<XRGrabInteractable> grabInteractors; // XRGrabInteractable 리스트
     [SerializeField] List<GameObject> objectsToBlink; // 깜빡이게 할 오브젝트 리스트
     [SerializeField] HandModelControll handModelControll; // HandModelControll 인스턴스 참조
+    [SerializeField] HandTrackingModelControll handTrackingModelControll; // HandModelControll 인스턴스 참조
 
     bool isObjectInSocket = false;
     bool isGrabbed = false;
@@ -18,10 +20,10 @@ public class ObjectBlinker : MonoBehaviour
     void Start()
     {
         // 모든 오브젝트를 비활성화
-        foreach (var obj in objectsToBlink)
-        {
-            obj.SetActive(false);
-        }
+        //foreach (var obj in objectsToBlink)
+        //{
+        //    obj.SetActive(false);
+        //}
 
         // 각 grabInteractor에 대해 SelectEntered 이벤트를 등록
         for (int i = 0; i < grabInteractors.Count; i++)
@@ -33,6 +35,7 @@ public class ObjectBlinker : MonoBehaviour
 
         // HandModelControll의 TaskCompleted 이벤트 구독
         handModelControll.IsTaskCompleted += OnTaskCompleted;
+        handTrackingModelControll.IsTaskCompleted += OnTaskCompleted;
     }
 
     void Update()
@@ -49,13 +52,11 @@ public class ObjectBlinker : MonoBehaviour
 
     private IEnumerator BlinkObject(int index)
     {
-        Debug.Log("블링크");
-
         while (!isObjectInSocket)
         {
             objectsToBlink[index].SetActive(!objectsToBlink[index].activeSelf);
             yield return new WaitForSeconds(blinkInterval);
-            isObjectInSocket = socketInteractor.hasSelection;
+            isObjectInSocket = socket.hasSelection;
         }
 
         // 오브젝트가 소켓에 들어가면 깜빡이기 멈춤

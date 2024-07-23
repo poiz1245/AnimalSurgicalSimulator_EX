@@ -7,7 +7,7 @@ public class SocketManager : MonoBehaviour
     [System.Serializable]
     public class SocketConfig
     {
-        public CustomSocket socket;
+        public CustomSocketNBH socket;
         public List<GameObject> allowedObjects;
     }
 
@@ -32,7 +32,7 @@ public class SocketManager : MonoBehaviour
 
     private void OnSelectEntered(SelectEnterEventArgs args)
     {
-        var interactor = args.interactorObject as CustomSocket;
+        var interactor = args.interactorObject as CustomSocketNBH;
         var interactableObject = args.interactableObject.transform.gameObject;
 
         foreach (var config in socketConfigs)
