@@ -59,6 +59,16 @@ public class DigTask : MonoBehaviour
                 // 작업 완료 후 추가 동작이 필요하다면 여기에 작성
                 break;
         }
+        if (!grab.isSelected && task == TaskComplete.Attach)
+        {
+            task = TaskComplete.Start;
+            UpdateUIText();
+        }
+        else if ((handModel.isAttach == false && hand.isAttach == false) && task == TaskComplete.Dig)
+        {
+            task = TaskComplete.Attach;
+            UpdateUIText();
+        }
     }
 
     void UpdateUIText()
