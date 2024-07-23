@@ -372,7 +372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1502207232}
   handTrackingController: {fileID: 2059901799}
-  handSocketInteractor: {fileID: 0}
+  handSocketInteractor: {fileID: 1823099584}
 --- !u!4 &115061490
 Transform:
   m_ObjectHideFlags: 0
@@ -1289,31 +1289,7 @@ MonoBehaviour:
   m_Script: {fileID: -1774853514, guid: ebe26e22332665d4c8332b2a624e5e8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rules:
-  - Type: 0
-    Name: 
-    GameObject: {fileID: 18400571}
-    Ordinal: 0
-    Priority: 0
-    IconType: 121000
-    IconTexture: {fileID: 0}
-    IsIconRecursive: 0
-    BackgroundType: 0
-    BackgroundTexture: {fileID: 0}
-    IsBackgroundRecursive: 0
-    IsHidden: 0
-  - Type: 0
-    Name: 
-    GameObject: {fileID: 3309532504685657138}
-    Ordinal: 1
-    Priority: 0
-    IconType: 1000
-    IconTexture: {fileID: 0}
-    IsIconRecursive: 0
-    BackgroundType: 0
-    BackgroundTexture: {fileID: 0}
-    IsBackgroundRecursive: 0
-    IsHidden: 0
+  Rules: []
 --- !u!4 &340140942
 Transform:
   m_ObjectHideFlags: 0
@@ -9274,7 +9250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c09f8e388913347834e8313d0e4191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surgicalBed: {fileID: 6074320972600623401}
+  surgicalBed: {fileID: 0}
 --- !u!23 &6125040519782924001
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9948,7 +9924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1502207232}
   handTrackingController: {fileID: 2059901799}
-  handSocketInteractor: {fileID: 0}
+  handSocketInteractor: {fileID: 1823099584}
 --- !u!1 &9011485695721672874
 GameObject:
   m_ObjectHideFlags: 0
