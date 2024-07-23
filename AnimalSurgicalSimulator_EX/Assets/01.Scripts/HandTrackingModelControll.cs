@@ -20,7 +20,7 @@ public class HandTrackingModelControll : MonoBehaviour
     [SerializeField] HandVisualizer handVisualizer;
 
     float drillSpeed = 0.03f;
-    bool isAttach = false;
+    public bool isAttach { get; private set; } = false;
 
     public bool currentTaskComplete { get; private set; } = false;
 

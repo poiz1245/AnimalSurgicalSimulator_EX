@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IndicateNBH : MonoBehaviour
 {
-    [SerializeField] HandModelControllNBH controller;
+    [SerializeField] HandModelControll controller;
     [SerializeField] HandTrackingModelControllNBH handModel;
     public void OnIndicate()
     {

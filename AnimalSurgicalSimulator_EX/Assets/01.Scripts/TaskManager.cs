@@ -7,7 +7,6 @@ public class TaskManager : MonoBehaviour
     public static TaskManager instance;
 
     public DigComplete digComplete;
-    public TaskUIManager taskUIManager;
 
     private void Awake()
     {

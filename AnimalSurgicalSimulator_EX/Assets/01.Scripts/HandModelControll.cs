@@ -18,10 +18,10 @@ public class HandModelControll : MonoBehaviour
     [SerializeField] DrillTrigger drillTrigger;
 
     float drillSpeed = 0.03f;
-    bool isAttach = false;
+    public bool isAttach { get; private set; } = false;
 
     public bool currentTaskComplete { get; private set; } = false;
-
+   
     public delegate void TaskCompleted(bool taskComplete);
     public event TaskCompleted IsTaskCompleted;
 

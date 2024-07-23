@@ -18,18 +18,15 @@ public class HandModelControllNBH : MonoBehaviour
     [SerializeField] DrillTrigger drillTrigger;
 
     public delegate void TaskCompletedEventHandler(bool taskComplete);
-    public event TaskCompletedEventHandler TaskCompleted;
     public event TaskCompleted IsTaskCompleted;
 
     float drillSpeed = 0.03f;
     bool isAttach = false;
 
     public bool currentTaskComplete { get; private set; } = false;
-    public bool currentUITaskComplete { get; private set; } = false;
 
     private void Start()
     {
-        TaskCompleted += UpdateTaskUI; // UI 업데이트 메서드 구독
         IsTaskCompleted += TaskComplete;
     }
 
@@ -37,11 +34,8 @@ public class HandModelControllNBH : MonoBehaviour
     {
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
 
-            if(!currentUITaskComplete && !isAttach && grabInteractor.isSelected)
-            {
-                currentUITaskComplete = true;
-                TaskCompleted?.Invoke(currentUITaskComplete);
-            }
+            
+
             if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.2f)
             {
                 indicator.SetActive(false);
@@ -88,10 +82,6 @@ public class HandModelControllNBH : MonoBehaviour
 
         isAttach = false;
 
-        //if (isAttach)
-        //{
-        //    TaskCompleted?.Invoke(true); // 세 번째 UI 활성화
-        //}
     }
 
     void Move()
@@ -119,19 +109,5 @@ public class HandModelControllNBH : MonoBehaviour
     void TaskComplete(bool taskComplete)
     {
         TaskManager.instance.digComplete.TaskComplete(); // 작업 완료 처리
-    }
-
-    void UpdateTaskUI(bool taskComplete)
-    {
-        if (taskComplete)
-        {
-            Debug.Log("UI 꺼짐");
-            TaskManager.instance.taskUIManager.CloseTaskCompleteUI(); // 이전 UI 비활성화
-        }
-        else if (!taskComplete)
-        {
-            Debug.Log("UI 켜짐");
-            TaskManager.instance.taskUIManager.ShowTaskCompleteUI(); // 두 번째 UI 활성화
-        }
     }
 }
