@@ -29,6 +29,7 @@ public class HandModelControll : MonoBehaviour
     private void Start()
     {
         IsTaskCompleted += TaskComplete;
+        
     }
     private void Update()
     {
