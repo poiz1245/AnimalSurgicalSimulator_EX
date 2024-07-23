@@ -2585,3 +2585,37 @@
 2024-07-23 18:01:41.273 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 12,11,12,11,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
 2024-07-23 18:01:41.313 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 2,1,2,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
 2024-07-23 18:01:41.353 [11] WARN BhapticsPlayer.Bluetooth.TactosyOperation+<Write>d__13.MoveNext(): Write(TactGlove (R)) 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 20, 6e40000a-b5a3-f393-e0a9-e50e24dcca9e
+2024-07-23 18:20:06.497 [1] WARN BhapticsPlayer.Window.PortalWindow..ctor(): PortalWindow
+2024-07-23 18:20:08.973 [1] WARN BhapticsPlayer.Window.PortalWindow+<<-ctor>b__8_0>d.MoveNext(): PortalWindow Loaded
+2024-07-23 18:20:09.139 [1] WARN BhapticsPlayer.Internal.LocalDbRepository.InitializeDatabase(): InitializeDatabase
+2024-07-23 18:20:09.784 [1] EROR BhapticsPlayer.Utils.WindowsUtils.GetBluetoothVersion(): GetBluetoothVersion error No Radio.
+2024-07-23 18:20:10.744 [1] EROR BhapticsPlayer.Audio.UserService.GetUser(): User not ready.
+2024-07-23 18:20:10.747 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:20:10.751 [1] EROR BhapticsPlayer.Audio.UserService.GetUser(): User not ready.
+2024-07-23 18:20:10.753 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:20:11.015 [1] EROR BhapticsPlayer.ViewModel.PortalMenuViewModel.InitRestMenus(): InitRestMenus
+2024-07-23 18:20:11.031 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:20:11.098 [7] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:20:11.099 [7] WARN BhapticsPlayer.Repository.ContentReviewRepository+<GetMySaveList>d__14.MoveNext(): GetMySaveList user null
+2024-07-23 18:20:11.165 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:20:11.898 [15] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:20:11.948 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:20:11.960 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:20:12.522 [1] WARN BhapticsPlayer.View.PortalWindowMainView+<<-ctor>b__1_0>d.MoveNext(): PortalWindowMainView Loaded
+2024-07-23 18:20:12.693 [1] EROR BhapticsPlayer.Utils.WindowsUtils.GetBluetoothVersion(): GetBluetoothVersion error No Radio.
+2024-07-23 18:20:12.695 [1] WARN BhapticsPlayer.Window.PortalWindow+<SetPlayerData>d__14.MoveNext(): Bluetooth Version: Unknown
+2024-07-23 18:20:12.780 [1] WARN BhapticsPlayer.View.PortalWindowMainView+<<-ctor>b__1_0>d.MoveNext(): LastVersion: 41
+2024-07-23 18:20:13.070 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:20:13.136 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:20:13.147 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:20:13.153 [1] EROR BhapticsPlayer.ViewModel.ProfileMyViewModel+<>c__DisplayClass106_0.<Init>b__0(System.Object, System.ComponentModel.PropertyChangedEventArgs): Changed Settings
+2024-07-23 18:20:13.156 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:20:13.157 [1] EROR BhapticsPlayer.ViewModel.ProfileMyViewModel+<>c__DisplayClass106_0.<Init>b__0(System.Object, System.ComponentModel.PropertyChangedEventArgs): Changed IsEnable
+2024-07-23 18:20:13.159 [1] EROR BhapticsPlayer.ViewModel.ProfileMyViewModel+<>c__DisplayClass106_0.<Init>b__0(System.Object, System.ComponentModel.PropertyChangedEventArgs): Changed CanHapticResolution
+2024-07-23 18:20:13.289 [1] WARN BhapticsPlayer.Repository.AccountRepository+<GetMyPlayedProfiles>d__14.MoveNext(): GetMyPlayedProfiles token null
+2024-07-23 18:20:13.874 [4] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:20:13.902 [13] WARN BhapticsPlayer.Haptic.AthFilePlayer.Register(BhapticsPlayer.Haptic.RegisterAthRequest): Register() Does not have an app. 669a29e3b9c4b8465debe086 create one.
+2024-07-23 18:20:13.935 [1] WARN BhapticsPlayer.Login.UserRepository.GetCurrentUser(): GetCurrentUser User null
+2024-07-23 18:20:13.935 [1] WARN BhapticsPlayer.Repository.ContentReviewRepository+<GetMySaveList>d__14.MoveNext(): GetMySaveList user null
+2024-07-23 18:20:14.399 [7] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.OnMessage(WebSocketSharp.MessageEventArgs): OnMessage : SdkRequestAuthInit
+2024-07-23 18:20:14.404 [7] EROR BhapticsPlayer.Websocket.HapticPatternBehavior.GetHapticDeployMessage(System.String): GetHapticDeployMessage() HapticDeployHttpMessage
