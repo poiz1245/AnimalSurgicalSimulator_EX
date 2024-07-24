@@ -4,23 +4,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class CustomSocketNBH : MonoBehaviour
 {
-    [SerializeField] Transform attach;
-    [SerializeField] LayerMask socketLayer;
-    [SerializeField] GameObject hoverMesh;
-    [SerializeField] List<XRGrabInteractable> selectObjectGrabInteractable;
-    [SerializeField] List<CustomSocketNBH> sokets;
+    [SerializeField] List<Transform> attach; // 소켓의 위치
+    [SerializeField] LayerMask socketLayer; // 소켓 레이어
+    [SerializeField] GameObject hoverMesh; // 호버 메쉬
+    [SerializeField] List<XRGrabInteractable> selectObjectGrabInteractable; // 그랩 가능한 오브젝트 리스트
 
     public bool hasSelection = false;
-
-    void Start()
-    {
-        for (int i = 0; i < sokets.Count; i++)
-        {
-            sokets[i].transform.position = attach.position;   
-            sokets[i].transform.rotation = attach.rotation;   
-
-        }
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -32,16 +21,24 @@ public class CustomSocketNBH : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        for(int i = 0; i < sokets.Count; i++)
+        for (int i = 0; i < selectObjectGrabInteractable.Count; ++i)
         {
-            if (!selectObjectGrabInteractable[i].isSelected)
+            XRGrabInteractable grabInteractable = selectObjectGrabInteractable[i];
+
+            // 해당 오브젝트가 트리거된 경우
+            if (grabInteractable != null && other.gameObject == grabInteractable.gameObject)
             {
-                selectObjectGrabInteractable[i].transform.position = attach.position;
-                selectObjectGrabInteractable[i].transform.rotation = attach.rotation;
+                print(selectObjectGrabInteractable[i]);
+                // 소켓에 부착
+                if (i < attach.Count)
+                {
+                    grabInteractable.transform.position = attach[i].position;
+                    grabInteractable.transform.rotation = attach[i].rotation;
 
-                hasSelection = true;
-
-                hoverMesh.SetActive(false);
+                    hasSelection = true;
+                    hoverMesh.SetActive(false);
+                }
+                break; // 하나의 오브젝트만 처리
             }
             else
             {
@@ -50,6 +47,7 @@ public class CustomSocketNBH : MonoBehaviour
             }
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         hoverMesh.SetActive(false);

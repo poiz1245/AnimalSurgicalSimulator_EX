@@ -707,13 +707,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c83fb6da6eb79a49928aee8031101d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attach: {fileID: 111309108}
+  attach:
+  - {fileID: 111309108}
+  - {fileID: 1539319982}
   socketLayer:
     serializedVersion: 2
     m_Bits: 1536
   hoverMesh: {fileID: 1428266285}
-  selectObjectGrabInteractable: []
-  sokets: []
+  selectObjectGrabInteractable:
+  - {fileID: 1702645258}
+  - {fileID: 8649926550647728025}
   hasSelection: 0
 --- !u!1 &112475211
 GameObject:
@@ -8248,8 +8251,6 @@ GameObject:
   - component: {fileID: 1539319987}
   - component: {fileID: 1539319986}
   - component: {fileID: 1539319985}
-  - component: {fileID: 1539319984}
-  - component: {fileID: 1539319983}
   m_Layer: 0
   m_Name: Socket (1)
   m_TagString: Untagged
@@ -8272,46 +8273,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4545439424230501}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1539319983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1539319981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c83fb6da6eb79a49928aee8031101d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attach: {fileID: 1539319982}
-  socketLayer:
-    serializedVersion: 2
-    m_Bits: 1536
-  hoverMesh: {fileID: 2023178455545607486}
-  selectObjectGrabInteractable: []
-  sokets: []
-  hasSelection: 0
---- !u!114 &1539319984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1539319981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c255e37c1475a334193d6a0bf9b622fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  socket: {fileID: 1539319983}
-  blinkInterval: 0.5
-  grabInteractors:
-  - {fileID: 8649926550647728025}
-  objectsToBlink:
-  - {fileID: 2023178455545607486}
-  handModelControll: {fileID: 684575144}
-  handTrackingModelControll: {fileID: 1798773991}
 --- !u!65 &1539319985
 BoxCollider:
   m_ObjectHideFlags: 0
