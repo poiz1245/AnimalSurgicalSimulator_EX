@@ -1336,10 +1336,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4545439289475304, guid: be48e9b5cd2313746911d55e8990c8b8,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 556152549}
-    - targetCorrespondingSourceObject: {fileID: 4545439289475304, guid: be48e9b5cd2313746911d55e8990c8b8,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 350884601}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be48e9b5cd2313746911d55e8990c8b8, type: 3}
@@ -3104,13 +3100,14 @@ GameObject:
   m_Component:
   - component: {fileID: 556152549}
   - component: {fileID: 556152550}
+  - component: {fileID: 556152551}
   m_Layer: 0
   m_Name: Drill Grip Guide Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &556152549
 Transform:
   m_ObjectHideFlags: 0
@@ -3119,15 +3116,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556152548}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071125, y: 0.7070667, z: -0.0027280597, w: 0.0064274725}
-  m_LocalPosition: {x: -0.1176, y: 0.6621, z: 0.0903}
-  m_LocalScale: {x: 0.75861084, y: 0.6666669, z: 0.7586105}
+  m_LocalRotation: {x: 0.0027280746, y: -0.006427466, z: -0.7071125, w: 0.7070667}
+  m_LocalPosition: {x: -0.034199852, y: 0.007780254, z: -0.11133346}
+  m_LocalScale: {x: 1, y: 0.9999807, z: 1.0000236}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1445266027}
   - {fileID: 1440547236}
   - {fileID: 1906363009}
-  m_Father: {fileID: 320128452}
+  m_Father: {fileID: 1785801879}
   m_LocalEulerAnglesHint: {x: -0.3, y: 179.258, z: -90.002}
 --- !u!95 &556152550
 Animator:
@@ -3150,6 +3146,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &556152551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556152548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deebcfa48a6ff784d9cf59db1a4e28da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guideMesh: {fileID: 1440547235}
 --- !u!1 &560445341
 GameObject:
   m_ObjectHideFlags: 0
@@ -4530,7 +4539,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.02, y: 1.35}
+  m_AnchoredPosition: {x: -0.02, y: 1.5}
   m_SizeDelta: {x: 0.70000005, y: 0.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1188487786
@@ -5240,12 +5249,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1440547236}
   m_Layer: 0
-  m_Name: hands:hands_geom
+  m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1440547236
 Transform:
   m_ObjectHideFlags: 0
@@ -5293,37 +5302,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 115061490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!1 &1445266026
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1445266027}
-  m_Layer: 0
-  m_Name: DrillAttach
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1445266027
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1445266026}
-  serializedVersion: 2
-  m_LocalRotation: {x: -5.0242966e-15, y: 5.0242958e-15, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.0002, y: 0.0306, z: 0.1282}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 556152549}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1462076427
 GameObject:
   m_ObjectHideFlags: 0
@@ -6189,11 +6167,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1785801879}
   - {fileID: 843757865}
   - {fileID: 1308496999}
   - {fileID: 1260095154}
   - {fileID: 1484723231}
-  - {fileID: 1785801879}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1745145819
@@ -6639,7 +6617,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8440439721161652434, guid: fb5f86bdec59d2b48af017fd1fa688c3,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 556152549}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8970234419803572205, guid: fb5f86bdec59d2b48af017fd1fa688c3,
         type: 3}
@@ -7455,7 +7437,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0.7, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1909270583
