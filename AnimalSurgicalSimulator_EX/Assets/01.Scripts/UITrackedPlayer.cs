@@ -16,7 +16,8 @@ public class UITrackedPlayer : MonoBehaviour
     }
     void Update()
     {
-        transform.position = mainCamera.transform.position + (mainCamera.transform.forward * initialDistance);
+        Vector3 deltaPosition = mainCamera.transform.position + (mainCamera.transform.forward * initialDistance);
+        transform.position = new Vector3(deltaPosition.x,transform.position.y,deltaPosition.z);
         transform.LookAt(mainCamera.transform);
     }
 }
