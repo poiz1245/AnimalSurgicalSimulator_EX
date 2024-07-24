@@ -16,7 +16,8 @@ public class CustomSocketNBH : MonoBehaviour
     {
         for (int i = 0; i < sokets.Count; i++)
         {
-            sokets[i]. = attach.position;   
+            sokets[i].transform.position = attach.position;   
+            sokets[i].transform.rotation = attach.rotation;   
 
         }
     }
