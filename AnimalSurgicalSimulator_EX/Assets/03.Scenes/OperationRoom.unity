@@ -4568,6 +4568,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digComplete: {fileID: 1188487787}
+  digTask: {fileID: 1188487790}
+  uiText: {fileID: 446474711}
+  task: 0
 --- !u!4 &1188487789
 Transform:
   m_ObjectHideFlags: 0
@@ -4596,8 +4599,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handModel: {fileID: 1502207232}
-  grab: {fileID: 1785801876}
   hand: {fileID: 2059901799}
+  grab: {fileID: 1785801876}
   uiText: {fileID: 446474711}
 --- !u!1 &1200748270
 GameObject:
