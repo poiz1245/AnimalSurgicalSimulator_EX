@@ -46,6 +46,11 @@ public class HandTrackingModelControll : MonoBehaviour
             handModel.transform.rotation = Quaternion.Euler(new Vector3(90, -90, 0));
             Move();
         }
+        else if (isAttach && !grabInteractor.isSelected && distance <= 0.2f)
+        {
+            indicator.SetActive(true);
+            Detach();
+        }
         else if (!currentTaskComplete && isAttach && distance > 0.2f)
         {
             indicator.SetActive(true);
