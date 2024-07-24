@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class UIButtonHold : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
@@ -13,7 +14,8 @@ public class UIButtonHold : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     public enum ButtonName
     {
         BedUp,
-        BedDown
+        BedDown,
+        Reset
     }
 
     [SerializeField] ButtonName buttonName;
@@ -26,9 +28,13 @@ public class UIButtonHold : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
             {
                 BedUp();
             }
-            else
+            else if(buttonName == ButtonName.BedDown)
             {
                 BedDown();
+            }
+            else if(buttonName == ButtonName.Reset)
+            {
+                SceneReset();
             }
         }
     }
@@ -58,5 +64,9 @@ public class UIButtonHold : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     void Stop()
     {
         surgicalBed.transform.DOKill();
+    }
+    public void SceneReset()
+    {
+        SceneManager.LoadScene("OperationRoom");
     }
 }

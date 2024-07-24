@@ -4,89 +4,57 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using static TaskManager;
 
 public class DigTask : MonoBehaviour
 {
     [SerializeField] HandModelControll handModel;
-    [SerializeField] XRGrabInteractable grab;
     [SerializeField] HandTrackingModelControll hand;
-
+    [SerializeField] XRGrabInteractable grab;
 
     [SerializeField] TextMeshProUGUI uiText;
 
-    public enum TaskComplete
-    {
-        Start,
-        Attach,
-        Dig,
-        Complete
-    }
+    public delegate void TaskStateChanged(TaskName task);
+    public event TaskStateChanged OnTaskStateChanged;
 
-    private TaskComplete task = TaskComplete.Start; // 현재 작업 상태
-
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        switch (task)
+        switch (TaskManager.instance.task)
         {
-            case TaskComplete.Start:
-                UpdateUIText();
+            case TaskName.Start:
                 if (grab.isSelected)
                 {
-                    task = TaskComplete.Attach;
-                    UpdateUIText();
+                    TaskStateChange(TaskName.Attach);
                 }
                 break;
 
-            case TaskComplete.Attach:
+            case TaskName.Attach:
                 if (handModel.isAttach || hand.isAttach)
-
                 {
-                    task = TaskComplete.Dig;
-                    UpdateUIText();
+                    TaskStateChange(TaskName.Dig);
+                }
+                else if (!grab.isSelected)
+                {
+                    TaskStateChange(TaskName.Start);
                 }
                 break;
 
-            case TaskComplete.Dig:
+            case TaskName.Dig:
                 if (handModel.currentTaskComplete || hand.currentTaskComplete)
                 {
-                    task = TaskComplete.Complete;
-                    UpdateUIText();
+                    TaskStateChange(TaskName.Complete);
+                }
+                else if ((handModel.isAttach == false && hand.isAttach == false))
+                {
+                    TaskStateChange(TaskName.Attach);
                 }
                 break;
-
-            case TaskComplete.Complete:
-                // 작업 완료 후 추가 동작이 필요하다면 여기에 작성
-                break;
-        }
-        if (!grab.isSelected && task == TaskComplete.Attach)
-        {
-            task = TaskComplete.Start;
-            UpdateUIText();
-        }
-        else if ((handModel.isAttach == false && hand.isAttach == false) && task == TaskComplete.Dig)
-        {
-            task = TaskComplete.Attach;
-            UpdateUIText();
         }
     }
 
-    void UpdateUIText()
+    private void TaskStateChange(TaskName taskName)
     {
-        switch (task)
-        {
-            case TaskComplete.Start:
-                uiText.text = "Grab the drill";
-                break;
-            case TaskComplete.Attach:
-                uiText.text = "Attach the drill to the guidelines";
-                break;
-            case TaskComplete.Dig:
-                uiText.text = "Put your fist on the drill";
-                break;
-            case TaskComplete.Complete:
-                uiText.text = "Bring the drill back to its original position";
-                break;
-        }
+        TaskManager.instance.task = taskName;
+        OnTaskStateChanged?.Invoke(TaskManager.instance.task);
     }
 }
