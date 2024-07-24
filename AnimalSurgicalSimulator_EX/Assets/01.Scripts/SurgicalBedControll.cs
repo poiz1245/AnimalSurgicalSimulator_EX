@@ -9,7 +9,6 @@ public class SurgicalBedControll : MonoBehaviour
     [SerializeField] GameObject surgicalBed;
     [SerializeField] InputActionReference primaryButton;
     [SerializeField] InputActionReference secondaryButton;
-
     bool upButton;
     bool downButton;
     private void Start()
@@ -29,7 +28,7 @@ public class SurgicalBedControll : MonoBehaviour
     void BedUp(InputAction.CallbackContext context)
     {
         //upButton = true;
-        surgicalBed.transform.DOLocalMove(new Vector3(0, 0.1f, 0), 3).SetEase(Ease.Linear);
+        surgicalBed.transform.DOLocalMove(new Vector3(0, 0.5f, 0), 3f).SetEase(Ease.Linear);
     }
     void BedDown(InputAction.CallbackContext context)
     {

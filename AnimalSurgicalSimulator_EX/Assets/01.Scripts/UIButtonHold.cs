@@ -43,6 +43,7 @@ public class UIButtonHold : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     public void OnPointerDown(PointerEventData eventData)
     {
         isHolding = true;
+        HapticsTest.instance.CustomBasic(0.05f, 0.1f);
     }
 
     // 버튼에서 손을 뗐을 때 호출되는 메서드

@@ -92,11 +92,11 @@ public class HandModelControll : MonoBehaviour
         {
             if (drillTrigger.currentTriggerLayerName == "OutsideBone")
             {
-                drillSpeed = 0.005f;
+                drillSpeed = 0.001f;
             }
             else if (drillTrigger.currentTriggerLayerName == "InsideBone")
             {
-                drillSpeed = 0.02f;
+                drillSpeed = 0.005f;
             }
             else if (drillTrigger.currentTriggerLayerName == "EndLayer")
             {
