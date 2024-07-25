@@ -10,7 +10,6 @@ public class TaskManager : MonoBehaviour
 
     public DigComplete digComplete;
     [SerializeField] DigTask digTask;
-    [SerializeField] TextMeshProUGUI uiText;
     public enum TaskName
     {
         Start,
@@ -33,28 +32,7 @@ public class TaskManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        digTask.OnTaskStateChanged += UpdateUIText;
-        UpdateUIText(task);
-    }
+   
 
-    void UpdateUIText(TaskName taskName)
-    {
-        switch (taskName)
-        {
-            case TaskName.Start:
-                uiText.text = "Grab the drill";
-                break;
-            case TaskName.Attach:
-                uiText.text = "Attach the drill to the guidelines";
-                break;
-            case TaskName.Dig:
-                uiText.text = "Put your fist on the drill";
-                break;
-            case TaskName.Complete:
-                uiText.text = "Bring the drill back to its original position";
-                break;
-        }
-    }
+
 }

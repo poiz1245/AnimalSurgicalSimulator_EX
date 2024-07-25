@@ -56,7 +56,7 @@ public class UIButtonHold : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public void BedUp()
     {
-        surgicalBed.transform.DOLocalMove(new Vector3(0, 0.1f, 0), 3).SetEase(Ease.Linear);
+        surgicalBed.transform.DOLocalMove(new Vector3(0, 0.5f, 0), 3).SetEase(Ease.Linear);
     }
     public void BedDown()
     {
