@@ -13,6 +13,7 @@ public class DigTask : MonoBehaviour
     [SerializeField] XRGrabInteractable grab;
 
     [SerializeField] TextMeshProUGUI uiText;
+    [SerializeField] TextMeshProUGUI subUiText;
 
     public delegate void TaskStateChanged(TaskName task);
     public event TaskStateChanged OnTaskStateChanged;
@@ -70,15 +71,19 @@ public class DigTask : MonoBehaviour
         {
             case TaskName.Start:
                 uiText.text = "Grab the drill";
+                subUiText.text = "* Follow the drill guidelines on the right";
                 break;
             case TaskName.Attach:
                 uiText.text = "Attach the drill to the guidelines";
+                subUiText.text = "* Hold the object and follow the guidelines";
                 break;
             case TaskName.Dig:
                 uiText.text = "Put your fist on the drill";
+                subUiText.text = "* Pull the index finger to activate the drill";
                 break;
             case TaskName.Complete:
                 uiText.text = "Bring the drill back to its original position";
+                subUiText.text = "* Take it to the stand. Put your hands down";
                 break;
         }
     }

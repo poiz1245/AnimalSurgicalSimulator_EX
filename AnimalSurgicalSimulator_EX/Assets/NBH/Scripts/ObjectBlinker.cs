@@ -6,8 +6,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ObjectBlinker : MonoBehaviour
 {
     //[SerializeField] XRBaseInteractor socketInteractor; // 소켓 인터렉터 참조
-    //[SerializeField] CustomSocket socket;
-    [SerializeField] CustomSocketNBH socket;
+    [SerializeField] CustomSocket socket;
+    //[SerializeField] CustomSocketNBH socket;
     [SerializeField] float blinkInterval = 0.5f; // 깜빡이는 간격
     [SerializeField] List<XRGrabInteractable> grabInteractors; // XRGrabInteractable 리스트
     [SerializeField] List<GameObject> objectsToBlink; // 깜빡이게 할 오브젝트 리스트
