@@ -32,6 +32,7 @@ public class CustomSocketNBH : MonoBehaviour
                 // 소켓에 부착
                 if (i < attach.Count)
                 {
+                    // 해당 인덱스의 attach로 이동
                     grabInteractable.transform.position = attach[i].position;
                     grabInteractable.transform.rotation = attach[i].rotation;
 
@@ -40,13 +41,16 @@ public class CustomSocketNBH : MonoBehaviour
                 }
                 break; // 하나의 오브젝트만 처리
             }
-            else
-            {
-                hoverMesh.SetActive(true);
-                hasSelection = false;
-            }
+        }
+
+        // 만약 해당 오브젝트가 소켓에 부착되지 않았다면 hoverMesh를 활성화
+        if (!hasSelection)
+        {
+            hoverMesh.SetActive(true);
+            hasSelection = false;
         }
     }
+
 
     private void OnTriggerExit(Collider other)
     {
