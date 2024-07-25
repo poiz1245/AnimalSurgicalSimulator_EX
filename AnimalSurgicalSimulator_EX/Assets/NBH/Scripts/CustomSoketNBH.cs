@@ -17,24 +17,22 @@ public class CustomSocketNBH : MonoBehaviour
         {
             hoverMesh.SetActive(true);
         }
+        
     }
 
     private void OnTriggerStay(Collider other)
     {
-        for (int i = 0; i < selectObjectGrabInteractable.Count; ++i)
+        for (int i = 0; i < selectObjectGrabInteractable.Count; i++)
         {
-            XRGrabInteractable grabInteractable = selectObjectGrabInteractable[i];
-
             // 해당 오브젝트가 트리거된 경우
-            if (grabInteractable != null && other.gameObject == grabInteractable.gameObject)
+            if (selectObjectGrabInteractable[i] != null && other.gameObject == selectObjectGrabInteractable[i].gameObject)
             {
-                print(selectObjectGrabInteractable[i]);
-                // 소켓에 부착
-                if (i < attach.Count)
+                // 인덱스가 같을 경우에만 이동
+                if (i < attach.Count) // attach 리스트가 충분한지 확인
                 {
                     // 해당 인덱스의 attach로 이동
-                    grabInteractable.transform.position = attach[i].position;
-                    grabInteractable.transform.rotation = attach[i].rotation;
+                    selectObjectGrabInteractable[i].transform.position = attach[i].position;
+                    selectObjectGrabInteractable[i].transform.rotation = attach[i].rotation;
 
                     hasSelection = true;
                     hoverMesh.SetActive(false);
@@ -50,6 +48,7 @@ public class CustomSocketNBH : MonoBehaviour
             hasSelection = false;
         }
     }
+
 
 
     private void OnTriggerExit(Collider other)
