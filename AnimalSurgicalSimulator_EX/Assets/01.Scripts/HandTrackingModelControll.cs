@@ -46,6 +46,11 @@ public class HandTrackingModelControll : MonoBehaviour
             handModel.transform.rotation = Quaternion.Euler(new Vector3(90, -90, 0));
             Move();
         }
+        else if (isAttach && !grabInteractor.isSelected && distance <= 0.2f)
+        {
+            indicator.SetActive(true);
+            Detach();
+        }
         else if (!currentTaskComplete && isAttach && distance > 0.2f)
         {
             indicator.SetActive(true);
@@ -97,11 +102,11 @@ public class HandTrackingModelControll : MonoBehaviour
         {
             if (drillTrigger.currentTriggerLayerName == "OutsideBone")
             {
-                drillSpeed = 0.005f;
+                drillSpeed = 0.001f;
             }
             else if (drillTrigger.currentTriggerLayerName == "InsideBone")
             {
-                drillSpeed = 0.02f;
+                drillSpeed = 0.005f;
             }
             else if (drillTrigger.currentTriggerLayerName == "EndLayer")
             {
@@ -129,5 +134,10 @@ public class HandTrackingModelControll : MonoBehaviour
     void TaskComplete(bool taskComplete)
     {
         TaskManager.instance.digComplete.TaskComplete();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        HapticsTest.instance.CustomBasic(0.05f, 0.1f);
     }
 }

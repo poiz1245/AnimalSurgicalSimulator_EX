@@ -21,7 +21,7 @@ public class HandModelControll : MonoBehaviour
     public bool isAttach { get; private set; } = false;
 
     public bool currentTaskComplete { get; private set; } = false;
-   
+
     public delegate void TaskCompleted(bool taskComplete);
     public event TaskCompleted IsTaskCompleted;
 
@@ -29,7 +29,7 @@ public class HandModelControll : MonoBehaviour
     private void Start()
     {
         IsTaskCompleted += TaskComplete;
-        
+
     }
     private void Update()
     {
@@ -46,11 +46,17 @@ public class HandModelControll : MonoBehaviour
             handModel.transform.rotation = Quaternion.Euler(new Vector3(90, -90, 0));
             Move();
         }
+        else if(isAttach && !grabInteractor.isSelected && distance <= 0.2f)
+        {
+            indicator.SetActive(true);
+            Detach();
+        }
         else if (!currentTaskComplete && isAttach && distance > 0.2f)
         {
             indicator.SetActive(true);
             Detach();
         }
+
     }
     private void Attach()
     {
@@ -58,8 +64,8 @@ public class HandModelControll : MonoBehaviour
         grabInteractor.trackRotation = false;
 
         grabObject.transform.SetParent(handModel.transform);
-        //gameObject.transform.position = drillAttach.position;
-        //gameObject.transform.rotation = drillAttach.rotation;
+        grabObject.transform.position = drillAttach.transform.position;
+        grabObject.transform.rotation = drillAttach.transform.rotation;
 
         handModel.transform.SetParent(null);
         handModel.transform.position = indicatorAttach.position;
@@ -86,11 +92,11 @@ public class HandModelControll : MonoBehaviour
         {
             if (drillTrigger.currentTriggerLayerName == "OutsideBone")
             {
-                drillSpeed = 0.005f;
+                drillSpeed = 0.001f;
             }
             else if (drillTrigger.currentTriggerLayerName == "InsideBone")
             {
-                drillSpeed = 0.02f;
+                drillSpeed = 0.005f;
             }
             else if (drillTrigger.currentTriggerLayerName == "EndLayer")
             {

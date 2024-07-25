@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class ObjectGrabGuideControll : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    [SerializeField] GameObject guideMesh;
     void Update()
     {
-        //TaskManager.instance.
+        if(TaskManager.instance.task == TaskManager.TaskName.Start)
+        {
+            guideMesh.SetActive(true);
+        }
+        else
+        {
+            guideMesh.SetActive(false);
+        }
     }
 }

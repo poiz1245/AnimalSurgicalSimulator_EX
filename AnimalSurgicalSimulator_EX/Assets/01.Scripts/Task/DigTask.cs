@@ -17,6 +17,12 @@ public class DigTask : MonoBehaviour
     public delegate void TaskStateChanged(TaskName task);
     public event TaskStateChanged OnTaskStateChanged;
 
+    private void Start()
+    {
+        OnTaskStateChanged += UpdateUIText;
+        UpdateUIText(TaskManager.instance.task);
+    }
+
     public void Update()
     {
         switch (TaskManager.instance.task)
@@ -56,5 +62,24 @@ public class DigTask : MonoBehaviour
     {
         TaskManager.instance.task = taskName;
         OnTaskStateChanged?.Invoke(TaskManager.instance.task);
+    }
+
+    void UpdateUIText(TaskName taskName)
+    {
+        switch (taskName)
+        {
+            case TaskName.Start:
+                uiText.text = "Grab the drill";
+                break;
+            case TaskName.Attach:
+                uiText.text = "Attach the drill to the guidelines";
+                break;
+            case TaskName.Dig:
+                uiText.text = "Put your fist on the drill";
+                break;
+            case TaskName.Complete:
+                uiText.text = "Bring the drill back to its original position";
+                break;
+        }
     }
 }

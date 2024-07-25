@@ -81,7 +81,6 @@ public class ObjectBlinker : MonoBehaviour
     {
         if (taskComplete)
         {
-            Debug.Log("Task is completed.");
             // 여기에서 필요한 작업을 수행합니다.
             if (grabbedIndex >= 0 && grabbedIndex < objectsToBlink.Count)
             {
