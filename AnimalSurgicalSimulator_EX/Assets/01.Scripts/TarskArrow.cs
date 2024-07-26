@@ -1,37 +1,152 @@
+//using System.Collections.Generic;
+//using UnityEngine;
+//using static DigTask;
+//using static TaskManager;
+
+//public class TaskArrow : MonoBehaviour
+//{
+//    Camera mainCamera;
+//    [SerializeField] List<Transform> targets; // 바라볼 오브젝트 리스트
+//    [SerializeField] float fieldOfView; // 바라보는 각도 허용 범위
+//    [SerializeField] GameObject[] arrow; // 비활성화할 Arrow 오브젝트
+
+//    public delegate void TaskStateChanged(TaskName task);
+//    public event TaskStateChanged OnTaskStateChanged;
+
+//    void Start()
+//    {
+//        mainCamera = Camera.main;
+//    }
+
+//    void Update()
+//    {
+//        for (int i = 0; i < targets.Count; i++)
+//        {
+//            if (targets[i] != null && targets[i].gameObject.activeInHierarchy)
+//            {
+//                Vector3 cameraPosition = mainCamera.transform.position;
+//                Vector3 objectPosition = targets[i].position;
+
+//                // 방향 벡터 계산
+//                Vector3 directionToTarget = objectPosition - cameraPosition;
+//                float angle = Vector3.SignedAngle(mainCamera.transform.forward, directionToTarget, Vector3.up);
+
+//                // 시야각 확인
+//                if (Mathf.Abs(angle) <= fieldOfView / 2)
+//                {
+//                    // 시야각 안에 있을 때의 처리 (예: 작업 상태 가져오기)
+//                    TaskName currentTask = TaskManager.instance.task;
+//                    // TargetView(i, currentTask);
+//                    arrow[0].SetActive(false);
+//                    arrow[1].SetActive(false);
+//                }
+//                else
+//                {
+//                    // 시야각에 들어오지 않는 경우 방향에 따라 화살표 활성화
+//                    if (angle < 0)
+//                    {
+//                        // 왼쪽에 위치
+//                        arrow[0].SetActive(true);
+//                        arrow[1].SetActive(false);
+//                    }
+//                    else
+//                    {
+//                        // 오른쪽에 위치
+//                        arrow[0].SetActive(false);
+//                        arrow[1].SetActive(true);
+//                    }
+//                }
+//            }
+//            else
+//            {
+//                // 타겟이 비활성화 되어 있으면 화살표 비활성화
+//                arrow[0].SetActive(false);
+//                arrow[1].SetActive(false);
+//            }
+//        }
+//    }
+//}
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TaskArrow : MonoBehaviour
 {
-    [SerializeField]List<Transform> targetPositions; // 목표 위치 리스트
-    int currentIndex;
+    private static TaskArrow instance; // 싱글톤 인스턴스
+    private Camera mainCamera;
+    [SerializeField] float fieldOfView; // 바라보는 각도 허용 범위
+    [SerializeField] GameObject[] arrow; // 비활성화할 Arrow 오브젝트
+    private List<Transform> targets; // 타겟 리스트
+    public static TaskArrow Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<TaskArrow>();
+                if (instance == null)
+                {
+                    Debug.LogError("TaskArrow instance not found in the scene.");
+                }
+            }
+            return instance;
+        }
+    }
+
+    void Start()
+    {
+        mainCamera = Camera.main;
+    }
+
     void Update()
     {
-        if (currentIndex < targetPositions.Count)
+        if (targets == null || targets.Count == 0) return;
+
+        for (int i = 0; i < targets.Count; i++)
         {
-            // 현재 목표 위치로 이동
-            Transform targetPosition = targetPositions[currentIndex];
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition.position, Time.deltaTime); // 속도 설정
-
-            // z 회전 변경 (스위치문을 사용하여 각 인덱스에 따라 회전 설정)
-            switch (currentIndex)
+            if (targets[i] != null && targets[i].gameObject.activeInHierarchy)
             {
-                case 0:
-                    gameObject.SetActive(false);
-                    break;
-                case 1:
-                    transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, -180f);
-                    break;
-                // 필요에 따라 추가적인 case를 추가
-                default:
-                    break;
+                Vector3 cameraPosition = mainCamera.transform.position;
+                Vector3 objectPosition = targets[i].position;
+
+                // 방향 벡터 계산
+                Vector3 directionToTarget = objectPosition - cameraPosition;
+                float angle = Vector3.SignedAngle(mainCamera.transform.forward, directionToTarget, Vector3.up);
+
+                // 시야각 확인
+                if (Mathf.Abs(angle) <= fieldOfView / 2)
+                {
+                    // 시야각 안에 있을 때의 처리
+                    arrow[0].SetActive(false);
+                    arrow[1].SetActive(false);
+                }
+                else
+                {
+                    // 시야각에 들어오지 않는 경우 방향에 따라 화살표 활성화
+                    if (angle < 0)
+                    {
+                        // 왼쪽에 위치
+                        arrow[0].SetActive(true);
+                        arrow[1].SetActive(false);
+                    }
+                    else
+                    {
+                        // 오른쪽에 위치
+                        arrow[0].SetActive(false);
+                        arrow[1].SetActive(true);
+                    }
+                }
             }
-
-            // 목표 위치에 도달하면 다음 목표로 변경
-            if (Vector3.Distance(transform.position, targetPosition.position) < 0.1f)
+            else
             {
-                currentIndex++;
+                // 타겟이 비활성화 되어 있으면 화살표 비활성화
+                arrow[0].SetActive(false);
+                arrow[1].SetActive(false);
             }
         }
+    }
+
+    public void SetTargets(List<Transform> newTargets)
+    {
+        targets = newTargets;
     }
 }
