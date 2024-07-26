@@ -9,7 +9,6 @@ public class UITrackedPlayer : MonoBehaviour
 
     Camera mainCamera;
     float initialDistance;
-
     private void Start()
     {
         mainCamera = Camera.main;
@@ -20,7 +19,7 @@ public class UITrackedPlayer : MonoBehaviour
     void Update()
     {
         Vector3 deltaPosition = mainCamera.transform.position + (mainCamera.transform.forward * initialDistance);
-        transform.position = new Vector3(deltaPosition.x,transform.position.y,deltaPosition.z);
+        transform.position = new Vector3(deltaPosition.x, mainCamera.transform.position.y + offsetY, deltaPosition.z);
         transform.LookAt(mainCamera.transform);
     }
 }
