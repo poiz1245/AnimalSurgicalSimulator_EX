@@ -7505,6 +7505,11 @@ MonoBehaviour:
   grab: {fileID: 288610222}
   uiText: {fileID: 372944429}
   subUiText: {fileID: 44074661}
+  targets:
+  - {fileID: 288610220}
+  - {fileID: 1374458818}
+  - {fileID: 1374458818}
+  - {fileID: 1197929314}
 --- !u!114 &1125392000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10671,8 +10676,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ddbaff91c355804f9903993b0baa4f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targets:
-  - {fileID: 288610220}
   fieldOfView: 60
   arrow:
   - {fileID: 242793017}
@@ -11994,7 +11997,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ddbaff91c355804f9903993b0baa4f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targets: []
   fieldOfView: 0
   arrow: []
 --- !u!1 &1941535124
