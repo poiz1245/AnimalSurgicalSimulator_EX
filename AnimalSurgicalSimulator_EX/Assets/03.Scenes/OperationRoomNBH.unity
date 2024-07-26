@@ -2419,6 +2419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e53be7d38c6f5f4ca062f62267009bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1381432552}
 --- !u!1 &232985268
 GameObject:
   m_ObjectHideFlags: 0
@@ -11822,6 +11823,7 @@ GameObject:
   - component: {fileID: 1906377974}
   - component: {fileID: 1906377973}
   - component: {fileID: 1906377975}
+  - component: {fileID: 1906377976}
   m_Layer: 5
   m_Name: TaskArrow
   m_TagString: Untagged
@@ -11901,6 +11903,21 @@ MonoBehaviour:
   targetPositions:
   - {fileID: 1169582734}
   - {fileID: 2069503981}
+--- !u!114 &1906377976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906377971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3526b810d91abdc47849bda825348212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 1381432556}
+  target: {fileID: 288610220}
+  lookThreshold: 10
 --- !u!1 &1941535124
 GameObject:
   m_ObjectHideFlags: 0

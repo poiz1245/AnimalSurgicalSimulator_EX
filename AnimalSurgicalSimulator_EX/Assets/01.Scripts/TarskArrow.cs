@@ -17,7 +17,7 @@ public class TaskArrow : MonoBehaviour
             switch (currentIndex)
             {
                 case 0:
-                    transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, -90f);
+                    gameObject.SetActive(false);
                     break;
                 case 1:
                     transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, -180f);
