@@ -4,24 +4,21 @@ using UnityEngine;
 
 public class UIButtonTrack : MonoBehaviour
 {
-    [SerializeField] Transform player; // 플레이어의 Transform
+    Transform mainCamera; // 플레이어의 Transform
     float minZ = 0.72f; // 최소 Z 값
     float maxZ = 1.5f;  // 최대 Z 값
 
     void Start()
     {
-        if (player == null)
-        {
-            Debug.LogError("플레이어를 설정해주세요.");
-        }
+        mainCamera = Camera.main.transform;
     }
 
     void Update()
     {
-        if (player != null)
+        if (mainCamera != null)
         {
             // 플레이어의 위치를 기준으로 버튼의 새로운 위치를 설정
-            Vector3 newPosition = player.position ;
+            Vector3 newPosition = mainCamera.position ;
 
             // Z 위치를 minZ와 maxZ 사이로 제한
             newPosition.z = Mathf.Clamp(newPosition.z, minZ, maxZ);
