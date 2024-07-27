@@ -50,7 +50,6 @@ public class ObjectBlinker : MonoBehaviour
             return;
         }
     }
-
     private IEnumerator BlinkObject(int index)
     {
         while (!isObjectInSocket)
