@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7742,7 +7743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HandTrackingEvents: {fileID: 1007995940611028215}
-  m_HandShapeOrPose: {fileID: 11400000, guid: 1b87b102d6f63a7458a7c10e6951b6cb, type: 2}
+  m_HandShapeOrPose: {fileID: 11400000, guid: a202cb3eb6dcbd64eb9e5c5fd09b14aa, type: 2}
   m_Background: {fileID: 0}
   m_GesturePerformed:
     m_PersistentCalls:
