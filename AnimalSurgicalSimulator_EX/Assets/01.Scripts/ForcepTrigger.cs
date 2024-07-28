@@ -3,24 +3,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
+using UnityEngine.XR.Hands;
 using UnityEngine.XR.Hands.Gestures;
+using UnityEngine.XR.Hands.Samples.Gestures.DebugTools;
 using UnityEngine.XR.Hands.Samples.VisualizerSample;
+using static TaskManager;
 
 public class ForcepTrigger : MonoBehaviour
 {
-    public HandVisualizer handVisualizer;
-    public void Vibration()
-    {
-        /* if (sisorShape.fingerShapeConditions[0]. <= 0.1f)
-         {
-             print("aa");
-             HapticsTest.instance.CustomBasic(1, 0.1f);
+    [SerializeField] GetMiddleFingerShapeCondition middleFingerShapeCondition;
 
-         }
-         else if (sisorShape.fingerShapeConditions[0].targets[0].desired > 0.1f && sisorShape.fingerShapeConditions[0].targets[0].desired <= 0.2f)
-         {
-             print("bb");
-             HapticsTest.instance.CustomBasic(1, 0.1f);
-         }*/
+    
+
+    private void Start()
+    {
+        middleFingerShapeCondition.OnValueChanged += Vibration;
+    }
+
+    void Vibration(float value)
+    {
+        HapticsTest.instance.CustomBasic(1, 0.1f);
+
+        /*if (value <= 0.4f)
+        {
+            print("aa");
+            HapticsTest.instance.CustomBasic(1, 0.1f);
+
+        }
+        else if (value > 0.4f && value <= 0.8f)
+        {
+            print("bb");
+            HapticsTest.instance.CustomBasic(1, 0.1f);
+        }
+        else if (value > 0.8f && value <= 1f)
+        {
+            print("cc");
+            HapticsTest.instance.CustomBasic(1, 0.1f);
+        }*/
     }
 }
