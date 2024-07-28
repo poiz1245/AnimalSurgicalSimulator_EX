@@ -24,6 +24,8 @@ public class DigTask : MonoBehaviour
 
         // 초기 타겟 설정
         UpdateTargets(TaskManager.instance.task);
+        // 초기 UI 텍스트 업데이트
+        UpdateUIText(TaskManager.instance.task);
     }
 
     public void Update()
