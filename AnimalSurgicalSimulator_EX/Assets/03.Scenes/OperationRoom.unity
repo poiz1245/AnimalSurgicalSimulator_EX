@@ -129,6 +129,128 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1785801874}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &18186338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 18186339}
+  - component: {fileID: 18186341}
+  - component: {fileID: 18186340}
+  m_Layer: 0
+  m_Name: Right Sisor Close Grip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &18186339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18186338}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4325059086601151717}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &18186340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18186338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf93899325d5df74eb9176e097ee3d4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HandTrackingEvents: {fileID: 1007995940611028215}
+  m_HandShapeOrPose: {fileID: 11400000, guid: 4008e1d3e5f29b148b785c9aa9c77575, type: 2}
+  m_Background: {fileID: 0}
+  m_GesturePerformed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 560445343}
+        m_TargetAssemblyTypeName: HandGrab, Assembly-CSharp
+        m_MethodName: SettingHandShape
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: Clamp
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 560445343}
+        m_TargetAssemblyTypeName: HandGrab, Assembly-CSharp
+        m_MethodName: LayerSetting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 560445343}
+        m_TargetAssemblyTypeName: HandGrab, Assembly-CSharp
+        m_MethodName: OnGripAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 919132148618843446}
+        m_TargetAssemblyTypeName: ClampTrigger, Assembly-CSharp
+        m_MethodName: CloseClamp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_GestureEnded:
+    m_PersistentCalls:
+      m_Calls: []
+  m_MinimumHoldTime: 0.01
+  m_GestureDetectionInterval: 0.01
+  m_StaticGestures:
+  - {fileID: 2272792352392748372}
+  - {fileID: 3473077810060414975}
+  - {fileID: 4118211158860607039}
+  - {fileID: 531429765451707944}
+  - {fileID: 4870785029421076451}
+  - {fileID: 7982097430812753504}
+  - {fileID: 7600528864783468077}
+  - {fileID: 18186340}
+  m_Highlight: {fileID: 0}
+--- !u!222 &18186341
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18186338}
+  m_CullTransparentMesh: 1
 --- !u!1 &18400571
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,7 +833,7 @@ Transform:
   m_GameObject: {fileID: 115061488}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: -0}
-  m_LocalPosition: {x: -0.14039998, y: 0.6561979, z: 0.0058412724}
+  m_LocalPosition: {x: -0.14039998, y: 0.6119, z: 0.0058412724}
   m_LocalScale: {x: 0.66666704, y: 0.52899814, z: 0.7586108}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2023,7 +2145,7 @@ Transform:
   m_GameObject: {fileID: 350884595}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.14039998, y: 0.65619785, z: 0.0058412724}
+  m_LocalPosition: {x: -0.14039998, y: 0.6119, z: 0.0058412724}
   m_LocalScale: {x: 0.1333334, y: 0.15172216, z: 0.15172215}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -8132,7 +8254,7 @@ GameObject:
   - component: {fileID: 1752741053}
   - component: {fileID: 1752741052}
   m_Layer: 0
-  m_Name: Right Sisor Grip
+  m_Name: Right Sisor Open Grip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8198,6 +8320,18 @@ MonoBehaviour:
       - m_Target: {fileID: 560445343}
         m_TargetAssemblyTypeName: HandGrab, Assembly-CSharp
         m_MethodName: OnGripAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 919132148618843446}
+        m_TargetAssemblyTypeName: ClampTrigger, Assembly-CSharp
+        m_MethodName: OpenClamp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8740,7 +8874,7 @@ PrefabInstance:
     - target: {fileID: 8440439721161652434, guid: fb5f86bdec59d2b48af017fd1fa688c3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.001445651
+      value: -0.08518493
       objectReference: {fileID: 0}
     - target: {fileID: 8440439721161652434, guid: fb5f86bdec59d2b48af017fd1fa688c3,
         type: 3}
@@ -10645,8 +10779,9 @@ GameObject:
   - component: {fileID: 543450653161230217}
   - component: {fileID: 919132148618843445}
   - component: {fileID: 919132148618843444}
+  - component: {fileID: 919132148618843446}
   m_Layer: 12
-  m_Name: Clamp_1
+  m_Name: Clamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10831,6 +10966,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &919132148618843446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148618843443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e79f4404720a564b87be800c3917385, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveClamp: {fileID: 8655143901254541801}
 --- !u!1 &919132148916590743
 GameObject:
   m_ObjectHideFlags: 0
@@ -10846,7 +10994,7 @@ GameObject:
   - component: {fileID: 1260095158}
   - component: {fileID: 1260095157}
   m_Layer: 11
-  m_Name: Scalpel_1
+  m_Name: Mes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11841,7 +11989,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8655143901254541801}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0.1513345, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12065,6 +12213,7 @@ Transform:
   - {fileID: 8642071557292568787}
   - {fileID: 1558408745}
   - {fileID: 1752741051}
+  - {fileID: 18186339}
   - {fileID: 5776575495651911926}
   - {fileID: 2078383042685363450}
   - {fileID: 6199481686666862824}
