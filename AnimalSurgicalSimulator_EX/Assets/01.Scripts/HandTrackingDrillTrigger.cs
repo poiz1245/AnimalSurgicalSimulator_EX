@@ -16,6 +16,9 @@ public class HandTrackingDrillTrigger : MonoBehaviour
     public string currentTriggerLayerName { get; private set; }
     public bool buttonOn { get; private set; } = false;
 
+    public delegate void ButtonSwitchChanged(bool buttonOn);
+    public event ButtonSwitchChanged buttonSwitchChanged;
+
     private void Update()
     {
         Vibration();
@@ -54,10 +57,12 @@ public class HandTrackingDrillTrigger : MonoBehaviour
     public void TriggerButtonOn()
     {
         buttonOn = true;
+        buttonSwitchChanged?.Invoke(buttonOn);
     }
     public void TriggerButtonOff()
     {
         buttonOn = false;
+        buttonSwitchChanged?.Invoke(buttonOn);
         spinObject.transform.DOKill();
         OnVibration(0);
     }
