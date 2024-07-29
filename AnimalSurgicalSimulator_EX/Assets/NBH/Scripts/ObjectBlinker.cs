@@ -13,6 +13,7 @@ public class ObjectBlinker : MonoBehaviour
     [SerializeField] List<GameObject> objectsToBlink; // 깜빡이게 할 오브젝트 리스트
     [SerializeField] HandModelControll handModelControll; // HandModelControll 인스턴스 참조
     [SerializeField] HandTrackingModelControll handTrackingModelControll; // HandModelControll 인스턴스 참조
+    [SerializeField] GameObject objecttransform;
 
     bool isObjectInSocket = false;
     bool isGrabbed = false;
@@ -50,7 +51,6 @@ public class ObjectBlinker : MonoBehaviour
             return;
         }
     }
-
     private IEnumerator BlinkObject(int index)
     {
         while (!isObjectInSocket)
@@ -62,6 +62,10 @@ public class ObjectBlinker : MonoBehaviour
 
         // 오브젝트가 소켓에 들어가면 깜빡이기 멈춤
         objectsToBlink[index].SetActive(false);
+        if (objecttransform != null) 
+        { 
+            objecttransform.SetActive(false);
+        }
     }
 
     private void OnGrabbed(int index)

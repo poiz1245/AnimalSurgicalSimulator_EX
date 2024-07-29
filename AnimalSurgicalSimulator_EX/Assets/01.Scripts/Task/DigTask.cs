@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
@@ -11,9 +10,9 @@ public class DigTask : MonoBehaviour
     [SerializeField] HandModelControll handModel;
     [SerializeField] HandTrackingModelControll hand;
     [SerializeField] XRGrabInteractable grab;
-
     [SerializeField] TextMeshProUGUI uiText;
     [SerializeField] TextMeshProUGUI subUiText;
+    [SerializeField] List<Transform> targets; // 타겟 오브젝트 리스트
 
     public delegate void TaskStateChanged(TaskName task);
     public event TaskStateChanged OnTaskStateChanged;
@@ -21,6 +20,11 @@ public class DigTask : MonoBehaviour
     private void Start()
     {
         OnTaskStateChanged += UpdateUIText;
+        OnTaskStateChanged += UpdateTargets; // 타겟 업데이트를 위한 이벤트 추가
+
+        // 초기 타겟 설정
+        UpdateTargets(TaskManager.instance.task);
+        // 초기 UI 텍스트 업데이트
         UpdateUIText(TaskManager.instance.task);
     }
 
@@ -86,5 +90,29 @@ public class DigTask : MonoBehaviour
                 subUiText.text = "* Take it to the stand. Put your hands down";
                 break;
         }
+    }
+
+    void UpdateTargets(TaskName taskName)
+    {
+        List<Transform> newTargets = new List<Transform>();
+
+        // TaskName에 따라 타겟 오브젝트를 변경
+        switch (taskName)
+        {
+            case TaskName.Start:
+                newTargets.Add(targets[0]);
+                break;
+            case TaskName.Attach:
+                newTargets.Add(targets[1]);
+                break;
+            case TaskName.Dig:
+                newTargets.Add(targets[2]);
+                break;
+            case TaskName.Complete:
+                newTargets.Add(targets[3]);
+                break;
+        }
+
+        TaskArrow.Instance.SetTargets(newTargets); // 타겟 업데이트
     }
 }
