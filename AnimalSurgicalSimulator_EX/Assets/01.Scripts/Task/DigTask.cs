@@ -111,6 +111,7 @@ public class DigTask : MonoBehaviour
             case TaskName.Complete:
                 newTargets.Add(targets[3]);
                 break;
+            
         }
 
         TaskArrow.Instance.SetTargets(newTargets); // 타겟 업데이트
