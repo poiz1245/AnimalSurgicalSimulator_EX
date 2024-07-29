@@ -106,7 +106,7 @@ public class HandTrackingModelControll : MonoBehaviour
             }
             else if (drillTrigger.currentTriggerLayerName == "InsideBone")
             {
-                drillSpeed = 0.005f;
+                drillSpeed = 0.002f;
             }
             else if (drillTrigger.currentTriggerLayerName == "EndLayer")
             {

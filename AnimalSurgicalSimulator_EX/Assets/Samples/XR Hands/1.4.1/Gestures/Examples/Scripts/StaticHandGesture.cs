@@ -21,9 +21,9 @@ namespace UnityEngine.XR.Hands.Samples.GestureSample
         //[Tooltip("The target Transform to user for target conditions in the hand shape or pose.")]
         //Transform m_TargetTransform;
 
-        [SerializeField]
+        /*[SerializeField]
         [Tooltip("The image component that draws the background for gesture icons.")]
-        Image m_Background;
+        Image m_Background;*/
 
         [SerializeField]
         [Tooltip("The event fired when the gesture is performed.")]
@@ -41,13 +41,13 @@ namespace UnityEngine.XR.Hands.Samples.GestureSample
         [Tooltip("The interval at which the gesture detection is performed.")]
         float m_GestureDetectionInterval = 0.1f;
 
-        [SerializeField]
+        /*[SerializeField]
         [Tooltip("The static gestures associated with this gestures handedness.")]
-        StaticHandGesture[] m_StaticGestures;
+        StaticHandGesture[] m_StaticGestures;*/
 
-        [SerializeField]
+       /* [SerializeField]
         [Tooltip("The image component that draws the highlighted gesture icon border.")]
-        Image m_Highlight;
+        Image m_Highlight;*/
 
         XRHandShape m_HandShape;
         XRHandPose m_HandPose;
@@ -88,20 +88,20 @@ namespace UnityEngine.XR.Hands.Samples.GestureSample
         /// <summary>
         /// The image component that draws the background for gesture icons.
         /// </summary>
-        public Image background
+        /*public Image background
         {
             get => m_Background;
             set => m_Background = value;
-        }
+        }*/
 
         /// <summary>
         /// The image component that draws the highlight state drawn on top of the gesture icon background.
         /// </summary>
-        public Image highlight
+        /*public Image highlight
         {
             get => m_Highlight;
             set => m_Highlight = value;
-        }
+        }*/
 
         /// <summary>
         /// The event fired when the gesture is performed.
@@ -142,24 +142,24 @@ namespace UnityEngine.XR.Hands.Samples.GestureSample
         /// <summary>
         /// Sets any assigned highlight UI component as visible/hidden
         /// </summary>
-        public bool highlightVisible
+        /*public bool highlightVisible
         {
             set
             {
                 if (m_Highlight)
                     m_Highlight.enabled = value;
             }
-        }
+        }*/
 
         void Awake()
         {
            // m_BackgroundDefaultColor = m_Background.color;
 
-            if (m_Highlight)
+            /*if (m_Highlight)
             {
                 m_Highlight.enabled = false;
                 m_Highlight.gameObject.SetActive(true);
-            }
+            }*/
         }
 
         void OnEnable()
@@ -206,14 +206,14 @@ namespace UnityEngine.XR.Hands.Samples.GestureSample
                     m_PerformedTriggered = true;
                     //m_Background.color = m_BackgroundHighlightColor;
 
-                    if (m_Highlight)
-                        m_Highlight.enabled = true;
+                    /*if (m_Highlight)
+                        m_Highlight.enabled = true;*/
 
-                    foreach (var gesture in m_StaticGestures)
+                    /*foreach (var gesture in m_StaticGestures)
                     {
                         if (gesture != this)
                             gesture.highlightVisible = false;
-                    }
+                    }*/
                 }
             }
 
