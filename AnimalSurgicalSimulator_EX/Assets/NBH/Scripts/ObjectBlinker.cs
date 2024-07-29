@@ -62,7 +62,10 @@ public class ObjectBlinker : MonoBehaviour
 
         // 오브젝트가 소켓에 들어가면 깜빡이기 멈춤
         objectsToBlink[index].SetActive(false);
-        objecttransform.SetActive(false);
+        if (objecttransform != null) 
+        { 
+            objecttransform.SetActive(false);
+        }
     }
 
     private void OnGrabbed(int index)
