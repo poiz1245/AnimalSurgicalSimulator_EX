@@ -212,7 +212,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HandTrackingEvents: {fileID: 1007995940611028215}
   m_HandShapeOrPose: {fileID: 11400000, guid: 4008e1d3e5f29b148b785c9aa9c77575, type: 2}
-  m_Background: {fileID: 0}
   m_GesturePerformed:
     m_PersistentCalls:
       m_Calls:
@@ -245,16 +244,6 @@ MonoBehaviour:
       m_Calls: []
   m_MinimumHoldTime: 0.01
   m_GestureDetectionInterval: 0.01
-  m_StaticGestures:
-  - {fileID: 2272792352392748372}
-  - {fileID: 3473077810060414975}
-  - {fileID: 4118211158860607039}
-  - {fileID: 531429765451707944}
-  - {fileID: 4870785029421076451}
-  - {fileID: 7982097430812753504}
-  - {fileID: 7600528864783468077}
-  - {fileID: 18186340}
-  m_Highlight: {fileID: 0}
 --- !u!222 &18186341
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9260,7 +9249,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HandTrackingEvents: {fileID: 1007995940611028215}
   m_HandShapeOrPose: {fileID: 11400000, guid: 07e31b89a59a6a8459893fdada703109, type: 2}
-  m_Background: {fileID: 0}
   m_GesturePerformed:
     m_PersistentCalls:
       m_Calls:
@@ -9305,16 +9293,6 @@ MonoBehaviour:
       m_Calls: []
   m_MinimumHoldTime: 0.01
   m_GestureDetectionInterval: 0.01
-  m_StaticGestures:
-  - {fileID: 2272792352392748372}
-  - {fileID: 3473077810060414975}
-  - {fileID: 4118211158860607039}
-  - {fileID: 531429765451707944}
-  - {fileID: 4870785029421076451}
-  - {fileID: 7982097430812753504}
-  - {fileID: 7600528864783468077}
-  - {fileID: 1558408746}
-  m_Highlight: {fileID: 0}
 --- !u!222 &1558408747
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10186,7 +10164,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HandTrackingEvents: {fileID: 1007995940611028215}
   m_HandShapeOrPose: {fileID: 11400000, guid: a202cb3eb6dcbd64eb9e5c5fd09b14aa, type: 2}
-  m_Background: {fileID: 0}
   m_GesturePerformed:
     m_PersistentCalls:
       m_Calls:
@@ -10243,16 +10220,6 @@ MonoBehaviour:
       m_Calls: []
   m_MinimumHoldTime: 0.01
   m_GestureDetectionInterval: 0.01
-  m_StaticGestures:
-  - {fileID: 2272792352392748372}
-  - {fileID: 3473077810060414975}
-  - {fileID: 4118211158860607039}
-  - {fileID: 531429765451707944}
-  - {fileID: 4870785029421076451}
-  - {fileID: 7982097430812753504}
-  - {fileID: 7600528864783468077}
-  - {fileID: 1752741052}
-  m_Highlight: {fileID: 0}
 --- !u!222 &1752741053
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13011,39 +12978,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &531429765451707944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8274902914898245592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf93899325d5df74eb9176e097ee3d4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HandTrackingEvents: {fileID: 1007995940611028215}
-  m_HandShapeOrPose: {fileID: 11400000, guid: 3a3a0d45621f98a4daebb7304139c969, type: 2}
-  m_Background: {fileID: 0}
-  m_GesturePerformed:
-    m_PersistentCalls:
-      m_Calls: []
-  m_GestureEnded:
-    m_PersistentCalls:
-      m_Calls: []
-  m_MinimumHoldTime: 0.2
-  m_GestureDetectionInterval: 0.1
-  m_StaticGestures:
-  - {fileID: 2272792352392748372}
-  - {fileID: 3473077810060414975}
-  - {fileID: 4118211158860607039}
-  - {fileID: 531429765451707944}
-  - {fileID: 4870785029421076451}
-  - {fileID: 7982097430812753504}
-  - {fileID: 7600528864783468077}
-  - {fileID: 3178947022907050898}
-  m_Highlight: {fileID: 0}
 --- !u!4 &543450652315322576
 Transform:
   m_ObjectHideFlags: 0
@@ -13403,21 +13337,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &922422337495030399
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8130600444996957104}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4325059086601151717}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1007995940611028212
 GameObject:
   m_ObjectHideFlags: 0
@@ -13682,14 +13601,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4443337841706649136}
   m_Mesh: {fileID: 1599182274854829636, guid: c127cab234a627d44b74f682c2c7c1cd, type: 3}
---- !u!222 &2041261955545018050
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8274902914898245592}
-  m_CullTransparentMesh: 1
 --- !u!4 &2078383042685363450
 Transform:
   m_ObjectHideFlags: 0
@@ -13746,80 +13657,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 543450653161230217}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2272792352392748372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8130600444996957104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf93899325d5df74eb9176e097ee3d4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HandTrackingEvents: {fileID: 1007995940611028215}
-  m_HandShapeOrPose: {fileID: 11400000, guid: 7fdd2afa44a436446bdb55fa7872a77d, type: 2}
-  m_Background: {fileID: 0}
-  m_GesturePerformed:
-    m_PersistentCalls:
-      m_Calls: []
-  m_GestureEnded:
-    m_PersistentCalls:
-      m_Calls: []
-  m_MinimumHoldTime: 0.2
-  m_GestureDetectionInterval: 0.1
-  m_StaticGestures:
-  - {fileID: 2272792352392748372}
-  - {fileID: 3473077810060414975}
-  - {fileID: 4118211158860607039}
-  - {fileID: 531429765451707944}
-  - {fileID: 4870785029421076451}
-  - {fileID: 7982097430812753504}
-  - {fileID: 7600528864783468077}
-  - {fileID: 3178947022907050898}
-  m_Highlight: {fileID: 0}
---- !u!4 &2278525001471169848
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2396884346996858537}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4325059086601151717}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2396884346996858537
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2278525001471169848}
-  - component: {fileID: 7279608354638899564}
-  - component: {fileID: 3473077810060414975}
-  m_Layer: 0
-  m_Name: RightThumbs Down
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!222 &2424070764146768570
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8130600444996957104}
-  m_CullTransparentMesh: 1
 --- !u!4 &2435022884486021095
 Transform:
   m_ObjectHideFlags: 0
@@ -13954,7 +13791,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0038161539, y: 0.004350543, z: 0.010463953}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0.88}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1140990196}
@@ -14027,32 +13864,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &2981070804595611101
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4277124808390494728}
-  - component: {fileID: 3113719464179090508}
-  - component: {fileID: 7600528864783468077}
-  m_Layer: 0
-  m_Name: Right Grab
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!222 &3113719464179090508
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2981070804595611101}
-  m_CullTransparentMesh: 1
 --- !u!114 &3178947022907050898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14067,7 +13878,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HandTrackingEvents: {fileID: 1007995940611028215}
   m_HandShapeOrPose: {fileID: 11400000, guid: 2aec9519eba98b54db5fde41229c8984, type: 2}
-  m_Background: {fileID: 0}
   m_GesturePerformed:
     m_PersistentCalls:
       m_Calls:
@@ -14112,33 +13922,6 @@ MonoBehaviour:
       m_Calls: []
   m_MinimumHoldTime: 0.01
   m_GestureDetectionInterval: 0.01
-  m_StaticGestures:
-  - {fileID: 2272792352392748372}
-  - {fileID: 3473077810060414975}
-  - {fileID: 4118211158860607039}
-  - {fileID: 531429765451707944}
-  - {fileID: 4870785029421076451}
-  - {fileID: 7982097430812753504}
-  - {fileID: 7600528864783468077}
-  - {fileID: 3178947022907050898}
-  m_Highlight: {fileID: 0}
---- !u!1 &3209494578979687621
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6199481686666862824}
-  - component: {fileID: 7982097430812753504}
-  m_Layer: 0
-  m_Name: Right Point
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!33 &3228061437365825032
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14249,39 +14032,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148916590743}
   m_Mesh: {fileID: -5426745354775853194, guid: ab4f68ad744228a4197cd96af45409ee, type: 3}
---- !u!114 &3473077810060414975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2396884346996858537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf93899325d5df74eb9176e097ee3d4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HandTrackingEvents: {fileID: 1007995940611028215}
-  m_HandShapeOrPose: {fileID: 11400000, guid: c3992a46bbdfb1c4d9446ec269f778bd, type: 2}
-  m_Background: {fileID: 0}
-  m_GesturePerformed:
-    m_PersistentCalls:
-      m_Calls: []
-  m_GestureEnded:
-    m_PersistentCalls:
-      m_Calls: []
-  m_MinimumHoldTime: 0.2
-  m_GestureDetectionInterval: 0.1
-  m_StaticGestures:
-  - {fileID: 2272792352392748372}
-  - {fileID: 3473077810060414975}
-  - {fileID: 4118211158860607039}
-  - {fileID: 531429765451707944}
-  - {fileID: 4870785029421076451}
-  - {fileID: 7982097430812753504}
-  - {fileID: 7600528864783468077}
-  - {fileID: 3178947022907050898}
-  m_Highlight: {fileID: 0}
 --- !u!23 &3492224630658017403
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14455,7 +14205,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HandTrackingEvents: {fileID: 1007995940611028215}
   m_HandShapeOrPose: {fileID: 11400000, guid: f8cb17f8ab5fc8c4083750c7e3a19f97, type: 2}
-  m_Background: {fileID: 0}
   m_GesturePerformed:
     m_PersistentCalls:
       m_Calls:
@@ -14500,16 +14249,6 @@ MonoBehaviour:
       m_Calls: []
   m_MinimumHoldTime: 0.01
   m_GestureDetectionInterval: 0.01
-  m_StaticGestures:
-  - {fileID: 2272792352392748372}
-  - {fileID: 3473077810060414975}
-  - {fileID: 4118211158860607039}
-  - {fileID: 531429765451707944}
-  - {fileID: 4870785029421076451}
-  - {fileID: 7982097430812753504}
-  - {fileID: 7600528864783468077}
-  - {fileID: 3178947022907050898}
-  m_Highlight: {fileID: 0}
 --- !u!4 &4199881298012476586
 Transform:
   m_ObjectHideFlags: 0
@@ -14567,21 +14306,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!4 &4277124808390494728
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2981070804595611101}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4325059086601151717}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4325059086601151717
 Transform:
   m_ObjectHideFlags: 0
@@ -14601,11 +14325,6 @@ Transform:
   - {fileID: 18186339}
   - {fileID: 5776575495651911926}
   - {fileID: 2078383042685363450}
-  - {fileID: 6199481686666862824}
-  - {fileID: 922422337495030399}
-  - {fileID: 2278525001471169848}
-  - {fileID: 7599925194200361565}
-  - {fileID: 4277124808390494728}
   m_Father: {fileID: 1007995940611028213}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4358055833545161848
@@ -14779,7 +14498,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HandTrackingEvents: {fileID: 1007995940611028215}
   m_HandShapeOrPose: {fileID: 11400000, guid: 60daa8e83ed1163488562d11f4d9e5be, type: 2}
-  m_Background: {fileID: 0}
   m_GesturePerformed:
     m_PersistentCalls:
       m_Calls:
@@ -14836,16 +14554,6 @@ MonoBehaviour:
         m_CallState: 2
   m_MinimumHoldTime: 0.01
   m_GestureDetectionInterval: 0.01
-  m_StaticGestures:
-  - {fileID: 2272792352392748372}
-  - {fileID: 3473077810060414975}
-  - {fileID: 4118211158860607039}
-  - {fileID: 531429765451707944}
-  - {fileID: 4870785029421076451}
-  - {fileID: 7982097430812753504}
-  - {fileID: 7600528864783468077}
-  - {fileID: 3178947022907050898}
-  m_Highlight: {fileID: 0}
 --- !u!1 &4899513198031148450
 GameObject:
   m_ObjectHideFlags: 0
@@ -16256,21 +15964,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!4 &6199481686666862824
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3209494578979687621}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4325059086601151717}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6438412763069904895
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16366,14 +16059,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9011485695721672874}
   m_CullTransparentMesh: 1
---- !u!222 &7279608354638899564
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2396884346996858537}
-  m_CullTransparentMesh: 1
 --- !u!114 &7281332684812921689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16445,54 +16130,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!4 &7599925194200361565
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8274902914898245592}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4325059086601151717}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7600528864783468077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2981070804595611101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf93899325d5df74eb9176e097ee3d4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HandTrackingEvents: {fileID: 1007995940611028215}
-  m_HandShapeOrPose: {fileID: 11400000, guid: 201e5d377563ef14ba2af87226046e90, type: 2}
-  m_Background: {fileID: 0}
-  m_GesturePerformed:
-    m_PersistentCalls:
-      m_Calls: []
-  m_GestureEnded:
-    m_PersistentCalls:
-      m_Calls: []
-  m_MinimumHoldTime: 0.2
-  m_GestureDetectionInterval: 0.1
-  m_StaticGestures:
-  - {fileID: 2272792352392748372}
-  - {fileID: 3473077810060414975}
-  - {fileID: 4118211158860607039}
-  - {fileID: 531429765451707944}
-  - {fileID: 4870785029421076451}
-  - {fileID: 7982097430812753504}
-  - {fileID: 7600528864783468077}
-  - {fileID: 3178947022907050898}
-  m_Highlight: {fileID: 0}
 --- !u!23 &7661838249708871101
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16584,51 +16221,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 674291568256962871}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7982097430812753504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3209494578979687621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf93899325d5df74eb9176e097ee3d4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HandTrackingEvents: {fileID: 1007995940611028215}
-  m_HandShapeOrPose: {fileID: 11400000, guid: 8ecb1b2f675de454c8d5a427d3311887, type: 2}
-  m_Background: {fileID: 0}
-  m_GesturePerformed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 560445343}
-        m_TargetAssemblyTypeName: HandGrab, Assembly-CSharp
-        m_MethodName: OnGripAction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  m_GestureEnded:
-    m_PersistentCalls:
-      m_Calls: []
-  m_MinimumHoldTime: 0.01
-  m_GestureDetectionInterval: 0.01
-  m_StaticGestures:
-  - {fileID: 2272792352392748372}
-  - {fileID: 3473077810060414975}
-  - {fileID: 4118211158860607039}
-  - {fileID: 531429765451707944}
-  - {fileID: 4870785029421076451}
-  - {fileID: 7982097430812753504}
-  - {fileID: 7600528864783468077}
-  - {fileID: 3178947022907050898}
-  m_Highlight: {fileID: 0}
 --- !u!33 &8026137945729737561
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16718,24 +16310,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &8130600444996957104
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 922422337495030399}
-  - component: {fileID: 2424070764146768570}
-  - component: {fileID: 2272792352392748372}
-  m_Layer: 0
-  m_Name: Right Thumbs Up
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!4 &8182899355844640961
 Transform:
   m_ObjectHideFlags: 0
@@ -16751,24 +16325,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 954426332}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8274902914898245592
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7599925194200361565}
-  - component: {fileID: 2041261955545018050}
-  - component: {fileID: 531429765451707944}
-  m_Layer: 0
-  m_Name: Right Shaka
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!33 &8545161734469015459
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -17002,6 +16558,7 @@ SceneRoots:
   - {fileID: 218303316}
   - {fileID: 167916125}
   - {fileID: 948240318}
+  - {fileID: 673420526}
   - {fileID: 674230719}
   - {fileID: 1188487789}
   - {fileID: 649721434}
@@ -17014,4 +16571,3 @@ SceneRoots:
   - {fileID: 18400574}
   - {fileID: 1715114811}
   - {fileID: 543450653317010946}
-  - {fileID: 673420526}
