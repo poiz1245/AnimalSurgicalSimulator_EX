@@ -6,7 +6,7 @@ public class CustomSocketNBH : MonoBehaviour
 {
     [SerializeField] List<Transform> attach; // 소켓의 위치
     [SerializeField] LayerMask socketLayer; // 소켓 레이어
-    [SerializeField] GameObject hoverMesh; // 호버 메쉬
+    [SerializeField] List<GameObject> hoverMesh; // 호버 메쉬
     [SerializeField] List<XRGrabInteractable> selectObjectGrabInteractable; // 그랩 가능한 오브젝트 리스트
 
     public bool hasSelection = false;
@@ -15,7 +15,10 @@ public class CustomSocketNBH : MonoBehaviour
     {
         if ((socketLayer & (1 << other.gameObject.layer)) != 0)
         {
-            hoverMesh.SetActive(true);
+            for (int i = 0; i < selectObjectGrabInteractable.Count; i++) 
+            { 
+                hoverMesh[i].SetActive(true);
+            }
         }
         
     }
@@ -35,24 +38,29 @@ public class CustomSocketNBH : MonoBehaviour
                     selectObjectGrabInteractable[i].transform.rotation = attach[i].rotation;
 
                     hasSelection = true;
-                    hoverMesh.SetActive(false);
+                    hoverMesh[i].SetActive(false);
                 }
                 break; // 하나의 오브젝트만 처리
+            }
+            else if (!hasSelection)
+            {
+                hoverMesh[i].SetActive(true);
+                hasSelection = false;
             }
         }
 
         // 만약 해당 오브젝트가 소켓에 부착되지 않았다면 hoverMesh를 활성화
-        if (!hasSelection)
-        {
-            hoverMesh.SetActive(true);
-            hasSelection = false;
-        }
+       
     }
 
 
 
     private void OnTriggerExit(Collider other)
     {
-        hoverMesh.SetActive(false);
+        for (int i = 0; i < selectObjectGrabInteractable.Count; i++)
+        {
+            hoverMesh[i].SetActive(false);
+
+        }
     }
 }
