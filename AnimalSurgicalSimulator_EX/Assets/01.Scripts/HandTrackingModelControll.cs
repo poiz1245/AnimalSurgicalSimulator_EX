@@ -138,6 +138,6 @@ public class HandTrackingModelControll : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        HapticsTest.instance.CustomBasic(0.05f, 0.1f);
+        HapticsTest.instance.CustomBasic(0.02f, 0.1f);
     }
 }
