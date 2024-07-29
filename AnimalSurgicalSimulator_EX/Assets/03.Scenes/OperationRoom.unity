@@ -1559,7 +1559,7 @@ GameObject:
   m_Component:
   - component: {fileID: 250369975}
   - component: {fileID: 250369977}
-  - component: {fileID: 250369976}
+  - component: {fileID: 250369978}
   m_Layer: 0
   m_Name: Mes Grip Guide Mesh
   m_TagString: Untagged
@@ -1584,19 +1584,6 @@ Transform:
   - {fileID: 569462539}
   m_Father: {fileID: 543450652905357869}
   m_LocalEulerAnglesHint: {x: -90, y: 180, z: -90}
---- !u!114 &250369976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 250369974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: deebcfa48a6ff784d9cf59db1a4e28da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  guideMesh: {fileID: 1756809542}
 --- !u!95 &250369977
 Animator:
   serializedVersion: 5
@@ -1618,6 +1605,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &250369978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250369974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d75182dcef02f4c9a9510cffb339db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guideMesh: {fileID: 1756809542}
 --- !u!1 &253459786
 GameObject:
   m_ObjectHideFlags: 0
@@ -7813,7 +7813,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1299229425
 Transform:
   m_ObjectHideFlags: 0
@@ -10276,7 +10276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1756809543
 Transform:
   m_ObjectHideFlags: 0
@@ -12529,7 +12529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2068258516}
   - component: {fileID: 2068258518}
-  - component: {fileID: 2068258517}
+  - component: {fileID: 2068258519}
   m_Layer: 0
   m_Name: Clamp Grip Guide Mesh
   m_TagString: Untagged
@@ -12554,19 +12554,6 @@ Transform:
   - {fileID: 430142496}
   m_Father: {fileID: 543450653161230217}
   m_LocalEulerAnglesHint: {x: -79.967, y: 90, z: -90}
---- !u!114 &2068258517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2068258515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: deebcfa48a6ff784d9cf59db1a4e28da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  guideMesh: {fileID: 1299229424}
 --- !u!95 &2068258518
 Animator:
   serializedVersion: 5
@@ -12588,6 +12575,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2068258519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068258515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d75182dcef02f4c9a9510cffb339db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guideMesh: {fileID: 1299229424}
 --- !u!1 &2071932714
 GameObject:
   m_ObjectHideFlags: 0
@@ -13087,7 +13087,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148618843443}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -0.152, z: 0.279}
   m_LocalScale: {x: 0.69999987, y: 0.7, z: 0.6999998}
   m_ConstrainProportionsScale: 1
@@ -13097,7 +13097,7 @@ Transform:
   - {fileID: 2250688162329212857}
   - {fileID: 1349387678}
   m_Father: {fileID: 1715114811}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &543450653317010946
 Transform:
   m_ObjectHideFlags: 0
