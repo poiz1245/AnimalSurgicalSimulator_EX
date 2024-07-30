@@ -7662,6 +7662,7 @@ GameObject:
   - component: {fileID: 1188487789}
   - component: {fileID: 1188487788}
   - component: {fileID: 1188487787}
+  - component: {fileID: 1188487791}
   - component: {fileID: 1188487790}
   m_Layer: 0
   m_Name: Taskmanager
@@ -7696,6 +7697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digComplete: {fileID: 1188487787}
+  mesComplete: {fileID: 1188487791}
   digTask: {fileID: 1188487790}
   task: 0
 --- !u!4 &1188487789
@@ -7735,6 +7737,19 @@ MonoBehaviour:
   - {fileID: 674291568256962871}
   - {fileID: 674291568256962871}
   - {fileID: 115061490}
+--- !u!114 &1188487791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188487786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43814277a974fba4784bc39dee1ea3bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskObject: {fileID: 0}
 --- !u!1 &1200748270
 GameObject:
   m_ObjectHideFlags: 0

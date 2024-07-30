@@ -108,6 +108,6 @@ public class MesTaskHandModelControll : MonoBehaviour
 
     void TaskComplete(bool taskComplete)
     {
-        TaskManager.instance.digComplete.TaskComplete();
+        TaskManager.instance.mesComplete.TaskComplete();
     }
 }
