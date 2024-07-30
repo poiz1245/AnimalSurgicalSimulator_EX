@@ -10,6 +10,7 @@ public class TaskManager : MonoBehaviour
 
     public DigComplete digComplete;
     public MesComplete mesComplete;
+    public ClampComplete clampComplete;
 
     [SerializeField] DigTask digTask;
     public enum TaskName

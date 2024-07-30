@@ -10,21 +10,15 @@ public class ClampTaskHandModelControll : MonoBehaviour
     [SerializeField] GameObject indicator;
     [SerializeField] GameObject handModel;
     [SerializeField] GameObject grabObject;
-    //[SerializeField] Transform grabObjectAttach;
 
     [SerializeField] Transform mesAttach;
 
-    //[SerializeField] Transform indicatorAttach;
-
     [SerializeField] XRSocketInteractor socketInteractor;
     [SerializeField] XRGrabInteractable grabInteractor;
-
     [SerializeField] HandVisualizer handVisualizer;
-
-    [SerializeField] CinemachineDollyCart dollyCart;
+    [SerializeField] ClampTrigger clampTrigger;
 
     float startCartPosition;
-    //float drillSpeed = 0.03f;
     public bool isAttach { get; private set; } = false;
 
     public bool currentTaskComplete { get; private set; } = false;
@@ -48,7 +42,10 @@ public class ClampTaskHandModelControll : MonoBehaviour
         }
         else if (isAttach && grabInteractor.isSelected && distance <= 0.2f)
         {
-            Move();
+            if (!clampTrigger.clampOpen)
+            {
+                Move();
+            }
         }
         else if (isAttach && !grabInteractor.isSelected && distance <= 0.2f)
         {
@@ -72,7 +69,6 @@ public class ClampTaskHandModelControll : MonoBehaviour
 
         grabObject.transform.SetParent(handModel.transform);
 
-        dollyCart.m_Position = 0;
         startCartPosition = transform.position.x;
 
         isAttach = true;
@@ -87,7 +83,6 @@ public class ClampTaskHandModelControll : MonoBehaviour
         socketInteractor.transform.rotation = gameObject.transform.rotation;
 
         grabObject.transform.SetParent(null);
-        grabObject.transform.position = socketInteractor.transform.position;
 
         handModel.SetActive(false);
         isAttach = false;
@@ -95,12 +90,15 @@ public class ClampTaskHandModelControll : MonoBehaviour
 
     void Move()
     {
-        //clamp 벌리기가 완료 되면 
-        //handModel.SetActive(false);
+        grabInteractor.enabled = false;
+        currentTaskComplete = true;
+        IsTaskCompleted?.Invoke(currentTaskComplete);
+
+        Detach();
     }
 
     void TaskComplete(bool taskComplete)
     {
-        TaskManager.instance.mesComplete.TaskComplete();
+        TaskManager.instance.clampComplete.TaskComplete();
     }
 }

@@ -8,6 +8,7 @@ public class Indicate : MonoBehaviour
     [SerializeField] HandModelControll controller;
     [SerializeField] DrillTaskHandModelControll drillHandModelController;
     [SerializeField] MesTaskHandModelControll mesHandModelController;
+    [SerializeField] ClampTaskHandModelControll clampHandModelController;
     [SerializeField] XRSocketInteractor handSocketInteractor;
 
     public enum ObjectName
@@ -30,6 +31,13 @@ public class Indicate : MonoBehaviour
         else if (objectName == ObjectName.Mes)
         {
             if (!controller.currentTaskComplete && !mesHandModelController.currentTaskComplete)
+            {
+                gameObject.SetActive(true);
+            }
+        }
+        else if (objectName == ObjectName.Clamp)
+        {
+            if (!controller.currentTaskComplete && !clampHandModelController.currentTaskComplete)
             {
                 gameObject.SetActive(true);
             }

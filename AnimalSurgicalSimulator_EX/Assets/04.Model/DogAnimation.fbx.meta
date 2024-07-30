@@ -3,7 +3,17 @@ guid: bea0856ca680ba84ca77c1968f75be90
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default
+    second: {fileID: 2100000, guid: e7e605ff21098314591fc22dcc84824d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hellenic_hound_v1_mat
+    second: {fileID: 2100000, guid: d42e9f9f9f128a546a6f24bf25d7e43f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
