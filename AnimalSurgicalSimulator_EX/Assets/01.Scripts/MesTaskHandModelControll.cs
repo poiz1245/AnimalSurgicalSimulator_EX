@@ -36,7 +36,7 @@ public class MesTaskHandModelControll : MonoBehaviour
 
     private void Start()
     {
-        //IsTaskCompleted += TaskComplete;
+        IsTaskCompleted += TaskComplete;
     }
     private void Update()
     {
@@ -96,18 +96,18 @@ public class MesTaskHandModelControll : MonoBehaviour
 
     void Move()
     {
-        //handModel.transform.position = new Vector3(gameObject.transform.position.x, handModel.transform.position.y, handModel.transform.position.z);
         dollyCart.m_Position = (gameObject.transform.position.x - startCartPosition) * 0.8f;
 
         if (dollyCart.m_Position >= 0.06f)
         {
             currentTaskComplete = true;
+            IsTaskCompleted?.Invoke(currentTaskComplete);
             Detach();
         }
     }
 
-    /*void TaskComplete(bool taskComplete)
+    void TaskComplete(bool taskComplete)
     {
         TaskManager.instance.digComplete.TaskComplete();
-    }*/
+    }
 }
