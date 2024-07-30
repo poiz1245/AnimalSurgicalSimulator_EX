@@ -7318,8 +7318,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f8fe278a5fe8b641b1174f279863695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  taskList: []
+  isNextTask: 0
   digComplete: {fileID: 1188487787}
-  digTask: {fileID: 1188487790}
   task: 0
 --- !u!4 &1188487789
 Transform:
@@ -8560,7 +8561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a2572df3635b24dab292106c0319db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetY: 0
+  offsetY: 0.28
 --- !u!1 &1502207230
 GameObject:
   m_ObjectHideFlags: 0
@@ -9091,6 +9092,7 @@ MonoBehaviour:
   arrow:
   - {fileID: 1133712323}
   - {fileID: 1133130697}
+  isCompleteArrow: 0
 --- !u!1001 &1549446474
 PrefabInstance:
   m_ObjectHideFlags: 0

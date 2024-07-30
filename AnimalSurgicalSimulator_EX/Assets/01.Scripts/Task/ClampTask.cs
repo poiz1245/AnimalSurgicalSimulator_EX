@@ -61,11 +61,15 @@ public class ClampTask : MonoBehaviour
                     TaskStateChange(TaskName.Attach);
                 }
                 break;
-        //    case TaskName.Complete:
-        //        TaskManager.instance.NextTask(); // 다음 태스크로 전환
-        //        TaskManager.instance.GetCurrentTask().enabled = true; // 다음 태스크 활성화
-        //        this.enabled = false; // 현재 태스크 비활성화
-        //        break;
+            case TaskName.Complete:
+                if (TaskManager.instance.isNextTask)
+                {
+                    TaskManager.instance.NextTask();
+                    TaskManager.instance.GetCurrentTask().enabled = true;
+                    this.enabled = false;
+                }
+                TaskManager.instance.isNextTask = false;
+                break;
         }
     }
 
