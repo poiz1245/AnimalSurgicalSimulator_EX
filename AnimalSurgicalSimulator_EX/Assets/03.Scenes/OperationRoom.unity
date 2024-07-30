@@ -455,7 +455,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36327631}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c255e37c1475a334193d6a0bf9b622fa, type: 3}
   m_Name: 
@@ -467,7 +467,8 @@ MonoBehaviour:
   objectsToBlink:
   - {fileID: 332125263}
   handModelControll: {fileID: 1502207232}
-  handTrackingModelControll: {fileID: 2059901802}
+  drillTask: {fileID: 0}
+  mesTask: {fileID: 0}
 --- !u!65 &36327635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2571,7 +2572,8 @@ MonoBehaviour:
   objectsToBlink:
   - {fileID: 17310851}
   handModelControll: {fileID: 1502207232}
-  handTrackingModelControll: {fileID: 2059901802}
+  drillTask: {fileID: 2059901802}
+  mesTask: {fileID: 2059901801}
 --- !u!65 &350884598
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3352,7 +3354,8 @@ MonoBehaviour:
   objectsToBlink:
   - {fileID: 699829788}
   handModelControll: {fileID: 1502207232}
-  handTrackingModelControll: {fileID: 2059901802}
+  drillTask: {fileID: 2059901802}
+  mesTask: {fileID: 2059901801}
 --- !u!65 &469721465
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7664,6 +7667,7 @@ GameObject:
   - component: {fileID: 1188487787}
   - component: {fileID: 1188487791}
   - component: {fileID: 1188487790}
+  - component: {fileID: 1188487792}
   m_Layer: 0
   m_Name: Taskmanager
   m_TagString: Untagged
@@ -7699,7 +7703,9 @@ MonoBehaviour:
   digComplete: {fileID: 1188487787}
   mesComplete: {fileID: 1188487791}
   digTask: {fileID: 1188487790}
+  currentMainTask: 0
   task: 0
+  isNextTask: 0
 --- !u!4 &1188487789
 Transform:
   m_ObjectHideFlags: 0
@@ -7750,6 +7756,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskObject: {fileID: 0}
+--- !u!114 &1188487792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188487786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af11f67897333c140926aeb483f8fa47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handModel: {fileID: 1502207232}
+  hand: {fileID: 2059901801}
+  grab: {fileID: 1260095157}
+  uiText: {fileID: 1708343489}
+  subUiText: {fileID: 1785600533}
+  targets:
+  - {fileID: 543450652905357869}
+  - {fileID: 1374636917}
+  - {fileID: 1374636917}
+  - {fileID: 0}
 --- !u!1 &1200748270
 GameObject:
   m_ObjectHideFlags: 0
@@ -9878,6 +9906,7 @@ MonoBehaviour:
   arrow:
   - {fileID: 1133712323}
   - {fileID: 1133130697}
+  isCompleteArrow: 0
 --- !u!1001 &1549446474
 PrefabInstance:
   m_ObjectHideFlags: 0

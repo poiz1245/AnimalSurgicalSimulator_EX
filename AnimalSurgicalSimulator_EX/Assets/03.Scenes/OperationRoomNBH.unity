@@ -7924,11 +7924,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f8fe278a5fe8b641b1174f279863695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskList:
-  - {fileID: 973269680}
-  isNextTask: 0
   digComplete: {fileID: 973269681}
+  mesComplete: {fileID: 0}
+  digTask: {fileID: 0}
+  currentMainTask: 0
   task: 0
+  isNextTask: 0
 --- !u!4 &973269683
 Transform:
   m_ObjectHideFlags: 0
@@ -7951,7 +7952,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973269679}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af11f67897333c140926aeb483f8fa47, type: 3}
   m_Name: 

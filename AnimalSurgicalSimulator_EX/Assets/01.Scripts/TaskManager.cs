@@ -14,8 +14,8 @@ public class TaskManager : MonoBehaviour
     public enum MainTask
     {
         Mes,
-        Clamp,
         Dig
+        //Clamp,
     }
     public MesComplete mesComplete;
 
@@ -56,11 +56,12 @@ public class TaskManager : MonoBehaviour
         switch (currentMainTask)
         {
             case MainTask.Mes:
-                currentMainTask = MainTask.Clamp;
-                break;
-            case MainTask.Clamp:
+                //currentMainTask = MainTask.Clamp;
                 currentMainTask = MainTask.Dig;
                 break;
+            //case MainTask.Clamp:
+            //    currentMainTask = MainTask.Dig;
+            //    break;
             case MainTask.Dig:
                 TaskArrow.Instance.isCompleteArrow = true;
                 Debug.Log("모든 메인 작업 완료");

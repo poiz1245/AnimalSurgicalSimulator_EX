@@ -7,7 +7,7 @@ using static TaskManager;
 public class MesTask : MonoBehaviour
 {
     [SerializeField] HandModelControll handModel;
-    [SerializeField] DrillTaskHandModelControll hand;
+    [SerializeField] MesTaskHandModelControll hand;
     [SerializeField] XRGrabInteractable grab;
     [SerializeField] TextMeshProUGUI uiText;
     [SerializeField] TextMeshProUGUI subUiText;
@@ -61,16 +61,10 @@ public class MesTask : MonoBehaviour
                     TaskStateChange(TaskName.Attach);
                 }
                 break;
-            //case TaskName.Complete:
-            //    if (TaskManager.instance.isNextTask)
-            //    {
-            //        TaskManager.instance.NextTask(); // 다음 태스크로 전환
-            //        TaskManager.instance.GetCurrentTask().enabled = true; // 다음 태스크 활성화
-            //        this.enabled = false; // 현재 태스크 비활성화
-            //        Debug.Log("다음 테스크 활성화");
-            //    }
-            //    TaskManager.instance.isNextTask = false;
-            //    break;
+            case TaskName.Complete:
+                TaskManager.instance.isNextTask = true;
+                TaskManager.instance.NextTask(); // 다음 태스크로 전환
+                break;
         }
     }
 
