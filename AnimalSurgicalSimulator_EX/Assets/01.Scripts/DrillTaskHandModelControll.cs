@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.XR.Hands.Samples.VisualizerSample;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class HandTrackingModelControll : MonoBehaviour
+public class DrillTaskHandModelControll : MonoBehaviour
 {
     [SerializeField] GameObject indicator;
     [SerializeField] GameObject handModel;
