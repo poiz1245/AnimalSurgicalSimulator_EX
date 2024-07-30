@@ -59,13 +59,13 @@ public class DigTask : MonoBehaviour
                     TaskStateChange(TaskName.Attach);
                 }
                 break;
-            case TaskName.Complete:
-                if (TaskManager.instance.isNextTask)
-                {
-                    TaskManager.instance.NextTask(); // 다음 태스크로 전환
-                }
-                TaskManager.instance.isNextTask = false;
-                break;
+            //case TaskName.Complete:
+            //    if (TaskManager.instance.isNextTask)
+            //    {
+            //        TaskManager.instance.NextTask(); // 다음 태스크로 전환
+            //    }
+            //    TaskManager.instance.isNextTask = false;
+            //    break;
         }
     }
 

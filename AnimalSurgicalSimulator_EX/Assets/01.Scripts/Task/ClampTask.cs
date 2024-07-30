@@ -7,7 +7,7 @@ using static TaskManager;
 public class ClampTask : MonoBehaviour
 {
     [SerializeField] HandModelControll handModel;
-    [SerializeField] HandTrackingModelControll hand;
+    [SerializeField] DrillTaskHandModelControll hand;
     [SerializeField] XRGrabInteractable grab;
     [SerializeField] TextMeshProUGUI uiText;
     [SerializeField] TextMeshProUGUI subUiText;
@@ -61,15 +61,15 @@ public class ClampTask : MonoBehaviour
                     TaskStateChange(TaskName.Attach);
                 }
                 break;
-            case TaskName.Complete:
-                if (TaskManager.instance.isNextTask)
-                {
-                    TaskManager.instance.NextTask();
-                    TaskManager.instance.GetCurrentTask().enabled = true;
-                    this.enabled = false;
-                }
-                TaskManager.instance.isNextTask = false;
-                break;
+            //case TaskName.Complete:
+            //    if (TaskManager.instance.isNextTask)
+            //    {
+            //        TaskManager.instance.NextTask();
+            //        TaskManager.instance.GetCurrentTask().enabled = true;
+            //        this.enabled = false;
+            //    }
+            //    TaskManager.instance.isNextTask = false;
+            //    break;
         }
     }
 
