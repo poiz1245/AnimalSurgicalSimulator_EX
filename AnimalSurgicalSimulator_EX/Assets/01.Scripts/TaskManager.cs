@@ -17,6 +17,9 @@ public class TaskManager : MonoBehaviour
         Clamp,
         Dig
     }
+    public MesComplete mesComplete;
+
+    [SerializeField] DigTask digTask;
     public enum TaskName
     {
         Start,
