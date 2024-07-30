@@ -23,19 +23,21 @@ public class MesTaskHandModelControll : MonoBehaviour
     [SerializeField] HandVisualizer handVisualizer;
 
     [SerializeField] CinemachineDollyCart dollyCart;
+
+    float startCartPosition;
     //float drillSpeed = 0.03f;
     public bool isAttach { get; private set; } = false;
 
     public bool currentTaskComplete { get; private set; } = false;
 
-    /*public delegate void TaskCompleted(bool taskComplete);
-    public event TaskCompleted IsTaskCompleted;*/
+    public delegate void TaskCompleted(bool taskComplete);
+    public event TaskCompleted IsTaskCompleted;
 
 
-    /*private void Start()
+    private void Start()
     {
-        IsTaskCompleted += TaskComplete;
-    }*/
+        //IsTaskCompleted += TaskComplete;
+    }
     private void Update()
     {
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
@@ -71,13 +73,15 @@ public class MesTaskHandModelControll : MonoBehaviour
 
         grabObject.transform.SetParent(handModel.transform);
 
+        dollyCart.m_Position = 0;
+        startCartPosition = transform.position.x;
+
         isAttach = true;
     }
 
     private void Detach()
     {
         handVisualizer.drawMeshes = true;
-        handModel.SetActive(false);
 
         socketInteractor.transform.SetParent(gameObject.transform);
         socketInteractor.transform.position = gameObject.transform.position;
@@ -85,22 +89,25 @@ public class MesTaskHandModelControll : MonoBehaviour
 
         grabObject.transform.SetParent(null);
         grabObject.transform.position = socketInteractor.transform.position;
+
+        handModel.SetActive(false);
         isAttach = false;
     }
 
     void Move()
     {
         //handModel.transform.position = new Vector3(gameObject.transform.position.x, handModel.transform.position.y, handModel.transform.position.z);
-        dollyCart.m_Position = gameObject.transform.position.x;
+        dollyCart.m_Position = (gameObject.transform.position.x - startCartPosition) * 0.8f;
+
+        if (dollyCart.m_Position >= 0.06f)
+        {
+            currentTaskComplete = true;
+            Detach();
+        }
     }
 
-    void TaskComplete(bool taskComplete)
+    /*void TaskComplete(bool taskComplete)
     {
         TaskManager.instance.digComplete.TaskComplete();
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        HapticsTest.instance.CustomBasic(0.02f, 0.1f);
-    }
+    }*/
 }
