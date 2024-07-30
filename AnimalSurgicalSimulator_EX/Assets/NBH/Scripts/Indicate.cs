@@ -6,7 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Indicate : MonoBehaviour
 {
     [SerializeField] HandModelControll controller;
-    [SerializeField] HandTrackingModelControll handTrackingController;
+    [SerializeField] DrillTaskHandModelControll handTrackingController;
     [SerializeField] XRSocketInteractor handSocketInteractor;
     public void OnIndicate()
     {

@@ -8,7 +8,7 @@ using static TaskManager;
 public class DigTask : MonoBehaviour
 {
     [SerializeField] HandModelControll handModel;
-    [SerializeField] HandTrackingModelControll hand;
+    [SerializeField] DrillTaskHandModelControll hand;
     [SerializeField] XRGrabInteractable grab;
     [SerializeField] TextMeshProUGUI uiText;
     [SerializeField] TextMeshProUGUI subUiText;

@@ -12,7 +12,7 @@ public class ObjectBlinker : MonoBehaviour
     [SerializeField] List<XRGrabInteractable> grabInteractors; // XRGrabInteractable 리스트
     [SerializeField] List<GameObject> objectsToBlink; // 깜빡이게 할 오브젝트 리스트
     [SerializeField] HandModelControll handModelControll; // HandModelControll 인스턴스 참조
-    [SerializeField] HandTrackingModelControll handTrackingModelControll; // HandModelControll 인스턴스 참조
+    [SerializeField] DrillTaskHandModelControll handTrackingModelControll; // HandModelControll 인스턴스 참조
     //[SerializeField] GameObject objecttransform;
 
     bool isObjectInSocket = false;
