@@ -7695,10 +7695,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f8fe278a5fe8b641b1174f279863695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskList: []
-  isNextTask: 0
   digComplete: {fileID: 1188487787}
+  currentMainTask: 0
   task: 0
+  isNextTask: 0
 --- !u!4 &1188487789
 Transform:
   m_ObjectHideFlags: 0

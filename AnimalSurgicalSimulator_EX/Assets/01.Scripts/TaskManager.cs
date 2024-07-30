@@ -8,8 +8,7 @@ public class TaskManager : MonoBehaviour
 {
     public static TaskManager instance;
     //[SerializeField] List<MonoBehaviour> taskList;
-    int currentTaskIndex = 0;
-    public bool isNextTask = false;
+    
 
     public DigComplete digComplete;
     public enum MainTask
@@ -28,7 +27,7 @@ public class TaskManager : MonoBehaviour
 
     public MainTask currentMainTask = MainTask.Mes;
     public TaskName task = TaskName.Start; // 현재 작업 상태
-
+    public bool isNextTask = false;
     private void Awake()
     {
         if (instance == null)
@@ -40,10 +39,7 @@ public class TaskManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void Start()
-    {
-        InitializeMainTask(currentMainTask);
-    }
+
     public void NextTask()
     {
         if (task == TaskName.Complete)
@@ -68,7 +64,8 @@ public class TaskManager : MonoBehaviour
                 return;
         }
 
-        InitializeMainTask(currentMainTask); // 새로운 메인 태스크를 초기화합니다
+        task = TaskName.Start; // 새 태스크를 시작 상태로 초기화
+        Debug.Log("새로운 메인 작업: " + currentMainTask);
     }
 
     public void UpdateTask(TaskName newTaskStatus)
@@ -78,18 +75,6 @@ public class TaskManager : MonoBehaviour
         {
             NextTask(); // 다음 태스크로 넘어가기
         }
-    }
-
-    public void SetMainTask(MainTask newMainTask)
-    {
-        currentMainTask = newMainTask;
-        InitializeMainTask(currentMainTask); // 메인 태스크 초기화
-    }
-
-    private void InitializeMainTask(MainTask mainTask)
-    {
-        // 메인 태스크에 따라 각 태스크의 초기화 작업을 수행합니다.
-        // 예: TaskArrow.Instance.SetTargets(...); // 필요에 따라 타겟 설정
     }
     //public void NextTask()
     //{
