@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using static TaskManager;
 
-public class DigTask : MonoBehaviour
+public class MesTask : MonoBehaviour
 {
     [SerializeField] HandModelControll handModel;
     [SerializeField] HandTrackingModelControll hand;
@@ -16,7 +16,8 @@ public class DigTask : MonoBehaviour
     public delegate void TaskStateChanged(TaskName task);
     public event TaskStateChanged OnTaskStateChanged;
 
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         OnTaskStateChanged += UpdateUIText;
         OnTaskStateChanged += UpdateTargets; // 타겟 업데이트를 위한 이벤트 추가
@@ -26,6 +27,7 @@ public class DigTask : MonoBehaviour
         // 초기 UI 텍스트 업데이트
         UpdateUIText(TaskManager.instance.task);
     }
+
 
     public void Update()
     {
@@ -63,7 +65,6 @@ public class DigTask : MonoBehaviour
             //    TaskManager.instance.NextTask(); // 다음 태스크로 전환
             //    TaskManager.instance.GetCurrentTask().enabled = true; // 다음 태스크 활성화
             //    this.enabled = false; // 현재 태스크 비활성화
-            //    Debug.Log("다음 테스크 활성화");
             //    break;
         }
     }
@@ -79,19 +80,19 @@ public class DigTask : MonoBehaviour
         switch (taskName)
         {
             case TaskName.Start:
-                uiText.text = "Grab the drill";
-                subUiText.text = "* Follow the drill guidelines on the right";
+                uiText.text = "Grab the Mes";
+                subUiText.text = "* Follow the Mes guidelines on the right";
                 break;
             case TaskName.Attach:
-                uiText.text = "Attach the drill to the guidelines";
+                uiText.text = "Attach the Mes to the guidelines";
                 subUiText.text = "* Hold the object and follow the guidelines";
                 break;
             case TaskName.Process:
-                uiText.text = "Put your fist on the drill";
-                subUiText.text = "* Pull the index finger to activate the drill";
+                uiText.text = "";
+                subUiText.text = "* ";
                 break;
             case TaskName.Complete:
-                uiText.text = "Bring the drill back to its original position";
+                uiText.text = "Bring the Mes back to its original position";
                 subUiText.text = "* Take it to the stand. Put your hands down";
                 break;
         }
@@ -116,7 +117,7 @@ public class DigTask : MonoBehaviour
             case TaskName.Complete:
                 newTargets.Add(targets[3]);
                 break;
-            
+
         }
 
         TaskArrow.Instance.SetTargets(newTargets); // 타겟 업데이트
