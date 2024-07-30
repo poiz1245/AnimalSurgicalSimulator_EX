@@ -6,16 +6,33 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Indicate : MonoBehaviour
 {
     [SerializeField] HandModelControll controller;
-    [SerializeField] DrillTaskHandModelControll handTrackingController;
+    [SerializeField] DrillTaskHandModelControll drillHandModelController;
+    [SerializeField] MesTaskHandModelControll mesHandModelController;
     [SerializeField] XRSocketInteractor handSocketInteractor;
+
+    public enum ObjectName
+    {
+        Drill,
+        Mes,
+        Clamp
+    }
+
+    public ObjectName objectName;
     public void OnIndicate()
     {
-        if (!controller.currentTaskComplete && !handTrackingController.currentTaskComplete)
+        if (objectName == ObjectName.Drill)
         {
-            //if (handSocketInteractor.enabled || handTrackingController.currentTaskComplete)
-            //{
-            gameObject.SetActive(true);
-            //}
+            if (!controller.currentTaskComplete && !drillHandModelController.currentTaskComplete)
+            {
+                gameObject.SetActive(true);
+            }
+        }
+        else if (objectName == ObjectName.Mes)
+        {
+            if (!controller.currentTaskComplete && !mesHandModelController.currentTaskComplete)
+            {
+                gameObject.SetActive(true);
+            }
         }
     }
 
