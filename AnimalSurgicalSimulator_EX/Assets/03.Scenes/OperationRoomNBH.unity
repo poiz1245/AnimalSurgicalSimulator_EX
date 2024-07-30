@@ -7869,7 +7869,6 @@ GameObject:
   - component: {fileID: 973269682}
   - component: {fileID: 973269681}
   - component: {fileID: 973269680}
-  - component: {fileID: 973269684}
   m_Layer: 0
   m_Name: Taskmanager
   m_TagString: Untagged
@@ -7925,9 +7924,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digComplete: {fileID: 973269681}
-  taskList:
-  - {fileID: 973269680}
-  - {fileID: 973269684}
   task: 0
 --- !u!4 &973269683
 Transform:
@@ -7944,25 +7940,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &973269684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973269679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af11f67897333c140926aeb483f8fa47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  handModel: {fileID: 532244450}
-  hand: {fileID: 547755170}
-  grab: {fileID: 1052125241}
-  uiText: {fileID: 184399137}
-  subUiText: {fileID: 1399152883}
-  targets:
-  - {fileID: 1052125240}
 --- !u!1 &975268301
 GameObject:
   m_ObjectHideFlags: 0
