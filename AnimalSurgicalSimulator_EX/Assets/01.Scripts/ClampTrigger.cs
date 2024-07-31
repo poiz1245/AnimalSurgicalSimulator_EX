@@ -9,7 +9,7 @@ public class ClampTrigger : MonoBehaviour
     [SerializeField] GameObject moveClamp;
 
     XRGrabInteractable grabInteractable;
-    bool clampOpen = false;
+    public bool clampOpen { get; private set; } = false;
 
     private void Start()
     {
