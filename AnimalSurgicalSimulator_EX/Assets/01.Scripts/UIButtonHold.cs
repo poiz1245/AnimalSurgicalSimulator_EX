@@ -68,7 +68,7 @@ public class UIButtonHold : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     }
     public void SceneReset()
     {
-        SceneManager.LoadScene("OperationRoom");
-        //SceneManager.LoadScene("OperationRoomNBH");
+        //SceneManager.LoadScene("OperationRoom");
+        SceneManager.LoadScene("OperationRoomNBH");
     }
 }

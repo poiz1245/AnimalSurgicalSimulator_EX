@@ -11,6 +11,7 @@ public class TaskManager : MonoBehaviour
     public DigComplete digComplete;
     public MesComplete mesComplete;
     public ClampComplete clampComplete;
+    public bool isNextTask = false;
 
     [SerializeField] DigTask digTask;
     [SerializeField] ClampTask clampTask;
@@ -33,7 +34,7 @@ public class TaskManager : MonoBehaviour
 
     public MainTask currentMainTask = MainTask.Mes;
     public TaskName task = TaskName.Start; // 현재 작업 상태
-    public bool isNextTask = false;
+
 
     public delegate void MainTaskChanged(MainTask newMainTask);
     public event MainTaskChanged OnMainTaskChanged;
@@ -66,21 +67,27 @@ public class TaskManager : MonoBehaviour
 
     private void ProceedToNextMainTask()
     {
+        MainTask nextTask = currentMainTask;
+
         switch (currentMainTask)
         {
             case MainTask.Mes:
-                
-            //    currentMainTask = MainTask.Clamp;
-            //    break;
-            //case MainTask.Clamp:
-            //    currentMainTask = MainTask.Dig;
+                nextTask = MainTask.Clamp;
+                break;
+            case MainTask.Clamp:
+                nextTask = MainTask.Dig;
                 break;
             case MainTask.Dig:
-                TaskArrow.Instance.isCompleteArrow = true;
                 Debug.Log("모든 메인 작업 완료");
                 return;
         }
 
+        SetTaskAndActivate(nextTask);
+    }
+
+    private void SetTaskAndActivate(MainTask newMainTask)
+    {
+        currentMainTask = newMainTask;
         task = TaskName.Start; // 새 태스크를 시작 상태로 초기화
         SetActiveTask(currentMainTask);
         OnMainTaskChanged?.Invoke(currentMainTask); // 이벤트 호출
@@ -89,36 +96,23 @@ public class TaskManager : MonoBehaviour
 
     private void SetActiveTask(MainTask newMainTask)
     {
-        //if(digTask == enabled)
-    }
+        // 현재 작업 비활성화
+        if (digTask != null) digTask.enabled = false;
+        if (clampTask != null) clampTask.enabled = false;
+        if (mesTask != null) mesTask.enabled = false;
 
-    public void StartNewTask(MainTask newMainTask)
-    {
-        currentMainTask = newMainTask;
-        task = TaskName.Start;
-        SetActiveTask(newMainTask);
-        OnMainTaskChanged?.Invoke(currentMainTask);
-        Debug.Log("새로운 메인 작업 시작: " + currentMainTask);
+        // 새로운 작업 활성화
+        switch (newMainTask)
+        {
+            case MainTask.Mes:
+                if (mesTask != null) mesTask.enabled = true;
+                break;
+            case MainTask.Clamp:
+                if (clampTask != null) clampTask.enabled = true;
+                break;
+            case MainTask.Dig:
+                if (digTask != null) digTask.enabled = true;
+                break;
+        }
     }
-    //public void NextTask()
-    //{
-    //    currentTaskIndex++;
-    //    if (currentTaskIndex < taskList.Count)
-    //    {
-    //        task = TaskName.Start;
-    //        taskList[currentTaskIndex].enabled = true;  // 다음 태스크 활성화
-    //    }
-    //    else if (currentTaskIndex == taskList.Count)
-    //    {
-    //        TaskArrow.Instance.isCompleteArrow = true;
-    //        Debug.Log("테스크 종료");
-    //        return;
-    //    }
-    //}
-
-    //// 현재 태스크 반환
-    //public MonoBehaviour GetCurrentTask()
-    //{
-    //    return taskList[currentTaskIndex];
-    //}
 }

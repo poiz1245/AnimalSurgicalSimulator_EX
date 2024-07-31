@@ -4,42 +4,35 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using static TaskManager;
 
-public class MesTask : MonoBehaviour
+public class MesTask : BaseTask
 {
     [SerializeField] HandModelControll handModel;
     [SerializeField] MesTaskHandModelControll hand;
     [SerializeField] XRGrabInteractable grab;
-    [SerializeField] TextMeshProUGUI uiText;
-    [SerializeField] TextMeshProUGUI subUiText;
-    [SerializeField] List<Transform> targets; // 타겟 오브젝트 리스트
+    //[SerializeField] TextMeshProUGUI uiText;
+    //[SerializeField] TextMeshProUGUI subUiText;
+    //[SerializeField] List<Transform> targets; // 타겟 오브젝트 리스트
     //[SerializeField] GameObject handGuide;
 
-    public delegate void TaskStateChanged(TaskName task);
-    public event TaskStateChanged OnTaskStateChanged;
+    //public delegate void TaskStateChanged(TaskName task);
+    //public event TaskStateChanged OnTaskStateChanged;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        OnTaskStateChanged += UpdateUIText;
-        OnTaskStateChanged += UpdateTargets; // 타겟 업데이트를 위한 이벤트 추가
+    //// Start is called before the first frame update
+    //void Start()
+    //{
+    //    OnTaskStateChanged += UpdateUIText;
+    //    OnTaskStateChanged += UpdateTargets; // 타겟 업데이트를 위한 이벤트 추가
 
-        // 초기 타겟 설정
-        UpdateTargets(TaskManager.instance.task);
-        // 초기 UI 텍스트 업데이트
-        UpdateUIText(TaskManager.instance.task);
-    }
+    //    // 초기 타겟 설정
+    //    UpdateTargets(TaskManager.instance.task);
+    //    // 초기 UI 텍스트 업데이트
+    //    UpdateUIText(TaskManager.instance.task);
+    //}
 
 
     public void Update()
     {
-        if (TaskManager.instance.currentMainTask == MainTask.Mes)
-        {
-            this.enabled = true;
-        }
-        else
-        {
-            this.enabled = false;
-        }
+        if (!enabled) return;
 
         switch (TaskManager.instance.task)
         {
@@ -73,19 +66,23 @@ public class MesTask : MonoBehaviour
                 }
                 break;
             case TaskName.Complete:
-                TaskManager.instance.isNextTask = true;
-                TaskManager.instance.UpdateTask(TaskName.Complete); // 다음 태스크로 전환
+                if (TaskManager.instance.isNextTask)
+                    TaskManager.instance.UpdateTask(TaskName.Complete); // 다음 태스크로 전환
                 break;
         }
     }
-
-    private void TaskStateChange(TaskName taskName)
+    protected override TaskManager.MainTask GetMainTaskType()
     {
-        TaskManager.instance.task = taskName;
-        OnTaskStateChanged?.Invoke(TaskManager.instance.task);
+        return TaskManager.MainTask.Mes;
     }
 
-    void UpdateUIText(TaskName taskName)
+    //private void TaskStateChange(TaskName taskName)
+    //{
+    //    TaskManager.instance.task = taskName;
+    //    OnTaskStateChanged?.Invoke(TaskManager.instance.task);
+    //}
+
+    protected override void UpdateUIText(TaskManager.TaskName taskName)
     {
         switch (taskName)
         {
@@ -99,7 +96,7 @@ public class MesTask : MonoBehaviour
                 break;
             case TaskName.Process:
                 uiText.text = "Draw the scalpel along the guide";
-                subUiText.text = "*Do not let go of the Mes from your hand. ";
+                subUiText.text = "* Do not let go of the Mes from your hand.";
                 break;
             case TaskName.Complete:
                 uiText.text = "Bring the Mes back to its original position";
@@ -108,11 +105,10 @@ public class MesTask : MonoBehaviour
         }
     }
 
-    void UpdateTargets(TaskName taskName)
+    protected override void UpdateTargets(TaskManager.TaskName taskName)
     {
         List<Transform> newTargets = new List<Transform>();
 
-        // TaskName에 따라 타겟 오브젝트를 변경
         switch (taskName)
         {
             case TaskName.Start:
@@ -127,9 +123,57 @@ public class MesTask : MonoBehaviour
             case TaskName.Complete:
                 newTargets.Add(targets[3]);
                 break;
-
         }
 
-        TaskArrow.Instance.SetTargets(newTargets); // 타겟 업데이트
+        TaskArrow.Instance.SetTargets(newTargets);
     }
+
+
+    //void UpdateUIText(TaskName taskName)
+    //{
+    //    switch (taskName)
+    //    {
+    //        case TaskName.Start:
+    //            uiText.text = "Grab the Mes";
+    //            subUiText.text = "* Follow the Mes guidelines on the right";
+    //            break;
+    //        case TaskName.Attach:
+    //            uiText.text = "Attach the Mes to the guidelines";
+    //            subUiText.text = "* Hold the object and follow the guidelines";
+    //            break;
+    //        case TaskName.Process:
+    //            uiText.text = "Draw the scalpel along the guide";
+    //            subUiText.text = "*Do not let go of the Mes from your hand. ";
+    //            break;
+    //        case TaskName.Complete:
+    //            uiText.text = "Bring the Mes back to its original position";
+    //            subUiText.text = "* Take it to the stand. Put your hands down";
+    //            break;
+    //    }
+    //}
+
+    //void UpdateTargets(TaskName taskName)
+    //{
+    //    List<Transform> newTargets = new List<Transform>();
+
+    //    // TaskName에 따라 타겟 오브젝트를 변경
+    //    switch (taskName)
+    //    {
+    //        case TaskName.Start:
+    //            newTargets.Add(targets[0]);
+    //            break;
+    //        case TaskName.Attach:
+    //            newTargets.Add(targets[1]);
+    //            break;
+    //        case TaskName.Process:
+    //            newTargets.Add(targets[2]);
+    //            break;
+    //        case TaskName.Complete:
+    //            newTargets.Add(targets[3]);
+    //            break;
+
+    //    }
+
+    //    TaskArrow.Instance.SetTargets(newTargets); // 타겟 업데이트
+    //}
 }

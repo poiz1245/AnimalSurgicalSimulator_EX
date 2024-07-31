@@ -14,7 +14,7 @@ public class ObjectBlinker : MonoBehaviour
     [SerializeField] HandModelControll handModelControll; // HandModelControll 인스턴스 참조
     [SerializeField] DrillTaskHandModelControll drillHandModelController;
     [SerializeField] MesTaskHandModelControll mesHandModelController;
-    //[SerializeField] ClampTaskHandModelControll calmpHandModelController;
+    [SerializeField] ClampTaskHandModelControll calmpHandModelController;
 
     bool isObjectInSocket = false;
     bool isGrabbed = false;
@@ -24,7 +24,7 @@ public class ObjectBlinker : MonoBehaviour
     {
         Mes,
         Clamp,
-        Drill
+        Dig
     }
 
     public BlinkName blinkName;
@@ -45,11 +45,11 @@ public class ObjectBlinker : MonoBehaviour
         {
             mesHandModelController.IsTaskCompleted += OnTaskCompleted;
         }
-        //else if (blinkName == BlinkName.Clamp)
-        //{
-        //    calmpHandModelController.IsTaskCompleted += OnTaskCompleted;
-        //}
-        else if (blinkName == BlinkName.Drill)
+        else if (blinkName == BlinkName.Clamp)
+        {
+            calmpHandModelController.IsTaskCompleted += OnTaskCompleted;
+        }
+        else if (blinkName == BlinkName.Dig)
         {
             drillHandModelController.IsTaskCompleted += OnTaskCompleted;
         }
@@ -77,7 +77,7 @@ public class ObjectBlinker : MonoBehaviour
 
         // 오브젝트가 소켓에 들어가면 깜빡이기 멈춤
         objectsToBlink[index].SetActive(false);
-        //TaskManager.instance.isNextTask = true;
+        TaskManager.instance.isNextTask = true;
     }
 
     private void OnGrabbed(int index)

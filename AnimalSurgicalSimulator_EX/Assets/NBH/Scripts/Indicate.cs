@@ -15,7 +15,7 @@ public class Indicate : MonoBehaviour
     {
         Mes,
         Clamp,
-        Drill
+        Dig
     }
 
     public ObjectName objectName;
@@ -35,16 +35,9 @@ public class Indicate : MonoBehaviour
                 gameObject.SetActive(true);
             }
         }
-        else if (objectName == ObjectName.Drill)
+        else if (objectName == ObjectName.Dig)
         {
             if (!controller.currentTaskComplete && !mesHandModelController.currentTaskComplete)
-            {
-                gameObject.SetActive(true);
-            }
-        }
-        else if (objectName == ObjectName.Clamp)
-        {
-            if (!controller.currentTaskComplete && !clampHandModelController.currentTaskComplete)
             {
                 gameObject.SetActive(true);
             }
