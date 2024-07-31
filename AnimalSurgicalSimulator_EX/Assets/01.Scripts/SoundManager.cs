@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] HandTrackingDrillTrigger handDrillTrigger;
-
+    [SerializeField] XRGrabInteractable drillGrabInteractable;
     [SerializeField] AudioSource drillSound;
     // Start is called before the first frame update
     void Start()
@@ -15,13 +16,16 @@ public class SoundManager : MonoBehaviour
 
     void DrillSoundControll(bool buttonOn)
     {
-        if (buttonOn)
+        if (drillGrabInteractable.isSelected)
         {
-            drillSound.Play();
-        }
-        else
-        {
-            drillSound.Stop();
+            if (buttonOn)
+            {
+                drillSound.Play();
+            }
+            else
+            {
+                drillSound.Stop();
+            }
         }
     }
 }

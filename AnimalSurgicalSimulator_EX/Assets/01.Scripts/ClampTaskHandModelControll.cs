@@ -11,7 +11,7 @@ public class ClampTaskHandModelControll : MonoBehaviour
     [SerializeField] GameObject handModel;
     [SerializeField] GameObject grabObject;
 
-    [SerializeField] Transform mesAttach;
+    [SerializeField] Transform clampAttach;
 
     [SerializeField] XRSocketInteractor socketInteractor;
     [SerializeField] XRGrabInteractable grabInteractor;
@@ -64,8 +64,8 @@ public class ClampTaskHandModelControll : MonoBehaviour
         handModel.SetActive(true);
 
         socketInteractor.transform.SetParent(handModel.transform);
-        socketInteractor.transform.position = mesAttach.transform.position;
-        socketInteractor.transform.rotation = mesAttach.transform.rotation;
+        socketInteractor.transform.position = clampAttach.transform.position;
+        socketInteractor.transform.rotation = clampAttach.transform.rotation;
 
         grabObject.transform.SetParent(handModel.transform);
 
