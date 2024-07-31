@@ -136,8 +136,8 @@ public class DrillTaskHandModelControll : MonoBehaviour
         TaskManager.instance.digComplete.TaskComplete();
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         HapticsTest.instance.CustomBasic(0.02f, 0.1f);
-    }
+    }*/
 }
