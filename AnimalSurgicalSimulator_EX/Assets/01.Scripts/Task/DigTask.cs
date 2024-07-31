@@ -12,7 +12,6 @@ public class DigTask : MonoBehaviour
     [SerializeField] TextMeshProUGUI uiText;
     [SerializeField] TextMeshProUGUI subUiText;
     [SerializeField] List<Transform> targets; // 타겟 오브젝트 리스트
-
     public delegate void TaskStateChanged(TaskName task);
     public event TaskStateChanged OnTaskStateChanged;
 
@@ -29,6 +28,15 @@ public class DigTask : MonoBehaviour
 
     public void Update()
     {
+        if (TaskManager.instance.currentMainTask == MainTask.Dig)
+        {
+            this.enabled = true;
+        }
+        else
+        {
+            this.enabled = false;
+        }
+
         switch (TaskManager.instance.task)
         {
             case TaskName.Start:
@@ -61,7 +69,7 @@ public class DigTask : MonoBehaviour
                 break;
             case TaskName.Complete:
                 TaskManager.instance.isNextTask = true;
-                TaskManager.instance.NextTask(); // 다음 태스크로 전환
+                TaskManager.instance.UpdateTask(TaskName.Complete); // 다음 태스크로 전환
                 break;
         }
     }

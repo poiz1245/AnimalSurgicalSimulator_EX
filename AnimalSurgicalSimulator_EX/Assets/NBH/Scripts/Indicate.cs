@@ -12,22 +12,29 @@ public class Indicate : MonoBehaviour
 
     public enum ObjectName
     {
-        Drill,
         Mes,
-        Clamp
+        Clamp,
+        Drill
     }
 
     public ObjectName objectName;
     public void OnIndicate()
     {
-        if (objectName == ObjectName.Drill)
+        if (objectName == ObjectName.Mes)
         {
             if (!controller.currentTaskComplete && !drillHandModelController.currentTaskComplete)
             {
                 gameObject.SetActive(true);
             }
         }
-        else if (objectName == ObjectName.Mes)
+        else if (objectName == ObjectName.Clamp)
+        {
+            if (!controller.currentTaskComplete && !mesHandModelController.currentTaskComplete)
+            {
+                gameObject.SetActive(true);
+            }
+        }
+        else if (objectName == ObjectName.Drill)
         {
             if (!controller.currentTaskComplete && !mesHandModelController.currentTaskComplete)
             {

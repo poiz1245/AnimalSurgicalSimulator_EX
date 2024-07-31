@@ -7,19 +7,21 @@ using UnityEngine.XR;
 public class TaskManager : MonoBehaviour
 {
     public static TaskManager instance;
-    //[SerializeField] List<MonoBehaviour> taskList;
-    
 
     public DigComplete digComplete;
-    public enum MainTask
-    {
-        Mes,
-        Dig
-        //Clamp,
-    }
     public MesComplete mesComplete;
 
     [SerializeField] DigTask digTask;
+    [SerializeField] ClampTask clampTask;
+    [SerializeField] MesTask mesTask;
+
+    public enum MainTask
+    {
+        Mes,
+        Clamp,
+        Dig
+    }
+
     public enum TaskName
     {
         Start,
@@ -31,6 +33,10 @@ public class TaskManager : MonoBehaviour
     public MainTask currentMainTask = MainTask.Mes;
     public TaskName task = TaskName.Start; // 현재 작업 상태
     public bool isNextTask = false;
+
+    public delegate void MainTaskChanged(MainTask newMainTask);
+    public event MainTaskChanged OnMainTaskChanged;
+
     private void Awake()
     {
         if (instance == null)
@@ -43,11 +49,17 @@ public class TaskManager : MonoBehaviour
         }
     }
 
-    public void NextTask()
+    private void Start()
     {
+        SetActiveTask(currentMainTask);
+    }
+
+    public void UpdateTask(TaskName newTaskStatus)
+    {
+        task = newTaskStatus;
         if (task == TaskName.Complete)
         {
-            ProceedToNextMainTask();
+            ProceedToNextMainTask(); // 다음 태스크로 전환
         }
     }
 
@@ -56,12 +68,12 @@ public class TaskManager : MonoBehaviour
         switch (currentMainTask)
         {
             case MainTask.Mes:
-                //currentMainTask = MainTask.Clamp;
-                currentMainTask = MainTask.Dig;
-                break;
+                
+            //    currentMainTask = MainTask.Clamp;
+            //    break;
             //case MainTask.Clamp:
             //    currentMainTask = MainTask.Dig;
-            //    break;
+                break;
             case MainTask.Dig:
                 TaskArrow.Instance.isCompleteArrow = true;
                 Debug.Log("모든 메인 작업 완료");
@@ -69,16 +81,23 @@ public class TaskManager : MonoBehaviour
         }
 
         task = TaskName.Start; // 새 태스크를 시작 상태로 초기화
+        SetActiveTask(currentMainTask);
+        OnMainTaskChanged?.Invoke(currentMainTask); // 이벤트 호출
         Debug.Log("새로운 메인 작업: " + currentMainTask);
     }
 
-    public void UpdateTask(TaskName newTaskStatus)
+    private void SetActiveTask(MainTask newMainTask)
     {
-        task = newTaskStatus;
-        if (task == TaskName.Complete)
-        {
-            NextTask(); // 다음 태스크로 넘어가기
-        }
+        //if(digTask == enabled)
+    }
+
+    public void StartNewTask(MainTask newMainTask)
+    {
+        currentMainTask = newMainTask;
+        task = TaskName.Start;
+        SetActiveTask(newMainTask);
+        OnMainTaskChanged?.Invoke(currentMainTask);
+        Debug.Log("새로운 메인 작업 시작: " + currentMainTask);
     }
     //public void NextTask()
     //{

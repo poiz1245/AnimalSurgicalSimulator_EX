@@ -61,15 +61,10 @@ public class ClampTask : MonoBehaviour
                     TaskStateChange(TaskName.Attach);
                 }
                 break;
-            //case TaskName.Complete:
-            //    if (TaskManager.instance.isNextTask)
-            //    {
-            //        TaskManager.instance.NextTask();
-            //        TaskManager.instance.GetCurrentTask().enabled = true;
-            //        this.enabled = false;
-            //    }
-            //    TaskManager.instance.isNextTask = false;
-            //    break;
+            case TaskName.Complete:
+                TaskManager.instance.isNextTask = true;
+                TaskManager.instance.UpdateTask(TaskName.Complete); // 다음 태스크로 전환
+                break;
         }
     }
 
@@ -92,8 +87,8 @@ public class ClampTask : MonoBehaviour
                 subUiText.text = "* Hold the object and follow the guidelines";
                 break;
             case TaskName.Process:
-                uiText.text = "";
-                subUiText.text = "* ";
+                uiText.text = "Spread the clamp with your thumb and ring finger";
+                subUiText.text = "* Move your thumb and ring finger slowly ";
                 break;
             case TaskName.Complete:
                 uiText.text = "Bring the Clamp back to its original position";

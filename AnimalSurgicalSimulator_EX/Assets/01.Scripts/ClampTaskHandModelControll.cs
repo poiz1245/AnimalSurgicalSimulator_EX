@@ -35,7 +35,7 @@ public class ClampTaskHandModelControll : MonoBehaviour
 
     private void Start()
     {
-        IsTaskCompleted += TaskComplete;
+        //IsTaskCompleted += TaskComplete;
     }
     private void Update()
     {
