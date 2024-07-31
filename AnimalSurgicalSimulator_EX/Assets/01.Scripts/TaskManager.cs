@@ -16,7 +16,7 @@ public class TaskManager : MonoBehaviour
     [SerializeField] DigTask digTask;
     [SerializeField] ClampTask clampTask;
     [SerializeField] MesTask mesTask;
-
+    [SerializeField] ObjectGrabGuideControll objectGrabGuideControll; //손 가이드 메쉬 호출
     public enum MainTask
     {
         Mes,
@@ -54,6 +54,7 @@ public class TaskManager : MonoBehaviour
     private void Start()
     {
         SetActiveTask(currentMainTask);
+        objectGrabGuideControll.UpdateMeshes(currentMainTask); // 손 메쉬 업데이트
     }
 
     public void UpdateTask(TaskName newTaskStatus)

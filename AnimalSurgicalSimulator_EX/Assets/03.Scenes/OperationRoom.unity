@@ -163,6 +163,7 @@ Transform:
   - {fileID: 150711881}
   - {fileID: 1287084286}
   - {fileID: 752356365}
+  - {fileID: 1443635891}
   m_Father: {fileID: 115061490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &18186338
@@ -495,10 +496,12 @@ MonoBehaviour:
   blinkInterval: 0.5
   grabInteractors:
   - {fileID: 919132148618843444}
-  objectsToBlink:
-  - {fileID: 332125263}
+  objectsToBlink: {fileID: 332125263}
   handModelControll: {fileID: 1502207232}
-  handTrackingModelControll: {fileID: 2059901802}
+  drillHandModelController: {fileID: 2059901802}
+  mesHandModelController: {fileID: 2059901801}
+  calmpHandModelController: {fileID: 2059901803}
+  blinkName: 1
 --- !u!65 &36327635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -919,6 +922,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1745145820}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &82184675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 82184676}
+  - component: {fileID: 82184677}
+  m_Layer: 0
+  m_Name: ClampSocketHoverMesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &82184676
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82184675}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: -0.009999988, y: 0.5765551, z: 0.0058412724}
+  m_LocalScale: {x: 0.46666658, y: 0.37029868, z: 0.531027}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 332125266}
+  m_Father: {fileID: 320128452}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &82184677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82184675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db348dfc1c72b9047960de744507c5be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1502207232}
+  drillHandModelController: {fileID: 2059901802}
+  mesHandModelController: {fileID: 2059901801}
+  clampHandModelController: {fileID: 2059901803}
+  handSocketInteractor: {fileID: 1823099584}
+  objectName: 1
 --- !u!1 &112000773
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,11 +1035,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1502207232}
-  drillHandModelController: {fileID: 0}
-  mesHandModelController: {fileID: 0}
-  clampHandModelController: {fileID: 0}
+  drillHandModelController: {fileID: 2059901802}
+  mesHandModelController: {fileID: 2059901801}
+  clampHandModelController: {fileID: 2059901803}
   handSocketInteractor: {fileID: 1823099584}
-  objectName: 0
+  objectName: 2
 --- !u!4 &115061490
 Transform:
   m_ObjectHideFlags: 0
@@ -999,7 +1053,6 @@ Transform:
   m_LocalScale: {x: 0.66666704, y: 0.52899814, z: 0.7586108}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1443635891}
   - {fileID: 17310852}
   m_Father: {fileID: 320128452}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -2329,11 +2382,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4545439289475304, guid: be48e9b5cd2313746911d55e8990c8b8,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 699829791}
+      addedObject: {fileID: 1485983402}
     - targetCorrespondingSourceObject: {fileID: 4545439289475304, guid: be48e9b5cd2313746911d55e8990c8b8,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 332125266}
+      addedObject: {fileID: 82184676}
     - targetCorrespondingSourceObject: {fileID: 4545439289475304, guid: be48e9b5cd2313746911d55e8990c8b8,
         type: 3}
       insertIndex: -1
@@ -2364,7 +2417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 332125266}
   m_Layer: 0
-  m_Name: ClampSocketHoverMesh
+  m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2378,14 +2431,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332125263}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -0.009999988, y: 0.576555, z: 0.0058412724}
-  m_LocalScale: {x: 0.46666655, y: 0.37029865, z: 0.531027}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 482218205}
   - {fileID: 2094466703}
-  m_Father: {fileID: 320128452}
+  m_Father: {fileID: 82184676}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &332570009
 GameObject:
@@ -2703,10 +2756,12 @@ MonoBehaviour:
   blinkInterval: 0.5
   grabInteractors:
   - {fileID: 1785801876}
-  objectsToBlink:
-  - {fileID: 17310851}
+  objectsToBlink: {fileID: 17310851}
   handModelControll: {fileID: 1502207232}
-  handTrackingModelControll: {fileID: 2059901802}
+  drillHandModelController: {fileID: 2059901802}
+  mesHandModelController: {fileID: 2059901801}
+  calmpHandModelController: {fileID: 2059901803}
+  blinkName: 2
 --- !u!65 &350884598
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3547,10 +3602,12 @@ MonoBehaviour:
   blinkInterval: 0.5
   grabInteractors:
   - {fileID: 1260095157}
-  objectsToBlink:
-  - {fileID: 699829788}
+  objectsToBlink: {fileID: 699829788}
   handModelControll: {fileID: 1502207232}
-  handTrackingModelControll: {fileID: 2059901802}
+  drillHandModelController: {fileID: 2059901802}
+  mesHandModelController: {fileID: 2059901801}
+  calmpHandModelController: {fileID: 2059901803}
+  blinkName: 0
 --- !u!65 &469721465
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4487,7 +4544,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 556152548}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: deebcfa48a6ff784d9cf59db1a4e28da, type: 3}
+  m_Script: {fileID: 11500000, guid: a4d75182dcef02f4c9a9510cffb339db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   guideMesh: {fileID: 1440547235}
@@ -5689,7 +5746,7 @@ GameObject:
   - component: {fileID: 699829790}
   - component: {fileID: 699829789}
   m_Layer: 11
-  m_Name: MesSocketHoverMesh
+  m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5754,12 +5811,12 @@ Transform:
   m_GameObject: {fileID: 699829788}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.14400002, y: 0.57708395, z: 0.0058412724}
-  m_LocalScale: {x: 0.66666704, y: 0.528998, z: 0.7586108}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 50165829}
-  m_Father: {fileID: 320128452}
+  m_Father: {fileID: 1485983402}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &713403520
 GameObject:
@@ -7139,7 +7196,7 @@ MonoBehaviour:
   mesHandModelController: {fileID: 2059901801}
   clampHandModelController: {fileID: 2059901803}
   handSocketInteractor: {fileID: 1823099584}
-  objectName: 2
+  objectName: 1
 --- !u!1 &948240315
 GameObject:
   m_ObjectHideFlags: 0
@@ -8337,6 +8394,8 @@ GameObject:
   - component: {fileID: 1188487791}
   - component: {fileID: 1188487792}
   - component: {fileID: 1188487790}
+  - component: {fileID: 1188487794}
+  - component: {fileID: 1188487793}
   m_Layer: 0
   m_Name: Taskmanager
   m_TagString: Untagged
@@ -8372,7 +8431,12 @@ MonoBehaviour:
   digComplete: {fileID: 1188487787}
   mesComplete: {fileID: 1188487791}
   clampComplete: {fileID: 1188487792}
+  isNextTask: 0
   digTask: {fileID: 1188487790}
+  clampTask: {fileID: 1188487793}
+  mesTask: {fileID: 1188487794}
+  objectGrabGuideControll: {fileID: 1715114812}
+  currentMainTask: 0
   task: 0
 --- !u!4 &1188487789
 Transform:
@@ -8401,9 +8465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf841bba4223fcb42a96682b368a265f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handModel: {fileID: 1502207232}
-  hand: {fileID: 2059901802}
-  grab: {fileID: 1785801876}
   uiText: {fileID: 1708343489}
   subUiText: {fileID: 1785600533}
   targets:
@@ -8411,6 +8472,9 @@ MonoBehaviour:
   - {fileID: 674291568256962871}
   - {fileID: 674291568256962871}
   - {fileID: 115061490}
+  handModel: {fileID: 1502207232}
+  hand: {fileID: 2059901802}
+  grab: {fileID: 1785801876}
 --- !u!114 &1188487791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8437,6 +8501,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskObject: {fileID: 0}
+--- !u!114 &1188487793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188487786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919b95ae7abc6d24aa669a7bfdd2e1a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiText: {fileID: 1708343489}
+  subUiText: {fileID: 1785600533}
+  targets:
+  - {fileID: 543450653161230217}
+  - {fileID: 944172710}
+  - {fileID: 944172710}
+  - {fileID: 82184676}
+  handModel: {fileID: 1502207232}
+  hand: {fileID: 2059901803}
+  grab: {fileID: 919132148618843444}
+--- !u!114 &1188487794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188487786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af11f67897333c140926aeb483f8fa47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiText: {fileID: 1708343489}
+  subUiText: {fileID: 1785600533}
+  targets:
+  - {fileID: 543450652905357869}
+  - {fileID: 1374636917}
+  - {fileID: 1374636917}
+  - {fileID: 1485983402}
+  handModel: {fileID: 1502207232}
+  hand: {fileID: 2059901801}
+  grab: {fileID: 1260095157}
 --- !u!1 &1200748270
 GameObject:
   m_ObjectHideFlags: 0
@@ -8998,7 +9106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1299229425}
   m_Layer: 0
-  m_Name: Mesh
+  m_Name: Clamp Hand Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9564,7 +9672,7 @@ MonoBehaviour:
   mesHandModelController: {fileID: 2059901801}
   clampHandModelController: {fileID: 2059901803}
   handSocketInteractor: {fileID: 1823099584}
-  objectName: 1
+  objectName: 0
 --- !u!23 &1374636915
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9889,12 +9997,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1440547236}
   m_Layer: 0
-  m_Name: Mesh
+  m_Name: Drill Hand Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1440547236
 Transform:
   m_ObjectHideFlags: 0
@@ -9935,12 +10043,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1443635890}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: -0.112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 115061490}
+  m_Father: {fileID: 17310852}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &1450027302
 GameObject:
@@ -10136,6 +10244,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 954426332}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1485983401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1485983402}
+  - component: {fileID: 1485983403}
+  m_Layer: 11
+  m_Name: MesSocketHoverMesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1485983402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485983401}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.14400004, y: 0.57708395, z: 0.0058412724}
+  m_LocalScale: {x: 0.66666704, y: 0.528998, z: 0.75861084}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 699829791}
+  m_Father: {fileID: 320128452}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1485983403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485983401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db348dfc1c72b9047960de744507c5be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1502207232}
+  drillHandModelController: {fileID: 2059901802}
+  mesHandModelController: {fileID: 2059901801}
+  clampHandModelController: {fileID: 2059901803}
+  handSocketInteractor: {fileID: 1823099584}
+  objectName: 0
 --- !u!1 &1488887038
 GameObject:
   m_ObjectHideFlags: 0
@@ -10749,6 +10908,7 @@ MonoBehaviour:
   arrow:
   - {fileID: 1133712323}
   - {fileID: 1133130697}
+  isCompleteArrow: 0
 --- !u!1001 &1549446474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12036,6 +12196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1715114811}
+  - component: {fileID: 1715114812}
   m_Layer: 0
   m_Name: Object
   m_TagString: Untagged
@@ -12061,6 +12222,26 @@ Transform:
   - {fileID: 543450652905357869}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1715114812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715114810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deebcfa48a6ff784d9cf59db1a4e28da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mesMesh: {fileID: 1756809542}
+  clampMesh: {fileID: 1299229424}
+  drillMesh: {fileID: 1440547235}
+  grabObject:
+  - {fileID: 250369978}
+  - {fileID: 2068258519}
+  - {fileID: 556152551}
+  gripObjectName: 0
 --- !u!1 &1726951050
 GameObject:
   m_ObjectHideFlags: 0
@@ -12315,7 +12496,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1756809543}
   m_Layer: 0
-  m_Name: Mesh
+  m_Name: Mes Hand Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13613,7 +13794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1863298924
 Transform:
   m_ObjectHideFlags: 0
@@ -14947,7 +15128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2071932715
 Transform:
   m_ObjectHideFlags: 0
@@ -19077,7 +19258,7 @@ MonoBehaviour:
   mesHandModelController: {fileID: 2059901801}
   clampHandModelController: {fileID: 2059901803}
   handSocketInteractor: {fileID: 1823099584}
-  objectName: 0
+  objectName: 2
 --- !u!1 &9011485695721672874
 GameObject:
   m_ObjectHideFlags: 0

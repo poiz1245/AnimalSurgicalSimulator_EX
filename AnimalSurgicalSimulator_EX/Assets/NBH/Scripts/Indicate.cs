@@ -23,21 +23,21 @@ public class Indicate : MonoBehaviour
     {
         if (objectName == ObjectName.Mes)
         {
-            if (!controller.currentTaskComplete && !drillHandModelController.currentTaskComplete)
+            if (!controller.currentTaskComplete && !mesHandModelController.currentTaskComplete)
             {
                 gameObject.SetActive(true);
             }
         }
         else if (objectName == ObjectName.Clamp)
         {
-            if (!controller.currentTaskComplete && !mesHandModelController.currentTaskComplete)
+            if (!controller.currentTaskComplete && !clampHandModelController.currentTaskComplete)
             {
                 gameObject.SetActive(true);
             }
         }
         else if (objectName == ObjectName.Dig)
         {
-            if (!controller.currentTaskComplete && !mesHandModelController.currentTaskComplete)
+            if (!controller.currentTaskComplete && !drillHandModelController.currentTaskComplete)
             {
                 gameObject.SetActive(true);
             }
@@ -47,5 +47,9 @@ public class Indicate : MonoBehaviour
     public void OffIndicate()
     {
         gameObject.SetActive(false);
+        if (objectName == ObjectName.Dig)
+        {
+            Debug.Log("DIG");
+        }
     }
 }

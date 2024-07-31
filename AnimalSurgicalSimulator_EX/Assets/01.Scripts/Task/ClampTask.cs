@@ -7,7 +7,7 @@ using static TaskManager;
 public class ClampTask : BaseTask
 {
     [SerializeField] HandModelControll handModel;
-    [SerializeField] DrillTaskHandModelControll hand;
+    [SerializeField] ClampTaskHandModelControll hand;
     [SerializeField] XRGrabInteractable grab;
     //[SerializeField] TextMeshProUGUI uiText;
     //[SerializeField] TextMeshProUGUI subUiText;
@@ -99,8 +99,8 @@ public class ClampTask : BaseTask
                 subUiText.text = "* Move your thumb and ring finger slowly ";
                 break;
             case TaskName.Complete:
-                uiText.text = "Bring the Clamp back to its original position";
-                subUiText.text = "* Take it to the stand. Put your hands down";
+                //uiText.text = "Bring the Clamp back to its original position";
+                //subUiText.text = "* Take it to the stand. Put your hands down";
                 break;
         }
     }
@@ -122,7 +122,7 @@ public class ClampTask : BaseTask
                 newTargets.Add(targets[2]);
                 break;
             case TaskName.Complete:
-                newTargets.Add(targets[3]);
+                //newTargets.Add(targets[3]);
                 break;
 
         }

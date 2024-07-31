@@ -13,15 +13,25 @@ public class GripGuideOnOffTemp : MonoBehaviour
         grabInteractable = GetComponentInParent<XRGrabInteractable>();
     }
 
-    private void Update()
+    //private void Update()
+    //{
+    //    if (grabInteractable.isSelected)
+    //    {
+    //        guideMesh.SetActive(false);
+    //    }
+    //    else
+    //    {
+    //        guideMesh.SetActive(true);
+    //    }
+    //}
+
+    public void GrabObject()
     {
-        if (grabInteractable.isSelected)
-        {
-            guideMesh.SetActive(false);
-        }
-        else
-        {
-            guideMesh.SetActive(true);
-        }
+        guideMesh.SetActive(false);
+    }
+
+    public void ReleaseObject()
+    {
+        guideMesh.SetActive(true);
     }
 }
