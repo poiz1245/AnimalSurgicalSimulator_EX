@@ -2753,7 +2753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   socket: {fileID: 350884602}
-  blinkInterval: 0.5
+  blinkInterval: 1
   grabInteractors:
   - {fileID: 1785801876}
   objectsToBlink: {fileID: 17310851}
@@ -12234,14 +12234,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deebcfa48a6ff784d9cf59db1a4e28da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mesMesh: {fileID: 1756809542}
-  clampMesh: {fileID: 1299229424}
-  drillMesh: {fileID: 1440547235}
-  grabObject:
-  - {fileID: 250369978}
-  - {fileID: 2068258519}
-  - {fileID: 556152551}
-  gripObjectName: 0
+  handMesh:
+  - {fileID: 1756809542}
+  - {fileID: 1299229424}
+  - {fileID: 1440547235}
 --- !u!1 &1726951050
 GameObject:
   m_ObjectHideFlags: 0

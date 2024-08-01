@@ -36,8 +36,8 @@ public class ObjectBlinker : MonoBehaviour
         for (int i = 0; i < grabInteractors.Count; i++)
         {
             int index = i; // 캡처된 인덱스
-            grabInteractors[i].selectEntered.AddListener((args) => OnGrabbed(index));
-            grabInteractors[i].selectExited.AddListener((args) => OnReleased(index));
+            grabInteractors[i].selectEntered.AddListener((args) => OnGrabbed());
+            grabInteractors[i].selectExited.AddListener((args) => OnReleased());
         }
 
         handModelControll.IsTaskCompleted += OnTaskCompleted;
@@ -68,7 +68,7 @@ public class ObjectBlinker : MonoBehaviour
             return;
         }
     }
-    private IEnumerator BlinkObject(int index)
+    private IEnumerator BlinkObject()
     {
         while (!isObjectInSocket)
         {
@@ -84,16 +84,14 @@ public class ObjectBlinker : MonoBehaviour
         TaskManager.instance.isNextTask = true;
     }
 
-    private void OnGrabbed(int index)
+    private void OnGrabbed()
     {
         isGrabbed = true;
-        grabbedIndex = index;
     }
 
-    private void OnReleased(int index)
+    private void OnReleased()
     {
         isGrabbed = false;
-        grabbedIndex = -1;
     }
 
     // TaskCompleted 이벤트가 발생할 때 실행할 메서드
@@ -101,7 +99,7 @@ public class ObjectBlinker : MonoBehaviour
     {
         if (taskComplete)
         {
-            StartCoroutine(BlinkObject(grabbedIndex));
+            StartCoroutine(BlinkObject());
             // 여기에서 필요한 작업을 수행합니다.
             //if (grabbedIndex >= 0 && grabbedIndex < objectsToBlink.Count)
             //{
