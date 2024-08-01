@@ -165,6 +165,10 @@ public class ObjectBlinker : MonoBehaviour
         }
         objectsToBlink.SetActive(false);
         TaskManager.instance.isNextTask = true;
+        if(TaskManager.instance.currentMainTask == TaskManager.MainTask.Dig && TaskManager.instance.task == TaskManager.TaskName.Complete)
+        {
+            TaskArrow.Instance.isCompleteArrow = true;
+        }
     }
 
     private void OnGrabbed()

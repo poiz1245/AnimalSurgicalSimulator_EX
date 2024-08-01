@@ -1917,7 +1917,6 @@ GameObject:
   m_Component:
   - component: {fileID: 182643048}
   - component: {fileID: 182643050}
-  - component: {fileID: 182643049}
   m_Layer: 0
   m_Name: Clamp Grip Guide Mesh
   m_TagString: Untagged
@@ -1942,19 +1941,6 @@ Transform:
   - {fileID: 1842982889}
   m_Father: {fileID: 1887892923}
   m_LocalEulerAnglesHint: {x: -79.967, y: 90, z: -90}
---- !u!114 &182643049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 182643047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4d75182dcef02f4c9a9510cffb339db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  guideMesh: {fileID: 910166463}
 --- !u!95 &182643050
 Animator:
   serializedVersion: 5
@@ -3804,7 +3790,6 @@ GameObject:
   m_Component:
   - component: {fileID: 462156596}
   - component: {fileID: 462156598}
-  - component: {fileID: 462156597}
   m_Layer: 0
   m_Name: Mes Grip Guide Mesh
   m_TagString: Untagged
@@ -3829,19 +3814,6 @@ Transform:
   - {fileID: 60373398}
   m_Father: {fileID: 1360278599}
   m_LocalEulerAnglesHint: {x: -90, y: 180, z: -90}
---- !u!114 &462156597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 462156595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4d75182dcef02f4c9a9510cffb339db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  guideMesh: {fileID: 627811950}
 --- !u!95 &462156598
 Animator:
   serializedVersion: 5
@@ -15886,7 +15858,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1799454081}
   - component: {fileID: 1799454083}
-  - component: {fileID: 1799454082}
   m_Layer: 0
   m_Name: Drill Grip Guide Mesh
   m_TagString: Untagged
@@ -15911,19 +15882,6 @@ Transform:
   - {fileID: 1863408487}
   m_Father: {fileID: 1615139382}
   m_LocalEulerAnglesHint: {x: -0.3, y: 179.258, z: -90.002}
---- !u!114 &1799454082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799454080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4d75182dcef02f4c9a9510cffb339db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  guideMesh: {fileID: 1879051801}
 --- !u!95 &1799454083
 Animator:
   serializedVersion: 5

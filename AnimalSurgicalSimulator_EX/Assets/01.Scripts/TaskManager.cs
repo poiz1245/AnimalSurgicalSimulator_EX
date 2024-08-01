@@ -115,5 +115,6 @@ public class TaskManager : MonoBehaviour
                 if (digTask != null) digTask.enabled = true;
                 break;
         }
+
     }
 }
