@@ -5009,7 +5009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a200b19ca1a9685429ed7e043c28e904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Resolution: 6
+  m_Resolution: 17
   m_Appearance:
     pathColor: {r: 0, g: 1, b: 0, a: 1}
     inactivePathColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -5018,9 +5018,11 @@ MonoBehaviour:
   m_Waypoints:
   - position: {x: 0, y: 0, z: 0}
     roll: 0
-  - position: {x: -0.0014020551, y: 0.0033643246, z: 0.03211117}
+  - position: {x: -0.001402391, y: 0.0024074316, z: 0.025464827}
     roll: 0
-  - position: {x: -0.002562125, y: -0.012001157, z: 0.06595303}
+  - position: {x: -0.0025628058, y: -0.0035653114, z: 0.05143855}
+    roll: 0
+  - position: {x: -0.002562125, y: -0.01200116, z: 0.06595303}
     roll: 0
 --- !u!4 &652040503
 Transform:
@@ -11144,8 +11146,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581573356}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.08774188, y: 0.7007724, z: 0.087521516, w: 0.7025379}
-  m_LocalPosition: {x: -0.00025839452, y: 1.7677451, z: 0.19859095}
+  m_LocalRotation: {x: 0.21495076, y: 0.6939513, z: -0.23040235, w: 0.6474122}
+  m_LocalPosition: {x: 0.065743625, y: 1.755744, z: 0.19827469}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11166,9 +11168,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Path: {fileID: 652040502}
   m_UpdateMethod: 0
-  m_PositionUnits: 1
+  m_PositionUnits: 2
   m_Speed: 0.001
-  m_Position: 0
+  m_Position: 1
 --- !u!1 &1585577787
 GameObject:
   m_ObjectHideFlags: 0
@@ -14967,6 +14969,7 @@ MonoBehaviour:
   grabInteractor: {fileID: 1260095157}
   handVisualizer: {fileID: 1900805446}
   dollyCart: {fileID: 1581573358}
+  moveSpeed: 4
 --- !u!114 &2059901802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16572,8 +16575,8 @@ Transform:
   m_GameObject: {fileID: 5498973019364359064}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0038161539, y: 0.004350543, z: 0.010463953}
-  m_LocalScale: {x: 1, y: 1, z: 0.88}
+  m_LocalPosition: {x: 0.003816, y: 0.004351, z: 0.010181}
+  m_LocalScale: {x: 1, y: 1, z: 0.80473095}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1140990196}
@@ -17040,8 +17043,8 @@ Transform:
   m_GameObject: {fileID: 1574057385394962437}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0038437508, y: 0.0043690205, z: 0.01406014}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.003844, y: 0.004369, z: 0.013786}
+  m_LocalScale: {x: 1, y: 1, z: 1.3783201}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1140990196}
@@ -17283,6 +17286,42 @@ MonoBehaviour:
   m_GesturePerformed:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 560445343}
+        m_TargetAssemblyTypeName: HandGrab, Assembly-CSharp
+        m_MethodName: SettingHandShape
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 560445343}
+        m_TargetAssemblyTypeName: HandGrab, Assembly-CSharp
+        m_MethodName: LayerSetting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 560445343}
+        m_TargetAssemblyTypeName: HandGrab, Assembly-CSharp
+        m_MethodName: OnGripAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1785801881}
         m_TargetAssemblyTypeName: HandTrackingDrillTrigger, Assembly-CSharp
         m_MethodName: TriggerButtonOn

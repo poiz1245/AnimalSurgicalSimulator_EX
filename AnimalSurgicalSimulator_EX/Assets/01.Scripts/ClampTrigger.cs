@@ -19,8 +19,6 @@ public class ClampTrigger : MonoBehaviour
     {
         if (grabInteractable.isSelected)
         {
-            print("aa");
-
             moveClamp.transform.DOLocalRotate(new Vector3(0, 0, 20), 0.1f);
             clampOpen = true;
         }

@@ -21,7 +21,7 @@ public class CustomSocket : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (!selectObjectGrabInteractable.isSelected)
+        if (selectObjectGrabInteractable.enabled && !selectObjectGrabInteractable.isSelected)
         {
             selectObjectGrabInteractable.transform.position = attach.position;
             selectObjectGrabInteractable.transform.rotation = attach.rotation;
@@ -30,7 +30,7 @@ public class CustomSocket : MonoBehaviour
 
             hoverMesh.SetActive(false);
         }
-        else
+        else if(selectObjectGrabInteractable.isSelected)
         {
             hoverMesh.SetActive(true);
             hasSelection = false;
