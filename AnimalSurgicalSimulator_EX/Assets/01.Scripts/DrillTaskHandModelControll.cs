@@ -43,7 +43,7 @@ public class DrillTaskHandModelControll : MonoBehaviour
         }
         else if (isAttach && grabInteractor.isSelected && distance <= 0.2f)
         {
-            handModel.transform.rotation = Quaternion.Euler(new Vector3(90, -90, 0));
+            handModel.transform.rotation = Quaternion.Euler(new Vector3(0, -180, -90));
             Move();
         }
         else if (isAttach && !grabInteractor.isSelected && distance <= 0.2f)
