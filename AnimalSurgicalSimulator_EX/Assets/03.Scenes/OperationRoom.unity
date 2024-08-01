@@ -487,15 +487,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36327631}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c255e37c1475a334193d6a0bf9b622fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   socket: {fileID: 36327633}
   blinkInterval: 0.5
-  grabInteractors:
-  - {fileID: 919132148618843444}
+  grabInteractors: {fileID: 919132148618843444}
   objectsToBlink: {fileID: 332125263}
   handModelControll: {fileID: 1502207232}
   drillHandModelController: {fileID: 2059901802}
@@ -2754,8 +2753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   socket: {fileID: 350884602}
   blinkInterval: 1
-  grabInteractors:
-  - {fileID: 1785801876}
+  grabInteractors: {fileID: 1785801876}
   objectsToBlink: {fileID: 17310851}
   handModelControll: {fileID: 1502207232}
   drillHandModelController: {fileID: 2059901802}
@@ -3600,8 +3598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   socket: {fileID: 469721463}
   blinkInterval: 0.5
-  grabInteractors:
-  - {fileID: 1260095157}
+  grabInteractors: {fileID: 1260095157}
   objectsToBlink: {fileID: 699829788}
   handModelControll: {fileID: 1502207232}
   drillHandModelController: {fileID: 2059901802}
