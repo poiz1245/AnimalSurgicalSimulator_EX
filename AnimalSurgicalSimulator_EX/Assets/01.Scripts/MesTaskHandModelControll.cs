@@ -23,9 +23,9 @@ public class MesTaskHandModelControll : MonoBehaviour
     [SerializeField] HandVisualizer handVisualizer;
 
     [SerializeField] CinemachineDollyCart dollyCart;
+    [SerializeField] float moveSpeed;
 
     float startCartPosition;
-    //float drillSpeed = 0.03f;
     public bool isAttach { get; private set; } = false;
 
     public bool currentTaskComplete { get; private set; } = false;
@@ -96,9 +96,9 @@ public class MesTaskHandModelControll : MonoBehaviour
 
     void Move()
     {
-        dollyCart.m_Position = (gameObject.transform.position.x - startCartPosition) * 0.8f;
+        dollyCart.m_Position = (gameObject.transform.position.x - startCartPosition) * moveSpeed;
 
-        if (dollyCart.m_Position >= 0.06f)
+        if (dollyCart.m_Position >= 1)
         {
             currentTaskComplete = true;
             IsTaskCompleted?.Invoke(currentTaskComplete);
