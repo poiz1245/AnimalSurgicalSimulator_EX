@@ -21,19 +21,23 @@ public class CustomSocket : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (selectObjectGrabInteractable.enabled && !selectObjectGrabInteractable.isSelected)
+        if ((socketLayer & (1 << other.gameObject.layer)) != 0)
         {
-            selectObjectGrabInteractable.transform.position = attach.position;
-            selectObjectGrabInteractable.transform.rotation = attach.rotation;
+            if (selectObjectGrabInteractable.enabled && !selectObjectGrabInteractable.isSelected)
+            {
+                Debug.Log("Æ®¸®°Å");
+                selectObjectGrabInteractable.transform.position = attach.position;
+                selectObjectGrabInteractable.transform.rotation = attach.rotation;
 
-            hasSelection = true;
+                hasSelection = true;
 
-            hoverMesh.SetActive(false);
-        }
-        else if(selectObjectGrabInteractable.isSelected)
-        {
-            hoverMesh.SetActive(true);
-            hasSelection = false;
+                hoverMesh.SetActive(false);
+            }
+            else if (selectObjectGrabInteractable.isSelected)
+            {
+                hoverMesh.SetActive(true);
+                hasSelection = false;
+            }
         }
     }
     private void OnTriggerExit(Collider other)
