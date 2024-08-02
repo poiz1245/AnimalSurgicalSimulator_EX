@@ -64,16 +64,16 @@ public class DrillTaskHandModelControll : MonoBehaviour
         //handModel.transform.position = indicator.transform.position;
 
         socketInteractor.transform.SetParent(handModel.transform);
-        socketInteractor.transform.position = handModel.transform.position;
-        socketInteractor.transform.rotation= handModel.transform.rotation;
+        socketInteractor.transform.position = drillAttach.transform.position;
+        socketInteractor.transform.rotation= drillAttach.transform.rotation;
 
         //socketInteractor.socketActive = false;
 
         //handModel.transform.position = indicatorAttach.position;
 
         grabObject.transform.SetParent(handModel.transform);
-        grabObject.transform.position = drillAttach.transform.position;
-        grabObject.transform.rotation = drillAttach.transform.rotation;
+        //grabObject.transform.position = drillAttach.transform.position;
+        //grabObject.transform.rotation = drillAttach.transform.rotation;
 
 
 
