@@ -35,7 +35,6 @@ public class HandTrackingDrillTrigger : MonoBehaviour
         {
             spinObject.transform.DOLocalRotate(new Vector3(0, 0, 10), 0.01f).SetEase(Ease.Linear).SetLoops(-1, LoopType.Incremental);
 
-            print(currentTriggerLayerName);
             if (currentTriggerLayerName == "OutsideBone")
             {
                 HapticsTest.instance.CustomBasic(1, 0.1f);

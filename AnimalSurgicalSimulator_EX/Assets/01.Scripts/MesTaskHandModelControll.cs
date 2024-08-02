@@ -26,7 +26,9 @@ public class MesTaskHandModelControll : MonoBehaviour
     [SerializeField] CinemachineDollyCart dollyCart;
     [SerializeField] float moveSpeed;
 
-    float startCartPosition;
+    float startCartPositionX;
+    float startCartPositionY;
+
     public bool isAttach { get; private set; } = false;
 
     public bool currentTaskComplete { get; private set; } = false;
@@ -78,7 +80,9 @@ public class MesTaskHandModelControll : MonoBehaviour
         grabObject.transform.SetParent(handModel.transform);
 
         dollyCart.m_Position = 0;
-        startCartPosition = transform.position.y;
+
+        startCartPositionX = transform.position.x;
+        startCartPositionY = transform.position.y;
 
         isAttach = true;
     }
@@ -100,7 +104,10 @@ public class MesTaskHandModelControll : MonoBehaviour
 
     void Move()
     {
-        dollyCart.m_Position = (startCartPosition - gameObject.transform.position.y) * moveSpeed;
+        float movePositionX = gameObject.transform.position.x - startCartPositionX;
+        float movePositionY = startCartPositionY - gameObject.transform.position.y;
+
+        dollyCart.m_Position = (movePositionX + movePositionY) * moveSpeed;
 
         if (dollyCart.m_Position >= 1)
         {
