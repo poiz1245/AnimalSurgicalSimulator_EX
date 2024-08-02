@@ -4,12 +4,11 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using static TaskManager;
 
-public class DigTask : BaseTask
+public class ClampTask : BaseTask
 {
     [SerializeField] HandModelControll handModel;
-    [SerializeField] DrillTaskHandModelControll hand;
+    [SerializeField] ClampTaskHandModelControll hand;
     [SerializeField] XRGrabInteractable grab;
-
     //[SerializeField] TextMeshProUGUI uiText;
     //[SerializeField] TextMeshProUGUI subUiText;
     //[SerializeField] List<Transform> targets; // 타겟 오브젝트 리스트
@@ -17,7 +16,8 @@ public class DigTask : BaseTask
     //public delegate void TaskStateChanged(TaskName task);
     //public event TaskStateChanged OnTaskStateChanged;
 
-    //private void Start()
+    //// Start is called before the first frame update
+    //void Start()
     //{
     //    OnTaskStateChanged += UpdateUIText;
     //    OnTaskStateChanged += UpdateTargets; // 타겟 업데이트를 위한 이벤트 추가
@@ -28,13 +28,13 @@ public class DigTask : BaseTask
     //    UpdateUIText(TaskManager.instance.task);
     //}
 
+
     public void Update()
     {
         if (!enabled) return;
 
         switch (TaskManager.instance.task)
         {
-            
             case TaskName.Start:
                 if (grab.isSelected)
                 {
@@ -64,48 +64,52 @@ public class DigTask : BaseTask
                 }
                 break;
             case TaskName.Complete:
-                if (TaskManager.instance.isNextTask)
-                    TaskManager.instance.UpdateTask(TaskName.Complete); // 다음 태스크로 전환
-                    TaskArrow.Instance.isCompleteArrow = true; // 마지막 Task에만 추가
+                if(TaskManager.instance.isNextTask)
+                TaskManager.instance.UpdateTask(TaskName.Complete); // 다음 태스크로 전환
                 break;
         }
     }
+
     protected override TaskManager.MainTask GetMainTaskType()
     {
-        return TaskManager.MainTask.Dig;
+        return TaskManager.MainTask.Clamp;
     }
+
     //private void TaskStateChange(TaskName taskName)
     //{
     //    TaskManager.instance.task = taskName;
     //    OnTaskStateChanged?.Invoke(TaskManager.instance.task);
     //}
-    protected override void UpdateUIText(TaskManager.TaskName taskName)
+
+
+    protected override void UpdateUIText(TaskName taskName)
     {
         switch (taskName)
         {
             case TaskName.Start:
-                uiText.text = "Grab the drill";
-                subUiText.text = "* Follow the drill guidelines on the right";
+                uiText.text = "Grab the Clamp";
+                subUiText.text = "* Follow the Clamp guidelines on the right";
                 break;
             case TaskName.Attach:
-                uiText.text = "Attach the drill to the guidelines";
+                uiText.text = "Attach the Clamp to the guidelines";
                 subUiText.text = "* Hold the object and follow the guidelines";
                 break;
             case TaskName.Process:
-                uiText.text = "Put your fist on the drill";
-                subUiText.text = "* Pull the index finger to activate the drill";
+                uiText.text = "Spread the clamp with your thumb and ring finger";
+                subUiText.text = "* Move your thumb and ring finger slowly ";
                 break;
             case TaskName.Complete:
-                uiText.text = "Bring the drill back to its original position";
-                subUiText.text = "* Take it to the stand. Put your hands down";
+                //uiText.text = "Bring the Clamp back to its original position";
+                //subUiText.text = "* Take it to the stand. Put your hands down";
                 break;
         }
     }
 
-    protected override void UpdateTargets(TaskManager.TaskName taskName)
+    protected override void UpdateTargets(TaskName taskName)
     {
         List<Transform> newTargets = new List<Transform>();
 
+        // TaskName에 따라 타겟 오브젝트를 변경
         switch (taskName)
         {
             case TaskName.Start:
@@ -118,31 +122,33 @@ public class DigTask : BaseTask
                 newTargets.Add(targets[2]);
                 break;
             case TaskName.Complete:
-                newTargets.Add(targets[3]);
+                //newTargets.Add(targets[3]);
                 break;
+
         }
 
-        TaskArrow.Instance.SetTargets(newTargets);
+        TaskArrow.Instance.SetTargets(newTargets); // 타겟 업데이트
     }
+
+
     //void UpdateUIText(TaskName taskName)
     //{
     //    switch (taskName)
     //    {
     //        case TaskName.Start:
-    //            Debug.Log("드릴");
-    //            uiText.text = "Grab the drill";
-    //            subUiText.text = "* Follow the drill guidelines on the right";
+    //            uiText.text = "Grab the Clamp";
+    //            subUiText.text = "* Follow the Mes guidelines on the right";
     //            break;
     //        case TaskName.Attach:
-    //            uiText.text = "Attach the drill to the guidelines";
+    //            uiText.text = "Attach the Clamp to the guidelines";
     //            subUiText.text = "* Hold the object and follow the guidelines";
     //            break;
     //        case TaskName.Process:
-    //            uiText.text = "Put your fist on the drill";
-    //            subUiText.text = "* Pull the index finger to activate the drill";
+    //            uiText.text = "Spread the clamp with your thumb and ring finger";
+    //            subUiText.text = "* Move your thumb and ring finger slowly ";
     //            break;
     //        case TaskName.Complete:
-    //            uiText.text = "Bring the drill back to its original position";
+    //            uiText.text = "Bring the Clamp back to its original position";
     //            subUiText.text = "* Take it to the stand. Put your hands down";
     //            break;
     //    }

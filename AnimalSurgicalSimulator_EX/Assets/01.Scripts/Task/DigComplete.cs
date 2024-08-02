@@ -6,6 +6,7 @@ public class DigComplete : MonoBehaviour
 {
     [SerializeField] GameObject taskObject;
 
+
     public void TaskComplete()
     {
         taskObject.SetActive(false);

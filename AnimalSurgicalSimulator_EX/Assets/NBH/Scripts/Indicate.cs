@@ -13,22 +13,15 @@ public class Indicate : MonoBehaviour
 
     public enum ObjectName
     {
-        Drill,
         Mes,
-        Clamp
+        Clamp,
+        Dig
     }
 
     public ObjectName objectName;
     public void OnIndicate()
     {
-        if (objectName == ObjectName.Drill)
-        {
-            if (!controller.currentTaskComplete && !drillHandModelController.currentTaskComplete)
-            {
-                gameObject.SetActive(true);
-            }
-        }
-        else if (objectName == ObjectName.Mes)
+        if (objectName == ObjectName.Mes)
         {
             if (!controller.currentTaskComplete && !mesHandModelController.currentTaskComplete)
             {
@@ -42,10 +35,22 @@ public class Indicate : MonoBehaviour
                 gameObject.SetActive(true);
             }
         }
+        else if (objectName == ObjectName.Dig)
+        {
+            if (!controller.currentTaskComplete && !drillHandModelController.currentTaskComplete)
+            {
+                Debug.Log("드릴 활성화");
+                gameObject.SetActive(true);
+            }
+        }
     }
 
     public void OffIndicate()
     {
         gameObject.SetActive(false);
+        if (objectName == ObjectName.Dig)
+        {
+            Debug.Log("DIG");
+        }
     }
 }

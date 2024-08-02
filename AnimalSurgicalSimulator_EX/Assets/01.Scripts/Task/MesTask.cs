@@ -4,20 +4,21 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using static TaskManager;
 
-public class DigTask : BaseTask
+public class MesTask : BaseTask
 {
     [SerializeField] HandModelControll handModel;
-    [SerializeField] DrillTaskHandModelControll hand;
+    [SerializeField] MesTaskHandModelControll hand;
     [SerializeField] XRGrabInteractable grab;
-
     //[SerializeField] TextMeshProUGUI uiText;
     //[SerializeField] TextMeshProUGUI subUiText;
     //[SerializeField] List<Transform> targets; // 타겟 오브젝트 리스트
+    //[SerializeField] GameObject handGuide;
 
     //public delegate void TaskStateChanged(TaskName task);
     //public event TaskStateChanged OnTaskStateChanged;
 
-    //private void Start()
+    //// Start is called before the first frame update
+    //void Start()
     //{
     //    OnTaskStateChanged += UpdateUIText;
     //    OnTaskStateChanged += UpdateTargets; // 타겟 업데이트를 위한 이벤트 추가
@@ -28,16 +29,17 @@ public class DigTask : BaseTask
     //    UpdateUIText(TaskManager.instance.task);
     //}
 
+
     public void Update()
     {
         if (!enabled) return;
 
         switch (TaskManager.instance.task)
         {
-            
             case TaskName.Start:
                 if (grab.isSelected)
                 {
+                    //handGuide.SetActive(true);
                     TaskStateChange(TaskName.Attach);
                 }
                 break;
@@ -64,39 +66,43 @@ public class DigTask : BaseTask
                 }
                 break;
             case TaskName.Complete:
-                if (TaskManager.instance.isNextTask)
-                    TaskManager.instance.UpdateTask(TaskName.Complete); // 다음 태스크로 전환
-                    TaskArrow.Instance.isCompleteArrow = true; // 마지막 Task에만 추가
+                if (TaskManager.instance.isNextTask == true)
+                TaskManager.instance.UpdateTask(TaskName.Complete); // 다음 태스크로 전환
                 break;
         }
     }
+
+    
+
     protected override TaskManager.MainTask GetMainTaskType()
     {
-        return TaskManager.MainTask.Dig;
+        return TaskManager.MainTask.Mes;
     }
+
     //private void TaskStateChange(TaskName taskName)
     //{
     //    TaskManager.instance.task = taskName;
     //    OnTaskStateChanged?.Invoke(TaskManager.instance.task);
     //}
+
     protected override void UpdateUIText(TaskManager.TaskName taskName)
     {
         switch (taskName)
         {
             case TaskName.Start:
-                uiText.text = "Grab the drill";
-                subUiText.text = "* Follow the drill guidelines on the right";
+                uiText.text = "Grab the Mes";
+                subUiText.text = "* Follow the Mes guidelines on the right";
                 break;
             case TaskName.Attach:
-                uiText.text = "Attach the drill to the guidelines";
+                uiText.text = "Attach the Mes to the guidelines";
                 subUiText.text = "* Hold the object and follow the guidelines";
                 break;
             case TaskName.Process:
-                uiText.text = "Put your fist on the drill";
-                subUiText.text = "* Pull the index finger to activate the drill";
+                uiText.text = "Draw the scalpel along the guide";
+                subUiText.text = "* Do not let go of the Mes from your hand.";
                 break;
             case TaskName.Complete:
-                uiText.text = "Bring the drill back to its original position";
+                uiText.text = "Bring the Mes back to its original position";
                 subUiText.text = "* Take it to the stand. Put your hands down";
                 break;
         }
@@ -124,25 +130,26 @@ public class DigTask : BaseTask
 
         TaskArrow.Instance.SetTargets(newTargets);
     }
+
+
     //void UpdateUIText(TaskName taskName)
     //{
     //    switch (taskName)
     //    {
     //        case TaskName.Start:
-    //            Debug.Log("드릴");
-    //            uiText.text = "Grab the drill";
-    //            subUiText.text = "* Follow the drill guidelines on the right";
+    //            uiText.text = "Grab the Mes";
+    //            subUiText.text = "* Follow the Mes guidelines on the right";
     //            break;
     //        case TaskName.Attach:
-    //            uiText.text = "Attach the drill to the guidelines";
+    //            uiText.text = "Attach the Mes to the guidelines";
     //            subUiText.text = "* Hold the object and follow the guidelines";
     //            break;
     //        case TaskName.Process:
-    //            uiText.text = "Put your fist on the drill";
-    //            subUiText.text = "* Pull the index finger to activate the drill";
+    //            uiText.text = "Draw the scalpel along the guide";
+    //            subUiText.text = "*Do not let go of the Mes from your hand. ";
     //            break;
     //        case TaskName.Complete:
-    //            uiText.text = "Bring the drill back to its original position";
+    //            uiText.text = "Bring the Mes back to its original position";
     //            subUiText.text = "* Take it to the stand. Put your hands down";
     //            break;
     //    }

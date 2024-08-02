@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Hands.Samples.VisualizerSample;
 using UnityEngine.XR.Interaction.Toolkit;
+using static TaskManager;
 
 public class DrillTaskHandModelControll : MonoBehaviour
 {
@@ -27,7 +28,6 @@ public class DrillTaskHandModelControll : MonoBehaviour
     public delegate void TaskCompleted(bool taskComplete);
     public event TaskCompleted IsTaskCompleted;
 
-
     private void Start()
     {
         IsTaskCompleted += TaskComplete;
@@ -36,25 +36,28 @@ public class DrillTaskHandModelControll : MonoBehaviour
     {
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
 
-        if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.2f)
+        if(TaskManager.instance.currentMainTask == MainTask.Dig)
         {
-            indicator.SetActive(false);
-            Attach();
-        }
-        else if (isAttach && grabInteractor.isSelected && distance <= 0.2f)
-        {
-            //handModel.transform.rotation = Quaternion.Euler(new Vector3(0, -180, -90));
-            Move();
-        }
-        else if (isAttach && !grabInteractor.isSelected && distance <= 0.2f)
-        {
-            indicator.SetActive(true);
-            Detach();
-        }
-        else if (!currentTaskComplete && isAttach && distance > 0.2f)
-        {
-            indicator.SetActive(true);
-            Detach();
+            if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.2f)
+            {
+                indicator.SetActive(false);
+                Attach();
+            }
+            else if (isAttach && grabInteractor.isSelected && distance <= 0.2f)
+            {
+                handModel.transform.rotation = Quaternion.Euler(new Vector3(0, -180, -90));
+                Move();
+            }
+            else if (isAttach && !grabInteractor.isSelected && distance <= 0.2f)
+            {
+                indicator.SetActive(true);
+                Detach();
+            }
+            else if (!currentTaskComplete && isAttach && distance > 0.2f)
+            {
+                indicator.SetActive(true);
+                Detach();
+            }
         }
     }
     private void Attach()
