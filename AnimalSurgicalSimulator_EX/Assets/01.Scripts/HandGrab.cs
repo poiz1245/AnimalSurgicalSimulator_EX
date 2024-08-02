@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Hands.Gestures;
@@ -8,6 +10,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class HandGrab : MonoBehaviour
 {
     [SerializeField] XRSocketInteractor socketInteractor;
+    [SerializeField] TextMeshProUGUI gripText;
 
     int currentHandShape;
 
@@ -18,7 +21,9 @@ public class HandGrab : MonoBehaviour
 
     public void LayerSetting()
     {
-        socketInteractor.interactionLayers = currentHandShape;
+        InteractionLayerMask interacitonLayer = currentHandShape;
+        socketInteractor.interactionLayers = 1 << interacitonLayer;
+        gripText.text = InteractionLayerMask.LayerToName(currentHandShape);
     }
     public void OffGripAction()
     {

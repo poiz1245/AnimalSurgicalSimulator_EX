@@ -25,7 +25,9 @@ public class MesTaskHandModelControll : MonoBehaviour
     [SerializeField] CinemachineDollyCart dollyCart;
     [SerializeField] float moveSpeed;
 
-    float startCartPosition;
+    float startCartPositionX;
+    float startCartPositionY;
+
     public bool isAttach { get; private set; } = false;
 
     public bool currentTaskComplete { get; private set; } = false;
@@ -42,21 +44,21 @@ public class MesTaskHandModelControll : MonoBehaviour
     {
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
 
-        if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.2f)
+        if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.05f)
         {
             indicator.SetActive(false);
             Attach();
         }
-        else if (isAttach && grabInteractor.isSelected && distance <= 0.2f)
+        else if (isAttach && grabInteractor.isSelected && distance <= 0.3f)
         {
             Move();
         }
-        else if (isAttach && !grabInteractor.isSelected && distance <= 0.2f)
+        else if (isAttach && !grabInteractor.isSelected && distance <= 0.05f)
         {
             indicator.SetActive(true);
             Detach();
         }
-        else if (!currentTaskComplete && isAttach && distance > 0.2f)
+        else if (!currentTaskComplete && isAttach && distance > 0.3f)
         {
             indicator.SetActive(true);
             Detach();
@@ -74,7 +76,9 @@ public class MesTaskHandModelControll : MonoBehaviour
         grabObject.transform.SetParent(handModel.transform);
 
         dollyCart.m_Position = 0;
-        startCartPosition = transform.position.y;
+
+        startCartPositionX = transform.position.x;
+        startCartPositionY = transform.position.y;
 
         isAttach = true;
     }
@@ -96,7 +100,10 @@ public class MesTaskHandModelControll : MonoBehaviour
 
     void Move()
     {
-        dollyCart.m_Position = (startCartPosition - gameObject.transform.position.y) * moveSpeed;
+        float movePositionX = gameObject.transform.position.x - startCartPositionX;
+        float movePositionY = startCartPositionY - gameObject.transform.position.y;
+
+        dollyCart.m_Position = (movePositionX + movePositionY) * moveSpeed;
 
         if (dollyCart.m_Position >= 1)
         {
