@@ -78,7 +78,7 @@ public class MesTaskHandModelControll : MonoBehaviour
         grabObject.transform.SetParent(handModel.transform);
 
         dollyCart.m_Position = 0;
-        startCartPosition = transform.position.x;
+        startCartPosition = transform.position.y;
 
         isAttach = true;
     }
@@ -100,7 +100,7 @@ public class MesTaskHandModelControll : MonoBehaviour
 
     void Move()
     {
-        dollyCart.m_Position = (gameObject.transform.position.x - startCartPosition) * moveSpeed;
+        dollyCart.m_Position = (startCartPosition - gameObject.transform.position.y) * moveSpeed;
 
         if (dollyCart.m_Position >= 1)
         {
