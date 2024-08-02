@@ -88,7 +88,7 @@ public class ClampTask : BaseTask
         {
             case TaskName.Start:
                 uiText.text = "Grab the Clamp";
-                subUiText.text = "* Follow the Mes guidelines on the right";
+                subUiText.text = "* Follow the Clamp guidelines on the right";
                 break;
             case TaskName.Attach:
                 uiText.text = "Attach the Clamp to the guidelines";
