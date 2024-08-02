@@ -34,6 +34,7 @@ public class DigTask : BaseTask
 
         switch (TaskManager.instance.task)
         {
+            
             case TaskName.Start:
                 if (grab.isSelected)
                 {
@@ -65,6 +66,7 @@ public class DigTask : BaseTask
             case TaskName.Complete:
                 if (TaskManager.instance.isNextTask)
                     TaskManager.instance.UpdateTask(TaskName.Complete); // 다음 태스크로 전환
+                    TaskArrow.Instance.isCompleteArrow = true; // 마지막 Task에만 추가
                 break;
         }
     }
@@ -82,7 +84,6 @@ public class DigTask : BaseTask
         switch (taskName)
         {
             case TaskName.Start:
-                Debug.Log("드릴");
                 uiText.text = "Grab the drill";
                 subUiText.text = "* Follow the drill guidelines on the right";
                 break;

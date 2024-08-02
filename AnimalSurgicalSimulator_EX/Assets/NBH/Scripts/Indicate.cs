@@ -39,6 +39,7 @@ public class Indicate : MonoBehaviour
         {
             if (!controller.currentTaskComplete && !drillHandModelController.currentTaskComplete)
             {
+                Debug.Log("드릴 활성화");
                 gameObject.SetActive(true);
             }
         }

@@ -25,23 +25,30 @@ public class CustomSocket : MonoBehaviour
         {
             if (selectObjectGrabInteractable.enabled && !selectObjectGrabInteractable.isSelected)
             {
-                Debug.Log("Æ®¸®°Å");
                 selectObjectGrabInteractable.transform.position = attach.position;
                 selectObjectGrabInteractable.transform.rotation = attach.rotation;
-
+                
                 hasSelection = true;
-
                 hoverMesh.SetActive(false);
+                
+                if(selectObjectGrabInteractable.transform.position == attach.position && selectObjectGrabInteractable.transform.rotation == attach.rotation && TaskManager.instance.task == TaskManager.TaskName.Complete)
+                {
+                    TaskManager.instance.isNextTask = true;
+                }
+            
             }
             else if (selectObjectGrabInteractable.isSelected)
             {
                 hoverMesh.SetActive(true);
                 hasSelection = false;
             }
+
+
         }
     }
     private void OnTriggerExit(Collider other)
     {
         hoverMesh.SetActive(false);
     }
+
 }

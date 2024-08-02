@@ -66,11 +66,14 @@ public class MesTask : BaseTask
                 }
                 break;
             case TaskName.Complete:
-                if (TaskManager.instance.isNextTask)
-                    TaskManager.instance.UpdateTask(TaskName.Complete); // 다음 태스크로 전환
+                if (TaskManager.instance.isNextTask == true)
+                TaskManager.instance.UpdateTask(TaskName.Complete); // 다음 태스크로 전환
                 break;
         }
     }
+
+    
+
     protected override TaskManager.MainTask GetMainTaskType()
     {
         return TaskManager.MainTask.Mes;

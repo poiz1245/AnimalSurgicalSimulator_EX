@@ -47,21 +47,21 @@ public class MesTaskHandModelControll : MonoBehaviour
 
         if(TaskManager.instance.currentMainTask == MainTask.Mes)
         {
-            if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.2f)
+            if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.05f)
             {
                 indicator.SetActive(false);
                 Attach();
             }
-            else if (isAttach && grabInteractor.isSelected && distance <= 0.2f)
+            else if (isAttach && grabInteractor.isSelected && distance <= 0.3f)
             {
                 Move();
             }
-            else if (isAttach && !grabInteractor.isSelected && distance <= 0.2f)
+            else if (isAttach && !grabInteractor.isSelected && distance <= 0.05f)
             {
                 indicator.SetActive(true);
                 Detach();
             }
-            else if (!currentTaskComplete && isAttach && distance > 0.2f)
+            else if (!currentTaskComplete && isAttach && distance > 0.3f)
             {
                 indicator.SetActive(true);
                 Detach();
