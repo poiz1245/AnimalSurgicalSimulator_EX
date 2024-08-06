@@ -164,7 +164,6 @@ public class ObjectBlinker : MonoBehaviour
             Debug.Log("ºí¸µÅ©");
         }
         objectsToBlink.SetActive(false);
-        TaskManager.instance.isNextTask = true;
     }
 
     private void OnGrabbed()

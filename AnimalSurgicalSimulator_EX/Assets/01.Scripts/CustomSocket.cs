@@ -30,20 +30,17 @@ public class CustomSocket : MonoBehaviour
                 
                 hasSelection = true;
                 hoverMesh.SetActive(false);
-                
-                if(selectObjectGrabInteractable.transform.position == attach.position && selectObjectGrabInteractable.transform.rotation == attach.rotation && TaskManager.instance.task == TaskManager.TaskName.Complete)
-                {
-                    TaskManager.instance.isNextTask = true;
-                }
-            
             }
             else if (selectObjectGrabInteractable.isSelected)
             {
                 hoverMesh.SetActive(true);
                 hasSelection = false;
             }
-
-
+        }
+        if (selectObjectGrabInteractable.gameObject.transform.position == attach.position && hasSelection)
+        {
+            Debug.Log("소켓에 들어감");
+            //TaskManager.instance.isNextTask = true;
         }
     }
     private void OnTriggerExit(Collider other)

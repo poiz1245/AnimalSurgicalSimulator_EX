@@ -29,7 +29,8 @@ public class TaskManager : MonoBehaviour
         Start,
         Attach,
         Process,
-        Complete
+        Complete,
+        Next
     }
 
     public MainTask currentMainTask = MainTask.Mes;
@@ -60,9 +61,10 @@ public class TaskManager : MonoBehaviour
     public void UpdateTask(TaskName newTaskStatus)
     {
         task = newTaskStatus;
-        if (task == TaskName.Complete)
+        if (task == TaskName.Next)
         {
             ProceedToNextMainTask(); // 다음 태스크로 전환
+            TaskManager.instance.isNextTask = false;
         }
     }
 

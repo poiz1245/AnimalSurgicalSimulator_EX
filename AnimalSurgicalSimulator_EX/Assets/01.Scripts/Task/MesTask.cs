@@ -59,6 +59,7 @@ public class MesTask : BaseTask
                 if (handModel.currentTaskComplete || hand.currentTaskComplete)
                 {
                     TaskStateChange(TaskName.Complete);
+                    Debug.Log(TaskManager.instance.isNextTask);
                 }
                 else if ((handModel.isAttach == false && hand.isAttach == false))
                 {
@@ -67,6 +68,11 @@ public class MesTask : BaseTask
                 break;
             case TaskName.Complete:
                 if (TaskManager.instance.isNextTask == true)
+                {
+                    Debug.Log("다음 테스크로 전환");
+                }
+                break;
+            case TaskName.Next:
                 TaskManager.instance.UpdateTask(TaskName.Complete); // 다음 태스크로 전환
                 break;
         }

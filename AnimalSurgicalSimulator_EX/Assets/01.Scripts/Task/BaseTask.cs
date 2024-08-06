@@ -20,7 +20,6 @@ public abstract class BaseTask : MonoBehaviour
         // 초기 타겟 설정 및 UI 텍스트 업데이트
         if (TaskManager.instance.currentMainTask == GetMainTaskType())
         {
-            TaskManager.instance.isNextTask = false;
             UpdateTargets(TaskManager.instance.task);
             UpdateUIText(TaskManager.instance.task);
         }
