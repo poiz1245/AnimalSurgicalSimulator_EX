@@ -44,7 +44,7 @@ public class MesTaskHandModelControll : MonoBehaviour
     {
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
 
-        if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.05f)
+        if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.1f)
         {
             indicator.SetActive(false);
             Attach();
@@ -53,7 +53,7 @@ public class MesTaskHandModelControll : MonoBehaviour
         {
             Move();
         }
-        else if (isAttach && !grabInteractor.isSelected && distance <= 0.05f)
+        else if (isAttach && !grabInteractor.isSelected && distance <= 0.1f)
         {
             indicator.SetActive(true);
             Detach();
