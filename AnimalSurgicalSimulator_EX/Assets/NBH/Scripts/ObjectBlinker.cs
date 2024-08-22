@@ -161,7 +161,6 @@ public class ObjectBlinker : MonoBehaviour
             objectsToBlink.SetActive(!objectsToBlink.activeSelf);
             yield return new WaitForSeconds(blinkInterval);
             isObjectInSocket = socket.hasSelection;
-            Debug.Log("ºí¸µÅ©");
         }
         objectsToBlink.SetActive(false);
     }
@@ -176,7 +175,7 @@ public class ObjectBlinker : MonoBehaviour
         isGrabbed = false;
         if (!isGrabbed)
         {
-            isObjectInSocket = true;
+            //isObjectInSocket = true;
             objectsToBlink.SetActive(false);
             return;
         }
