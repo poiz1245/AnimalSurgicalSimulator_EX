@@ -65,7 +65,10 @@ public class ClampTask : BaseTask
                 break;
             case TaskName.Complete:
                 if (TaskManager.instance.isNextTask == true)
-                    TaskManager.instance.UpdateTask(TaskName.Complete); // 다음 태스크로 전환
+                    TaskManager.instance.UpdateTask(TaskName.Next); // 다음 태스크로 전환
+                break;
+            case TaskName.Next:
+                
                 break;
         }
     }
