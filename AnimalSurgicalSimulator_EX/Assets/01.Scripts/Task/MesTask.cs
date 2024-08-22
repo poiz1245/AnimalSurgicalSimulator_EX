@@ -69,11 +69,9 @@ public class MesTask : BaseTask
             case TaskName.Complete:
                 if (TaskManager.instance.isNextTask == true)
                 {
+                    TaskManager.instance.UpdateTask(TaskName.Complete); // 다음 태스크로 전환
                     Debug.Log("다음 테스크로 전환");
                 }
-                break;
-            case TaskName.Next:
-                TaskManager.instance.UpdateTask(TaskName.Complete); // 다음 태스크로 전환
                 break;
         }
     }
