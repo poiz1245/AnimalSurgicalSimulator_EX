@@ -2139,6 +2139,7 @@ MonoBehaviour:
   handModel: {fileID: 1700216241}
   hand: {fileID: 0}
   grab: {fileID: 0}
+  mesSocket: {fileID: 0}
 --- !u!114 &435225386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8309,7 +8310,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1951977534301054887
 Transform:
   m_ObjectHideFlags: 0
