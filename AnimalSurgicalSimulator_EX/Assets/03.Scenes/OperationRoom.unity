@@ -163,7 +163,6 @@ Transform:
   - {fileID: 150711881}
   - {fileID: 1287084286}
   - {fileID: 752356365}
-  - {fileID: 1443635891}
   m_Father: {fileID: 115061490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &18400571 stripped
@@ -451,11 +450,11 @@ Transform:
   m_GameObject: {fileID: 50165828}
   serializedVersion: 2
   m_LocalRotation: {x: 0.61237246, y: -0.35355335, z: -0.61237246, w: 0.35355335}
-  m_LocalPosition: {x: 0, y: 0.07310024, z: 0}
+  m_LocalPosition: {x: 0, y: 0.07310013, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 699829791}
+  m_Father: {fileID: 115656390}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: -120}
 --- !u!1 &55942971
 GameObject:
@@ -839,9 +838,62 @@ Transform:
   m_LocalScale: {x: 0.66666704, y: 0.52899814, z: 0.7586108}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1443635891}
   - {fileID: 17310852}
   m_Father: {fileID: 320128452}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &115656389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 115656390}
+  - component: {fileID: 115656391}
+  m_Layer: 11
+  m_Name: MesSocketHoverMesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &115656390
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115656389}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.14400004, y: 0.57708395, z: 0.0058412724}
+  m_LocalScale: {x: 0.66666704, y: 0.528998, z: 0.75861084}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 50165829}
+  - {fileID: 699829791}
+  m_Father: {fileID: 320128452}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &115656391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115656389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db348dfc1c72b9047960de744507c5be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1502207232}
+  drillHandModelController: {fileID: 2059901802}
+  mesHandModelController: {fileID: 2059901801}
+  clampHandModelController: {fileID: 2059901803}
+  handSocketInteractor: {fileID: 1823099584}
+  objectName: 0
 --- !u!1 &118950196
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,57 +994,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1785801874}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &129940256
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 129940257}
-  - component: {fileID: 129940258}
-  m_Layer: 0
-  m_Name: MesSocketHover
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &129940257
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129940256}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 699829791}
-  m_Father: {fileID: 320128452}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &129940258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129940256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db348dfc1c72b9047960de744507c5be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 1502207232}
-  drillHandModelController: {fileID: 2059901802}
-  mesHandModelController: {fileID: 2059901801}
-  clampHandModelController: {fileID: 2059901803}
-  handSocketInteractor: {fileID: 1823099584}
-  objectName: 0
 --- !u!1 &131772805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1886,11 +1887,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4545439289475304, guid: be48e9b5cd2313746911d55e8990c8b8,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 129940257}
+      addedObject: {fileID: 115656390}
     - targetCorrespondingSourceObject: {fileID: 4545439289475304, guid: be48e9b5cd2313746911d55e8990c8b8,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1310532074}
+      addedObject: {fileID: 512274802}
     - targetCorrespondingSourceObject: {fileID: 4545439289475304, guid: be48e9b5cd2313746911d55e8990c8b8,
         type: 3}
       insertIndex: -1
@@ -1921,7 +1922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 332125266}
   m_Layer: 0
-  m_Name: ClampSocketHoverMesh
+  m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1935,14 +1936,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332125263}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -0.009999988, y: 0.5765551, z: 0.0058412724}
-  m_LocalScale: {x: 0.46666658, y: 0.37029868, z: 0.531027}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 482218205}
   - {fileID: 2094466703}
-  m_Father: {fileID: 1310532074}
+  m_Father: {fileID: 512274802}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &332570009
 GameObject:
@@ -3715,6 +3716,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 990141626}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &512274801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 512274802}
+  - component: {fileID: 512274803}
+  m_Layer: 0
+  m_Name: ClampSocketHoverMesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &512274802
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512274801}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: -0.009999988, y: 0.5765551, z: 0.0058412724}
+  m_LocalScale: {x: 0.46666658, y: 0.37029868, z: 0.531027}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 332125266}
+  m_Father: {fileID: 320128452}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &512274803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512274801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db348dfc1c72b9047960de744507c5be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1502207232}
+  drillHandModelController: {fileID: 2059901802}
+  mesHandModelController: {fileID: 2059901801}
+  clampHandModelController: {fileID: 2059901803}
+  handSocketInteractor: {fileID: 1823099584}
+  objectName: 1
 --- !u!4 &514051276 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1937526957135141057, guid: d34371ff9b35ecf40b459bb54cc01e09,
@@ -4818,7 +4870,7 @@ GameObject:
   - component: {fileID: 699829790}
   - component: {fileID: 699829789}
   m_Layer: 11
-  m_Name: MesSocketHoverMesh
+  m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4883,12 +4935,11 @@ Transform:
   m_GameObject: {fileID: 699829788}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.14400004, y: 0.57708395, z: 0.0058412724}
-  m_LocalScale: {x: 0.66666704, y: 0.528998, z: 0.75861084}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 50165829}
-  m_Father: {fileID: 129940257}
+  m_Children: []
+  m_Father: {fileID: 115656390}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &713403520
 GameObject:
@@ -8132,57 +8183,6 @@ Transform:
   - {fileID: 2071932715}
   m_Father: {fileID: 2068258516}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1310532073
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1310532074}
-  - component: {fileID: 1310532075}
-  m_Layer: 0
-  m_Name: ClampSocketHover
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1310532074
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1310532073}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 332125266}
-  m_Father: {fileID: 320128452}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1310532075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1310532073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db348dfc1c72b9047960de744507c5be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 1502207232}
-  drillHandModelController: {fileID: 2059901802}
-  mesHandModelController: {fileID: 2059901801}
-  clampHandModelController: {fileID: 2059901803}
-  handSocketInteractor: {fileID: 1823099584}
-  objectName: 1
 --- !u!1 &1322257419
 GameObject:
   m_ObjectHideFlags: 0
@@ -9150,12 +9150,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1443635890}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: -0.112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 17310852}
+  m_Father: {fileID: 115061490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &1450027302
 GameObject:

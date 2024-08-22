@@ -61,7 +61,6 @@ public class MesTask : BaseTask
                 if (handModel.currentTaskComplete || hand.currentTaskComplete)
                 {
                     TaskStateChange(TaskName.Complete);
-                    Debug.Log(TaskManager.instance.isNextTask);
                 }
                 else if ((handModel.isAttach == false && hand.isAttach == false))
                 {
