@@ -9,25 +9,6 @@ public class DigTask : BaseTask
     [SerializeField] HandModelControll handModel;
     [SerializeField] DrillTaskHandModelControll hand;
     [SerializeField] XRGrabInteractable grab;
-
-    //[SerializeField] TextMeshProUGUI uiText;
-    //[SerializeField] TextMeshProUGUI subUiText;
-    //[SerializeField] List<Transform> targets; // 타겟 오브젝트 리스트
-
-    //public delegate void TaskStateChanged(TaskName task);
-    //public event TaskStateChanged OnTaskStateChanged;
-
-    //private void Start()
-    //{
-    //    OnTaskStateChanged += UpdateUIText;
-    //    OnTaskStateChanged += UpdateTargets; // 타겟 업데이트를 위한 이벤트 추가
-
-    //    // 초기 타겟 설정
-    //    UpdateTargets(TaskManager.instance.task);
-    //    // 초기 UI 텍스트 업데이트
-    //    UpdateUIText(TaskManager.instance.task);
-    //}
-
     public void Update()
     {
         if (!enabled) return;
@@ -74,11 +55,7 @@ public class DigTask : BaseTask
     {
         return TaskManager.MainTask.Dig;
     }
-    //private void TaskStateChange(TaskName taskName)
-    //{
-    //    TaskManager.instance.task = taskName;
-    //    OnTaskStateChanged?.Invoke(TaskManager.instance.task);
-    //}
+
     protected override void UpdateUIText(TaskManager.TaskName taskName)
     {
         switch (taskName)
@@ -124,52 +101,4 @@ public class DigTask : BaseTask
 
         TaskArrow.Instance.SetTargets(newTargets);
     }
-    //void UpdateUIText(TaskName taskName)
-    //{
-    //    switch (taskName)
-    //    {
-    //        case TaskName.Start:
-    //            Debug.Log("드릴");
-    //            uiText.text = "Grab the drill";
-    //            subUiText.text = "* Follow the drill guidelines on the right";
-    //            break;
-    //        case TaskName.Attach:
-    //            uiText.text = "Attach the drill to the guidelines";
-    //            subUiText.text = "* Hold the object and follow the guidelines";
-    //            break;
-    //        case TaskName.Process:
-    //            uiText.text = "Put your fist on the drill";
-    //            subUiText.text = "* Pull the index finger to activate the drill";
-    //            break;
-    //        case TaskName.Complete:
-    //            uiText.text = "Bring the drill back to its original position";
-    //            subUiText.text = "* Take it to the stand. Put your hands down";
-    //            break;
-    //    }
-    //}
-
-    //void UpdateTargets(TaskName taskName)
-    //{
-    //    List<Transform> newTargets = new List<Transform>();
-
-    //    // TaskName에 따라 타겟 오브젝트를 변경
-    //    switch (taskName)
-    //    {
-    //        case TaskName.Start:
-    //            newTargets.Add(targets[0]);
-    //            break;
-    //        case TaskName.Attach:
-    //            newTargets.Add(targets[1]);
-    //            break;
-    //        case TaskName.Process:
-    //            newTargets.Add(targets[2]);
-    //            break;
-    //        case TaskName.Complete:
-    //            newTargets.Add(targets[3]);
-    //            break;
-
-    //    }
-
-    //    TaskArrow.Instance.SetTargets(newTargets); // 타겟 업데이트
-    //}
 }
