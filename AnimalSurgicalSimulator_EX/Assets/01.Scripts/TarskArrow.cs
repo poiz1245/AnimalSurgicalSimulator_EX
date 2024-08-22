@@ -1,13 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
+using static TaskManager;
 
 public class TaskArrow : MonoBehaviour
 {
-    private static TaskArrow instance; // 싱글톤 인스턴스
-    private Camera mainCamera;
+    Camera mainCamera;
     [SerializeField] float fieldOfView; // 바라보는 각도 허용 범위
     [SerializeField] GameObject[] arrow; // 비활성화할 Arrow 오브젝트
     List<Transform> targets = new List<Transform>(); // 타겟 리스트 초기화
+
+    private static TaskArrow instance; // 싱글톤 인스턴스
+
     public static TaskArrow Instance
     {
         get
@@ -24,6 +27,8 @@ public class TaskArrow : MonoBehaviour
         }
     }
 
+    public bool isCompleteArrow = false;
+     
     void Start()
     {
         mainCamera = Camera.main;
@@ -68,7 +73,7 @@ public class TaskArrow : MonoBehaviour
                     }
                 }
             }
-            else
+            if(isCompleteArrow)
             {
                 // 타겟이 비활성화 되어 있으면 화살표 비활성화
                 arrow[0].SetActive(false);

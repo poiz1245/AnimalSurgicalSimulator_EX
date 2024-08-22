@@ -3,9 +3,11 @@
     "",
     "\\AnimalSurgicalSimulator_EX",
     "\\AnimalSurgicalSimulator_EX\\Assets",
+    "\\AnimalSurgicalSimulator_EX\\Assets\\01.Scripts",
+    "\\AnimalSurgicalSimulator_EX\\Assets\\01.Scripts\\Task",
     "\\AnimalSurgicalSimulator_EX\\Assets\\NBH",
     "\\AnimalSurgicalSimulator_EX\\Assets\\NBH\\Scripts"
   ],
-  "SelectedNode": "\\AnimalSurgicalSimulator_EX\\Assets\\NBH\\Cloaking.shader",
+  "SelectedNode": "\\AnimalSurgicalSimulator_EX\\Assets\\01.Scripts\\Task\\ClampTask.cs",
   "PreviewInSolutionExplorer": false
 }

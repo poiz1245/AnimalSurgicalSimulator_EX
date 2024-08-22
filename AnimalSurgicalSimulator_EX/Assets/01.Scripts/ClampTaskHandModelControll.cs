@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Hands.Samples.VisualizerSample;
 using UnityEngine.XR.Interaction.Toolkit;
+using static TaskManager;
 
 public class ClampTaskHandModelControll : MonoBehaviour
 {
@@ -29,33 +30,36 @@ public class ClampTaskHandModelControll : MonoBehaviour
 
     private void Start()
     {
-        IsTaskCompleted += TaskComplete;
+        //IsTaskCompleted += TaskComplete;
     }
     private void Update()
     {
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
 
-        if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.2f)
+        if(TaskManager.instance.currentMainTask == MainTask.Clamp)
         {
-            indicator.SetActive(false);
-            Attach();
-        }
-        else if (isAttach && grabInteractor.isSelected && distance <= 0.2f)
-        {
-            if (!clampTrigger.clampOpen)
+            if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.2f)
             {
-                Move();
+                indicator.SetActive(false);
+                Attach();
             }
-        }
-        else if (isAttach && !grabInteractor.isSelected && distance <= 0.2f)
-        {
-            indicator.SetActive(true);
-            Detach();
-        }
-        else if (!currentTaskComplete && isAttach && distance > 0.2f)
-        {
-            indicator.SetActive(true);
-            Detach();
+            else if (isAttach && grabInteractor.isSelected && distance <= 0.2f)
+            {
+                if (!clampTrigger.clampOpen)
+                {
+                    Move();
+                }
+            }
+            else if (isAttach && !grabInteractor.isSelected && distance <= 0.2f)
+            {
+                indicator.SetActive(true);
+                Detach();
+            }
+            else if (!currentTaskComplete && isAttach && distance > 0.2f)
+            {
+                indicator.SetActive(true);
+                Detach();
+            }
         }
     }
     private void Attach()

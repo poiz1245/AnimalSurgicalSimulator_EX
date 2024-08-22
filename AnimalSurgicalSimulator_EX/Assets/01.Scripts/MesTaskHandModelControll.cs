@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.XR.Hands.Samples.VisualizerSample;
 using UnityEngine.XR.Interaction.Toolkit;
+using static TaskManager;
 
 public class MesTaskHandModelControll : MonoBehaviour
 {
@@ -44,24 +45,27 @@ public class MesTaskHandModelControll : MonoBehaviour
     {
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
 
-        if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.1f)
+        if(TaskManager.instance.currentMainTask == MainTask.Mes)
         {
-            indicator.SetActive(false);
-            Attach();
-        }
-        else if (isAttach && grabInteractor.isSelected && distance <= 0.3f)
-        {
-            Move();
-        }
-        else if (isAttach && !grabInteractor.isSelected && distance <= 0.1f)
-        {
-            indicator.SetActive(true);
-            Detach();
-        }
-        else if (!currentTaskComplete && isAttach && distance > 0.3f)
-        {
-            indicator.SetActive(true);
-            Detach();
+            if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.05f)
+            {
+                indicator.SetActive(false);
+                Attach();
+            }
+            else if (isAttach && grabInteractor.isSelected && distance <= 0.3f)
+            {
+                Move();
+            }
+            else if (isAttach && !grabInteractor.isSelected && distance <= 0.05f)
+            {
+                indicator.SetActive(true);
+                Detach();
+            }
+            else if (!currentTaskComplete && isAttach && distance > 0.3f)
+            {
+                indicator.SetActive(true);
+                Detach();
+            }
         }
     }
     private void Attach()
