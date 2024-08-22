@@ -315,12 +315,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   socket: {fileID: 36327633}
   blinkInterval: 0.5
-  grabInteractors:
-  - {fileID: 919132148618843444}
-  objectsToBlink:
-  - {fileID: 332125263}
+  grabInteractors: {fileID: 919132148618843444}
+  objectsToBlink: {fileID: 332125263}
   handModelControll: {fileID: 1502207232}
-  handTrackingModelControll: {fileID: 2059901802}
+  drillHandModelController: {fileID: 2059901802}
+  mesHandModelController: {fileID: 2059901801}
+  calmpHandModelController: {fileID: 2059901803}
+  blinkName: 0
 --- !u!65 &36327635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -635,7 +636,7 @@ GameObject:
   - component: {fileID: 61707022}
   - component: {fileID: 61707021}
   m_Layer: 5
-  m_Name: TaskText (TMP)
+  m_Name: GripText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1514,7 +1515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &250369975
 Transform:
   m_ObjectHideFlags: 0
@@ -2206,12 +2207,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   socket: {fileID: 350884602}
   blinkInterval: 0.5
-  grabInteractors:
-  - {fileID: 1785801876}
-  objectsToBlink:
-  - {fileID: 17310851}
+  grabInteractors: {fileID: 1785801876}
+  objectsToBlink: {fileID: 17310851}
   handModelControll: {fileID: 1502207232}
-  handTrackingModelControll: {fileID: 2059901802}
+  drillHandModelController: {fileID: 2059901802}
+  mesHandModelController: {fileID: 2059901801}
+  calmpHandModelController: {fileID: 2059901803}
+  blinkName: 0
 --- !u!65 &350884598
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2471,7 +2473,7 @@ GameObject:
   - component: {fileID: 358661746}
   - component: {fileID: 358661745}
   m_Layer: 5
-  m_Name: MainText (TMP)
+  m_Name: Current Grip Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2516,7 +2518,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <color=black>aaa
+  m_text: <color=black>Default
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3355,12 +3357,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   socket: {fileID: 469721463}
   blinkInterval: 0.5
-  grabInteractors:
-  - {fileID: 1260095157}
-  objectsToBlink:
-  - {fileID: 699829788}
+  grabInteractors: {fileID: 1260095157}
+  objectsToBlink: {fileID: 699829788}
   handModelControll: {fileID: 1502207232}
-  handTrackingModelControll: {fileID: 2059901802}
+  drillHandModelController: {fileID: 2059901802}
+  mesHandModelController: {fileID: 2059901801}
+  calmpHandModelController: {fileID: 2059901803}
+  blinkName: 0
 --- !u!65 &469721465
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3741,14 +3744,13 @@ GameObject:
   m_Component:
   - component: {fileID: 556152549}
   - component: {fileID: 556152550}
-  - component: {fileID: 556152551}
   m_Layer: 0
   m_Name: Drill Grip Guide Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &556152549
 Transform:
   m_ObjectHideFlags: 0
@@ -3787,19 +3789,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &556152551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 556152548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: deebcfa48a6ff784d9cf59db1a4e28da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  guideMesh: {fileID: 1440547235}
 --- !u!1 &559219207
 GameObject:
   m_ObjectHideFlags: 0
@@ -7273,6 +7262,8 @@ GameObject:
   - component: {fileID: 1188487791}
   - component: {fileID: 1188487792}
   - component: {fileID: 1188487790}
+  - component: {fileID: 1188487794}
+  - component: {fileID: 1188487793}
   m_Layer: 0
   m_Name: Taskmanager
   m_TagString: Untagged
@@ -7308,7 +7299,12 @@ MonoBehaviour:
   digComplete: {fileID: 1188487787}
   mesComplete: {fileID: 1188487791}
   clampComplete: {fileID: 1188487792}
+  isNextTask: 0
   digTask: {fileID: 1188487790}
+  clampTask: {fileID: 1188487793}
+  mesTask: {fileID: 1188487794}
+  objectGrabGuideControll: {fileID: 1715114812}
+  currentMainTask: 0
   task: 0
 --- !u!4 &1188487789
 Transform:
@@ -7337,9 +7333,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf841bba4223fcb42a96682b368a265f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handModel: {fileID: 1502207232}
-  hand: {fileID: 2059901802}
-  grab: {fileID: 1785801876}
   uiText: {fileID: 1708343489}
   subUiText: {fileID: 1785600533}
   targets:
@@ -7347,6 +7340,9 @@ MonoBehaviour:
   - {fileID: 674291568256962871}
   - {fileID: 674291568256962871}
   - {fileID: 115061490}
+  handModel: {fileID: 1502207232}
+  hand: {fileID: 2059901802}
+  grab: {fileID: 1785801876}
 --- !u!114 &1188487791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7373,6 +7369,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskObject: {fileID: 8151579649872928467}
+--- !u!114 &1188487793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188487786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919b95ae7abc6d24aa669a7bfdd2e1a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiText: {fileID: 1708343489}
+  subUiText: {fileID: 1785600533}
+  targets:
+  - {fileID: 543450653161230217}
+  - {fileID: 674291568256962871}
+  - {fileID: 674291568256962871}
+  - {fileID: 332125266}
+  handModel: {fileID: 1502207232}
+  hand: {fileID: 2059901803}
+  grab: {fileID: 919132148618843444}
+--- !u!114 &1188487794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188487786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af11f67897333c140926aeb483f8fa47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiText: {fileID: 1708343489}
+  subUiText: {fileID: 1785600533}
+  targets:
+  - {fileID: 543450652905357869}
+  - {fileID: 1374636917}
+  - {fileID: 1374636917}
+  - {fileID: 699829791}
+  handModel: {fileID: 1502207232}
+  hand: {fileID: 2059901801}
+  grab: {fileID: 1260095157}
+  mesSocket: {fileID: 469721463}
 --- !u!1 &1200748270
 GameObject:
   m_ObjectHideFlags: 0
@@ -8966,7 +9007,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1440547236
 Transform:
   m_ObjectHideFlags: 0
@@ -9286,7 +9327,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489721381}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44a2572df3635b24dab292106c0319db, type: 3}
   m_Name: 
@@ -9435,6 +9476,7 @@ MonoBehaviour:
   arrow:
   - {fileID: 1133712323}
   - {fileID: 1133130697}
+  isCompleteArrow: 0
 --- !u!1 &1548478992
 GameObject:
   m_ObjectHideFlags: 0
@@ -10322,7 +10364,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <color=black>;alksdjfoiqawlkfjoidaklweijf
+  m_text: <color=black>Grab the mes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10408,6 +10450,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1715114811}
+  - component: {fileID: 1715114812}
   m_Layer: 0
   m_Name: Object
   m_TagString: Untagged
@@ -10433,6 +10476,22 @@ Transform:
   - {fileID: 543450652905357869}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1715114812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715114810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deebcfa48a6ff784d9cf59db1a4e28da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handMesh:
+  - {fileID: 250369974}
+  - {fileID: 2068258515}
+  - {fileID: 556152548}
 --- !u!1 &1726951050
 GameObject:
   m_ObjectHideFlags: 0
@@ -11336,7 +11395,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1863298924
 Transform:
   m_ObjectHideFlags: 0
@@ -11804,7 +11863,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2068258516
 Transform:
   m_ObjectHideFlags: 0
@@ -11872,7 +11931,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2071932715
 Transform:
   m_ObjectHideFlags: 0

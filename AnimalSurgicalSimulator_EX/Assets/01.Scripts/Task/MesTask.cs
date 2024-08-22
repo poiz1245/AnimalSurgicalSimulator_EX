@@ -9,6 +9,8 @@ public class MesTask : BaseTask
     [SerializeField] HandModelControll handModel;
     [SerializeField] MesTaskHandModelControll hand;
     [SerializeField] XRGrabInteractable grab;
+    [SerializeField] CustomSocket mesSocket;
+
     //[SerializeField] TextMeshProUGUI uiText;
     //[SerializeField] TextMeshProUGUI subUiText;
     //[SerializeField] List<Transform> targets; // 타겟 오브젝트 리스트
@@ -67,18 +69,21 @@ public class MesTask : BaseTask
                 }
                 break;
             case TaskName.Complete:
+                TaskManager.instance.isNextTask = mesSocket.hasSelection;
                 if (TaskManager.instance.isNextTask == true)
                 {
+
                     Debug.Log("다음 테스크로 전환");
+                    TaskStateChange(TaskName.Next);
                 }
                 break;
             case TaskName.Next:
-                TaskManager.instance.UpdateTask(TaskName.Complete); // 다음 태스크로 전환
+                TaskManager.instance.UpdateTask(TaskName.Next); // 다음 태스크로 전환
                 break;
         }
     }
 
-    
+
 
     protected override TaskManager.MainTask GetMainTaskType()
     {

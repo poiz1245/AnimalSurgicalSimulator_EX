@@ -39,7 +39,7 @@ public class CustomSocket : MonoBehaviour
         }
         if (selectObjectGrabInteractable.gameObject.transform.position == attach.position && hasSelection)
         {
-            Debug.Log("소켓에 들어감");
+            //Debug.Log("소켓에 들어감");
             //TaskManager.instance.isNextTask = true;
         }
     }
