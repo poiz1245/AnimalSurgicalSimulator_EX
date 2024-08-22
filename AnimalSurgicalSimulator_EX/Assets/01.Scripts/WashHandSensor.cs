@@ -4,73 +4,71 @@ using UnityEngine;
 
 public class WashHandSensor : MonoBehaviour
 {
+    [SerializeField] GameObject handTrigger;
     [SerializeField] Transform waterPosition;
+    [SerializeField] LineRenderer lineRenderer;
 
-    bool isTriggering = false;
-    bool isRayOn = false;
+    int triggerCount = 0; // 트리거 횟수 카운트
 
-    float triggerTime = 0f;
-    float requiredTriggerTime = 1f; // 트리거를 유지해야 하는 시간 (1초)
-    
-    void OnTriggerEnter(Collider other)
+    void Update()
     {
-        if (other.gameObject)
+        if (triggerCount % 2 == 1) // 트리거가 홀수일 때 레이 발사
         {
-            Debug.Log("센서 감지");
-            isTriggering = true;
-            triggerTime = 0f; // 트리거 시작 시 타이머 초기화
+            ShootRay();
         }
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if (isTriggering)
+        if (other.gameObject == handTrigger)
         {
-            triggerTime += Time.deltaTime; // 트리거 유지 시간 누적
+            // 트리거 횟수를 증가시킴
+            triggerCount++;
 
-            if (triggerTime >= requiredTriggerTime)
+            // 홀수일 때 레이 켜고, 짝수일 때 레이 끔
+            if (triggerCount % 2 == 1)
             {
-                if (!isRayOn)
-                {
-                    ShootRay();
-                    isRayOn = true;
-                }
-                else
-                {
-                    StopRay();
-                    isRayOn = false;
-                }
-                isTriggering = false; // 트리거 상태 초기화
+                StartRay(); // 레이 켜기
+            }
+            else
+            {
+                StopRay(); // 레이 끄기
             }
         }
     }
 
-    void OnTriggerExit(Collider other)
+    private void StartRay()
     {
-        if (other.gameObject)
-        {
-            isTriggering = false;
-            triggerTime = 0f; // 트리거 종료 시 타이머 초기화
-        }
+        lineRenderer.enabled = true; // LineRenderer 활성화
+        Debug.Log("레이 켬");
+    }
+
+    private void StopRay()
+    {
+        lineRenderer.enabled = false; // LineRenderer 비활성화
+        Debug.Log("레이 끔");
     }
 
     void ShootRay()
     {
-        Ray ray = new Ray(waterPosition.position, waterPosition.forward);
+        Debug.Log("레이 발사");
+        Ray ray = new Ray(waterPosition.position, Vector3.down);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit))
         {
             Debug.Log("레이에 맞은 오브젝트: " + hit.collider.name);
-            // 필요한 경우 추가적인 로직을 여기에 작성
+            lineRenderer.SetPosition(0, waterPosition.position);
+            lineRenderer.SetPosition(1, hit.point);
+        }
+        else
+        {
+            Debug.Log("레이가 아무것도 맞지 않았습니다.");
+            Vector3 endPoint = waterPosition.position + Vector3.down.normalized * 1f;
+            lineRenderer.SetPosition(0, waterPosition.position);
+            lineRenderer.SetPosition(1, endPoint);
         }
 
-        Debug.DrawRay(waterPosition.position, waterPosition.forward * 10, Color.red, 2f); // 디버그용 레이
-    }
-
-    void StopRay()
-    {
-        // 레이를 끄는 로직을 여기에 작성
-        Debug.Log("레이 종료");
+        Debug.Log("레이 방향: " + Vector3.down);
     }
 }

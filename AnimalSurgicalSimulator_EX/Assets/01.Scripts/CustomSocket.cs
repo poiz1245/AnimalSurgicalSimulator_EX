@@ -37,11 +37,11 @@ public class CustomSocket : MonoBehaviour
                 hasSelection = false;
             }
         }
-        if (selectObjectGrabInteractable.gameObject.transform.position == attach.position && hasSelection)
-        {
-            Debug.Log("소켓에 들어감");
-            //TaskManager.instance.isNextTask = true;
-        }
+        //if (selectObjectGrabInteractable.gameObject.transform.position == attach.position && hasSelection)
+        //{
+        //    Debug.Log("소켓에 들어감");
+        //    TaskManager.instance.isNextTask = true;
+        //}
     }
     private void OnTriggerExit(Collider other)
     {
