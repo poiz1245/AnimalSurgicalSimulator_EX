@@ -45,7 +45,6 @@ public class DrillTaskHandModelControll : MonoBehaviour
             }
             else if (isAttach && grabInteractor.isSelected && distance <= 0.2f)
             {
-                //handModel.transform.rotation = Quaternion.Euler(new Vector3(0, -180, -90));
                 Move();
             }
             else if (isAttach && !grabInteractor.isSelected && distance <= 0.2f)
@@ -64,28 +63,18 @@ public class DrillTaskHandModelControll : MonoBehaviour
     {
         handVisualizer.drawMeshes = false;
         handModel.SetActive(true);
-        //handModel.transform.position = indicator.transform.position;
 
         socketInteractor.transform.SetParent(handModel.transform);
         socketInteractor.transform.position = drillAttach.transform.position;
         socketInteractor.transform.rotation= drillAttach.transform.rotation;
 
-        //socketInteractor.socketActive = false;
-
-        //handModel.transform.position = indicatorAttach.position;
-
         grabObject.transform.SetParent(handModel.transform);
-        //grabObject.transform.position = drillAttach.transform.position;
-        //grabObject.transform.rotation = drillAttach.transform.rotation;
-
-
 
         isAttach = true;
     }
 
     private void Detach()
     {
-        //socketInteractor.socketActive = true;
         handVisualizer.drawMeshes = true;
         handModel.SetActive(false);
 
@@ -105,11 +94,11 @@ public class DrillTaskHandModelControll : MonoBehaviour
         {
             if (drillTrigger.currentTriggerLayerName == "OutsideBone")
             {
-                drillSpeed = 0.0008f;
+                drillSpeed = 0.002f;
             }
             else if (drillTrigger.currentTriggerLayerName == "InsideBone")
             {
-                drillSpeed = 0.002f;
+                drillSpeed = 0.004f;
             }
             else if (drillTrigger.currentTriggerLayerName == "EndLayer")
             {
@@ -121,26 +110,10 @@ public class DrillTaskHandModelControll : MonoBehaviour
             handModel.transform.Translate(0, 0, drillSpeed * Time.deltaTime);
         }
 
-        /*if (drillTrigger.buttonOn) // 직접 움직이는 기능
-        {
-            handModel.transform.position = new Vector3(indicatorAttach.position.x, gameObject.transform.position.y, indicatorAttach.position.z);
-
-            if (drillTrigger.currentTriggerLayerName == "EndLayer")
-            {
-                currentTaskComplete = true;
-                IsTaskCompleted?.Invoke(currentTaskComplete);
-                Detach();
-            }
-        }*/
     }
 
     void TaskComplete(bool taskComplete)
     {
         TaskManager.instance.digComplete.TaskComplete();
     }
-
-    /*private void OnTriggerEnter(Collider other)
-    {
-        HapticsTest.instance.CustomBasic(0.02f, 0.1f);
-    }*/
 }
