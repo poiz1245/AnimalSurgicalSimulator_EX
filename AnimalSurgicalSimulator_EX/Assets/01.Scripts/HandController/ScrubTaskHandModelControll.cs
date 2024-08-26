@@ -33,9 +33,9 @@ public class ScrubTaskHandModelControll : MonoBehaviour
     float startCartPositionY;
     float startCartPositionZ;
 
-    int scrubhand = 0;
 
     bool isNextWash = false; //다음 손씻는거로 넘어가기 위한 bool형 변수
+    public int scrubhand { get; private set; } = 0;
     public bool isAttach { get; private set; } = false;
     public bool currentTaskComplete { get; private set; } = false;
 
@@ -51,12 +51,12 @@ public class ScrubTaskHandModelControll : MonoBehaviour
     {
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
 
-/*
-        if (TaskManager.instance.currentMainTask == MainTask.scrub)
-        {
+        /*
+                if (TaskManager.instance.currentMainTask == MainTask.scrub)
+                {
 
-        }
-*/
+                }
+        */
         if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.1f)
         {
             indicator.SetActive(false);
@@ -66,11 +66,11 @@ public class ScrubTaskHandModelControll : MonoBehaviour
         {
             ScrubMove();
         }
-       /* else if (isAttach && !grabInteractor.isSelected && distance <= 0.1f)
-        {
-            indicator.SetActive(true);
-            Detach();
-        }*/
+        /* else if (isAttach && !grabInteractor.isSelected && distance <= 0.1f)
+         {
+             indicator.SetActive(true);
+             Detach();
+         }*/
         else if (!currentTaskComplete && isAttach && distance > 0.4f)
         {
             indicator.SetActive(true);
@@ -120,8 +120,8 @@ public class ScrubTaskHandModelControll : MonoBehaviour
     void ScrubMove()
     {
 
-        float movePositionX = startCartPositionX - gameObject.transform.position.x ;
-        float movePositionY = startCartPositionY - gameObject.transform.position.y ;
+        float movePositionX = startCartPositionX - gameObject.transform.position.x;
+        float movePositionY = startCartPositionY - gameObject.transform.position.y;
         float movePositionZ = startCartPositionZ - gameObject.transform.position.z;
         float caetPosition = dollyCart.m_Position;
 
