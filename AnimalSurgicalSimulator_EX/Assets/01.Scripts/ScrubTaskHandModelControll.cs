@@ -12,12 +12,13 @@ public class ScrubTaskHandModelControll : MonoBehaviour
 
     [SerializeField] GameObject indicator;
     [SerializeField] GameObject handModel;
-    [SerializeField] GameObject leftHandModel;
+    [SerializeField] GameObject leftHandScrubModel;
+    [SerializeField] GameObject leftHandFingerModel;
     [SerializeField] GameObject grabObject;
     //[SerializeField] Transform grabObjectAttach;
 
     [SerializeField] Transform scrubAttach;
-    //[SerializeField] Transform fingerWashAttach; // 기존에 Scrub 인디케이터를 이 위치로 옮길 예정
+    [SerializeField] Transform fingerWashAttach; // 기존에 Scrub 인디케이터를 이 위치로 옮길 예정
 
     //[SerializeField] Transform indicatorAttach;
 
@@ -65,6 +66,14 @@ public class ScrubTaskHandModelControll : MonoBehaviour
         else if (isAttach && grabInteractor.isSelected && distance <= 0.4f)
         {
             ScrubMove();
+
+            if(isNextWash)
+            {
+                SetPositionAndRotation(scrubAttach, fingerWashAttach);
+                SetChangeHand(leftHandScrubModel, leftHandFingerModel);
+                WashMove();
+            }
+
         }
        /* else if (isAttach && !grabInteractor.isSelected && distance <= 0.1f)
         {
@@ -77,11 +86,22 @@ public class ScrubTaskHandModelControll : MonoBehaviour
             Detach();
         }
     }
+    void SetPositionAndRotation(Transform Before, Transform After)
+    {
+        Before.position = After.position;
+        Before.rotation = After.rotation;
+    }
+
+    void SetChangeHand(GameObject Before,GameObject After)
+    {
+        Before.SetActive(false);
+        After.SetActive(true);
+    }
     private void Attach()
     {
         handVisualizer.drawMeshes = false;
         handModel.SetActive(true);
-        leftHandModel.SetActive(true);
+        leftHandScrubModel.SetActive(true);
 
         socketInteractor.transform.SetParent(handModel.transform);
         socketInteractor.transform.position = scrubAttach.transform.position;
@@ -112,7 +132,7 @@ public class ScrubTaskHandModelControll : MonoBehaviour
         grabObject.transform.position = socketInteractor.transform.position;
 
         handModel.SetActive(false);
-        leftHandModel.SetActive(false);
+        leftHandScrubModel.SetActive(false);
         isAttach = false;
 
     }
@@ -153,9 +173,9 @@ public class ScrubTaskHandModelControll : MonoBehaviour
         if (dollyCart.m_Position >= 1 && caetPosition < 1)
         {
             scrubhand++;
-            if (scrubhand == 30)
+            if (scrubhand == 2)
             {
-                Debug.Log("Scurb 완료");
+                Debug.Log("Finger Wash완료");
 
                 //currentTaskComplete = true;
                 //IsTaskCompleted?.Invoke(currentTaskComplete);
