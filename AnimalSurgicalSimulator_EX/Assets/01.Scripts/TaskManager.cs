@@ -29,8 +29,8 @@ public class TaskManager : MonoBehaviour
         Start,
         Attach,
         Process,
-        Complete,
-        Next
+        Complete
+        ,Next
     }
 
     public MainTask currentMainTask = MainTask.Mes;
