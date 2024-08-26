@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/03.Scenes/OperationRoom.unity
     guid: 1ee919c26832a0b45bcf0d8ca59f6baf
+  - enabled: 1
+    path: Assets/03.Scenes/WashHand.unity
+    guid: 4a41b87ac45b87e478b1be9b6834f7f8
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 00092b2c72cc78246b658e16a38b07ef,
       type: 2}
