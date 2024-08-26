@@ -12,10 +12,12 @@ public class ScrubTaskHandModelControll : MonoBehaviour
 
     [SerializeField] GameObject indicator;
     [SerializeField] GameObject handModel;
+    [SerializeField] GameObject leftHandModel;
     [SerializeField] GameObject grabObject;
     //[SerializeField] Transform grabObjectAttach;
 
     [SerializeField] Transform scrubAttach;
+    //[SerializeField] Transform fingerWashAttach; // 기존에 Scrub 인디케이터를 이 위치로 옮길 예정
 
     //[SerializeField] Transform indicatorAttach;
 
@@ -29,44 +31,47 @@ public class ScrubTaskHandModelControll : MonoBehaviour
 
     float startCartPositionX;
     float startCartPositionY;
+    float startCartPositionZ;
 
+    int scrubhand = 0;
+
+    bool isNextWash = false; //다음 손씻는거로 넘어가기 위한 bool형 변수
     public bool isAttach { get; private set; } = false;
-
     public bool currentTaskComplete { get; private set; } = false;
 
-    public delegate void TaskCompleted(bool taskComplete);
-    public event TaskCompleted IsTaskCompleted;
+    //public delegate void TaskCompleted(bool taskComplete);
+    //public event TaskCompleted IsTaskCompleted;
 
 
     private void Start()
     {
-        IsTaskCompleted += TaskComplete;
+        //IsTaskCompleted += TaskComplete;
     }
     private void Update()
     {
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
 
-        //if (TaskManager.instance.currentMainTask == MainTask.scrub)
-        //{
-            
-        //}
+/*
+        if (TaskManager.instance.currentMainTask == MainTask.scrub)
+        {
 
+        }
+*/
         if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.1f)
         {
             indicator.SetActive(false);
             Attach();
         }
-        else if (isAttach && grabInteractor.isSelected && distance <= 0.3f)
+        else if (isAttach && grabInteractor.isSelected && distance <= 0.4f)
         {
-            Debug.Log("aa");
-            Move();
+            ScrubMove();
         }
        /* else if (isAttach && !grabInteractor.isSelected && distance <= 0.1f)
         {
             indicator.SetActive(true);
             Detach();
         }*/
-        else if (!currentTaskComplete && isAttach && distance > 0.3f)
+        else if (!currentTaskComplete && isAttach && distance > 0.4f)
         {
             indicator.SetActive(true);
             Detach();
@@ -74,12 +79,11 @@ public class ScrubTaskHandModelControll : MonoBehaviour
     }
     private void Attach()
     {
-
         handVisualizer.drawMeshes = false;
-        grabObject.SetActive(false);
         handModel.SetActive(true);
+        leftHandModel.SetActive(true);
 
-        socketInteractor.transform.SetParent(dollyCart.transform);
+        socketInteractor.transform.SetParent(handModel.transform);
         socketInteractor.transform.position = scrubAttach.transform.position;
         socketInteractor.transform.rotation = scrubAttach.transform.rotation;
 
@@ -89,6 +93,7 @@ public class ScrubTaskHandModelControll : MonoBehaviour
 
         startCartPositionX = transform.position.x;
         startCartPositionY = transform.position.y;
+        startCartPositionZ = transform.position.z;
 
         isAttach = true;
 
@@ -107,25 +112,57 @@ public class ScrubTaskHandModelControll : MonoBehaviour
         grabObject.transform.position = socketInteractor.transform.position;
 
         handModel.SetActive(false);
+        leftHandModel.SetActive(false);
         isAttach = false;
 
     }
 
-    void Move()
+    void ScrubMove()
     {
-        float movePositionX = gameObject.transform.position.x - startCartPositionX;
-        float movePositionY = startCartPositionY - gameObject.transform.position.y;
 
-        dollyCart.m_Position = (movePositionX + movePositionY) * moveSpeed;
+        float movePositionX = startCartPositionX - gameObject.transform.position.x ;
+        float movePositionY = startCartPositionY - gameObject.transform.position.y ;
+        float movePositionZ = startCartPositionZ - gameObject.transform.position.z;
+        float caetPosition = dollyCart.m_Position;
 
-        if (dollyCart.m_Position >= 1)
+        dollyCart.m_Position = (movePositionX + movePositionY + movePositionZ) * moveSpeed;
+
+        if (dollyCart.m_Position >= 1 && caetPosition < 1)
         {
-            currentTaskComplete = true;
-            IsTaskCompleted?.Invoke(currentTaskComplete);
-            Detach();
+            scrubhand++;
+            if (scrubhand == 30)
+            {
+                Debug.Log("Scurb 완료");
+
+                //currentTaskComplete = true;
+                //IsTaskCompleted?.Invoke(currentTaskComplete);
+                Detach();
+            }
         }
     }
+    void WashMove()
+    {
 
+        float movePositionX = startCartPositionX - gameObject.transform.position.x;
+        float movePositionY = startCartPositionY - gameObject.transform.position.y;
+        float movePositionZ = startCartPositionZ - gameObject.transform.position.z;
+        float caetPosition = dollyCart.m_Position;
+
+        dollyCart.m_Position = (movePositionX + movePositionY + movePositionZ) * moveSpeed;
+
+        if (dollyCart.m_Position >= 1 && caetPosition < 1)
+        {
+            scrubhand++;
+            if (scrubhand == 30)
+            {
+                Debug.Log("Scurb 완료");
+
+                //currentTaskComplete = true;
+                //IsTaskCompleted?.Invoke(currentTaskComplete);
+                Detach();
+            }
+        }
+    }
     void TaskComplete(bool taskComplete)
     {
         //TaskManager.instance.scrubComplete.TaskComplete();
