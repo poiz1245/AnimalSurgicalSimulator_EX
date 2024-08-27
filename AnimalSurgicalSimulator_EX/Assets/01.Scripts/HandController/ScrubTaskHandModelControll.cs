@@ -6,21 +6,19 @@ using static TaskManager;
 using UnityEngine.XR.Hands.Samples.VisualizerSample;
 using UnityEngine.XR.Interaction.Toolkit;
 using static ObjectGrabGuideControll;
+using UnityEngine.UIElements;
 
 public class ScrubTaskHandModelControll : MonoBehaviour
 {
 
     [SerializeField] GameObject indicator;
     [SerializeField] GameObject handModel;
-    [SerializeField] GameObject leftHandScrubModel;
-    [SerializeField] GameObject leftHandFingerModel;
+    [SerializeField] GameObject[] leftHandModels; // 배열로 변경
     [SerializeField] GameObject grabObject;
-    //[SerializeField] Transform grabObjectAttach;
 
     [SerializeField] Transform scrubAttach;
-    [SerializeField] Transform fingerWashAttach; // 기존에 Scrub 인디케이터를 이 위치로 옮길 예정
+    [SerializeField] Transform[] fingerWashAttach; // 기존에 Scrub 인디케이터를 이 위치로 옮길 예정
 
-    //[SerializeField] Transform indicatorAttach;
 
     [SerializeField] XRSocketInteractor socketInteractor;
     [SerializeField] XRGrabInteractable grabInteractor;
@@ -28,25 +26,32 @@ public class ScrubTaskHandModelControll : MonoBehaviour
     [SerializeField] HandVisualizer handVisualizer;
 
     [SerializeField] CinemachineDollyCart dollyCart;
+    [SerializeField] CinemachinePathBase[] washPath; // 새로운 경로를 지정할 변수
     [SerializeField] float moveSpeed;
 
     float startCartPositionX;
     float startCartPositionY;
     float startCartPositionZ;
 
-    int scrubhand = 0;
+    int washScrub = 0;
+    int washFinger = 0;
 
     bool isNextWash = false; //다음 손씻는거로 넘어가기 위한 bool형 변수
+    bool isRightFinger = true;
     public bool isAttach { get; private set; } = false;
     public bool currentTaskComplete { get; private set; } = false;
 
-    //public delegate void TaskCompleted(bool taskComplete);
-    //public event TaskCompleted IsTaskCompleted;
+    public delegate void TaskCompleted(bool taskComplete);
+    public event TaskCompleted IsTaskCompleted;
 
 
     private void Start()
     {
-        //IsTaskCompleted += TaskComplete;
+        IsTaskCompleted += TaskComplete;
+        foreach (var model in leftHandModels)
+        {
+            model.SetActive(false);
+        }
     }
     private void Update()
     {
@@ -65,43 +70,38 @@ public class ScrubTaskHandModelControll : MonoBehaviour
         }
         else if (isAttach && grabInteractor.isSelected && distance <= 0.4f)
         {
-            ScrubMove();
-
-            if(isNextWash)
+                ScrubMove();
+/*            if (!isNextWash)
             {
-                SetPositionAndRotation(scrubAttach, fingerWashAttach);
-                SetChangeHand(leftHandScrubModel, leftHandFingerModel);
+            }
+            else
+            {
                 WashMove();
             }
-
+*/
         }
-       /* else if (isAttach && !grabInteractor.isSelected && distance <= 0.1f)
-        {
-            indicator.SetActive(true);
-            Detach();
-        }*/
+        /* else if (isAttach && !grabInteractor.isSelected && distance <= 0.1f)
+         {
+             indicator.SetActive(true);
+             Detach();
+         }*/
         else if (!currentTaskComplete && isAttach && distance > 0.4f)
         {
             indicator.SetActive(true);
             Detach();
         }
     }
-    void SetPositionAndRotation(Transform Before, Transform After)
+    void SetPositionAndRotation(GameObject Before, Transform After)
     {
-        Before.position = After.position;
-        Before.rotation = After.rotation;
+        Before.transform.position = After.position;
+        Before.transform.rotation = After.rotation;
     }
 
-    void SetChangeHand(GameObject Before,GameObject After)
-    {
-        Before.SetActive(false);
-        After.SetActive(true);
-    }
     private void Attach()
     {
         handVisualizer.drawMeshes = false;
         handModel.SetActive(true);
-        leftHandScrubModel.SetActive(true);
+        leftHandModels[isNextWash ? 1 : 0].SetActive(true);
 
         socketInteractor.transform.SetParent(handModel.transform);
         socketInteractor.transform.position = scrubAttach.transform.position;
@@ -132,7 +132,10 @@ public class ScrubTaskHandModelControll : MonoBehaviour
         grabObject.transform.position = socketInteractor.transform.position;
 
         handModel.SetActive(false);
-        leftHandScrubModel.SetActive(false);
+        foreach(var model in leftHandModels)
+        {
+            model.SetActive(false); // 모든 손 모델 비활성화
+        }
         isAttach = false;
 
     }
@@ -143,46 +146,78 @@ public class ScrubTaskHandModelControll : MonoBehaviour
         float movePositionX = startCartPositionX - gameObject.transform.position.x ;
         float movePositionY = startCartPositionY - gameObject.transform.position.y ;
         float movePositionZ = startCartPositionZ - gameObject.transform.position.z;
-        float caetPosition = dollyCart.m_Position;
+        float cartPosition = dollyCart.m_Position;
 
         dollyCart.m_Position = (movePositionX + movePositionY + movePositionZ) * moveSpeed;
 
-        if (dollyCart.m_Position >= 1 && caetPosition < 1)
+        if (dollyCart.m_Position >= 1 && cartPosition < 1)
         {
-            scrubhand++;
-            if (scrubhand == 30)
+            washScrub++;
+            Debug.Log("washScrub" + washScrub);
+            if (washScrub == 5 && !isNextWash)
             {
-                Debug.Log("Scurb 완료");
-
-                //currentTaskComplete = true;
-                //IsTaskCompleted?.Invoke(currentTaskComplete);
+                isNextWash = true;
                 Detach();
+                SetPositionAndRotation(indicator, fingerWashAttach[0]);
+                indicator.SetActive(true);
+                dollyCart.ChangePath(washPath[1]);
             }
+            else if (isNextWash)
+            {
+                washFinger++;
+                Debug.Log("washFinger" + washFinger);
+                if (washFinger == 2 && isRightFinger)
+                {
+                    Detach();
+                    dollyCart.ChangePath(washPath[2]); // 경로 변경
+                    SetPositionAndRotation(indicator, fingerWashAttach[1]);
+                    indicator.SetActive(true);
+                    washFinger = 0;
+                    isRightFinger = false;
+                }
+                else if (washFinger == 2 && !isRightFinger)
+                {
+                    Detach();
+                    currentTaskComplete = true;
+                    IsTaskCompleted?.Invoke(currentTaskComplete);
+                }
+            }
+                
+            
         }
     }
-    void WashMove()
+    /*void WashMove()
     {
-
+        
         float movePositionX = startCartPositionX - gameObject.transform.position.x;
         float movePositionY = startCartPositionY - gameObject.transform.position.y;
         float movePositionZ = startCartPositionZ - gameObject.transform.position.z;
-        float caetPosition = dollyCart.m_Position;
+        float cartPosition = dollyCart.m_Position;
+        
 
         dollyCart.m_Position = (movePositionX + movePositionY + movePositionZ) * moveSpeed;
 
-        if (dollyCart.m_Position >= 1 && caetPosition < 1)
+        if (dollyCart.m_Position >= 1 && cartPosition < 1)
         {
-            scrubhand++;
-            if (scrubhand == 2)
+            washFinger++;
+            Debug.Log("washFinger" + washFinger);
+            if (washFinger == 2 && isRightFinger)
+            {
+                dollyCart.TogglePath(false);
+                dollyCart.ChangePath(washPath[2]); // 경로 변경
+                washFinger = 0;
+                isRightFinger = false;
+                Debug.Log("트랙 변경");
+            }
+            else if(washFinger == 2 && !isRightFinger)
             {
                 Debug.Log("Finger Wash완료");
-
-                //currentTaskComplete = true;
-                //IsTaskCompleted?.Invoke(currentTaskComplete);
                 Detach();
+                currentTaskComplete = true;
+                IsTaskCompleted?.Invoke(currentTaskComplete);
             }
         }
-    }
+    }*/
     void TaskComplete(bool taskComplete)
     {
         //TaskManager.instance.scrubComplete.TaskComplete();
