@@ -33,9 +33,9 @@ public class ScrubTaskHandModelControll : MonoBehaviour
     float startCartPositionY;
     float startCartPositionZ;
 
-    int washScrub = 0;
     int washFinger = 0;
 
+    bool isRightFinger = true;
     bool isNextWash = false; //다음 손씻는거로 넘어가기 위한 bool형 변수
     public int scrubhand { get; private set; } = 0;
     public bool isAttach { get; private set; } = false;
@@ -57,12 +57,6 @@ public class ScrubTaskHandModelControll : MonoBehaviour
     {
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
 
-        /*
-                if (TaskManager.instance.currentMainTask == MainTask.scrub)
-                {
-
-                }
-        */
         if (!currentTaskComplete && !isAttach && grabInteractor.isSelected && distance <= 0.1f)
         {
             indicator.SetActive(false);
@@ -71,20 +65,7 @@ public class ScrubTaskHandModelControll : MonoBehaviour
         else if (isAttach && grabInteractor.isSelected && distance <= 0.4f)
         {
                 ScrubMove();
-/*            if (!isNextWash)
-            {
-            }
-            else
-            {
-                WashMove();
-            }
-*/
         }
-        /* else if (isAttach && !grabInteractor.isSelected && distance <= 0.1f)
-         {
-             indicator.SetActive(true);
-             Detach();
-         }*/
         else if (!currentTaskComplete && isAttach && distance > 0.4f)
         {
             indicator.SetActive(true);
@@ -152,9 +133,8 @@ public class ScrubTaskHandModelControll : MonoBehaviour
 
         if (dollyCart.m_Position >= 1 && cartPosition < 1)
         {
-            washScrub++;
-            Debug.Log("washScrub" + washScrub);
-            if (washScrub == 5 && !isNextWash)
+            scrubhand++;
+            if (scrubhand == 30 && !isNextWash)
             {
                 isNextWash = true;
                 Detach();
@@ -165,7 +145,6 @@ public class ScrubTaskHandModelControll : MonoBehaviour
             else if (isNextWash)
             {
                 washFinger++;
-                Debug.Log("washFinger" + washFinger);
                 if (washFinger == 2 && isRightFinger)
                 {
                     Detach();
@@ -186,38 +165,7 @@ public class ScrubTaskHandModelControll : MonoBehaviour
             
         }
     }
-    /*void WashMove()
-    {
-        
-        float movePositionX = startCartPositionX - gameObject.transform.position.x;
-        float movePositionY = startCartPositionY - gameObject.transform.position.y;
-        float movePositionZ = startCartPositionZ - gameObject.transform.position.z;
-        float cartPosition = dollyCart.m_Position;
-        
-
-        dollyCart.m_Position = (movePositionX + movePositionY + movePositionZ) * moveSpeed;
-
-        if (dollyCart.m_Position >= 1 && cartPosition < 1)
-        {
-            washFinger++;
-            Debug.Log("washFinger" + washFinger);
-            if (washFinger == 2 && isRightFinger)
-            {
-                dollyCart.TogglePath(false);
-                dollyCart.ChangePath(washPath[2]); // 경로 변경
-                washFinger = 0;
-                isRightFinger = false;
-                Debug.Log("트랙 변경");
-            }
-            else if(washFinger == 2 && !isRightFinger)
-            {
-                Debug.Log("Finger Wash완료");
-                Detach();
-                currentTaskComplete = true;
-                IsTaskCompleted?.Invoke(currentTaskComplete);
-            }
-        }
-    }*/
+   
     void TaskComplete(bool taskComplete)
     {
         //TaskManager.instance.scrubComplete.TaskComplete();

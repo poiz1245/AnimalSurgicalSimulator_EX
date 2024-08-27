@@ -15,7 +15,7 @@ public class HandWashCount : MonoBehaviour
     void Update()
     {
         slider.value = scrub.scrubhand * 0.03f;
-       if(scrub.scrubhand == 30)
+        if (scrub.scrubhand == 30)
         {
             guidePanel.SetActive(false);
             completePanel.SetActive(true);

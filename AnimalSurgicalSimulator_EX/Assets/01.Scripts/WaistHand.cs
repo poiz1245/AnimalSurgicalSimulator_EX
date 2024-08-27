@@ -8,7 +8,6 @@ public class WaistHand : MonoBehaviour
     {
         if (other.gameObject)
         {
-            Debug.Log("Çã¸®");    
 
         }
     }
