@@ -23,7 +23,10 @@ public class HandGrab : MonoBehaviour
     {
         InteractionLayerMask interacitonLayer = currentHandShape;
         socketInteractor.interactionLayers = 1 << interacitonLayer;
-        gripText.text = InteractionLayerMask.LayerToName(currentHandShape);
+        if (gripText != null)
+        {
+            gripText.text = InteractionLayerMask.LayerToName(currentHandShape);
+        }
     }
     public void OffGripAction()
     {
