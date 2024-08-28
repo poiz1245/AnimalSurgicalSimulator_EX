@@ -186,38 +186,7 @@ public class ScrubTaskHandModelControll : MonoBehaviour
             
         }
     }
-    /*void WashMove()
-    {
-        
-        float movePositionX = startCartPositionX - gameObject.transform.position.x;
-        float movePositionY = startCartPositionY - gameObject.transform.position.y;
-        float movePositionZ = startCartPositionZ - gameObject.transform.position.z;
-        float cartPosition = dollyCart.m_Position;
-        
-
-        dollyCart.m_Position = (movePositionX + movePositionY + movePositionZ) * moveSpeed;
-
-        if (dollyCart.m_Position >= 1 && cartPosition < 1)
-        {
-            washFinger++;
-            Debug.Log("washFinger" + washFinger);
-            if (washFinger == 2 && isRightFinger)
-            {
-                dollyCart.TogglePath(false);
-                dollyCart.ChangePath(washPath[2]); // 경로 변경
-                washFinger = 0;
-                isRightFinger = false;
-                Debug.Log("트랙 변경");
-            }
-            else if(washFinger == 2 && !isRightFinger)
-            {
-                Debug.Log("Finger Wash완료");
-                Detach();
-                currentTaskComplete = true;
-                IsTaskCompleted?.Invoke(currentTaskComplete);
-            }
-        }
-    }*/
+    
     void TaskComplete(bool taskComplete)
     {
         //TaskManager.instance.scrubComplete.TaskComplete();
