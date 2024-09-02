@@ -33,9 +33,9 @@ namespace UnityEngine.XR.Hands.Samples.VisualizerSample
         [Tooltip("If this is enabled, this component will enable the Input System internal feature flag 'USE_OPTIMIZED_CONTROLS'. You must have at least version 1.5.0 of the Input System and have its backend enabled for this to take effect.")]
         bool m_UseOptimizedControls;
 
-        [SerializeField]
+        //[SerializeField]
         [Tooltip("References either a prefab or a GameObject in the scene that will be used to visualize the left hand.")]
-        GameObject m_LeftHandMesh;
+        public GameObject m_LeftHandMesh;
 
         [SerializeField]
         [Tooltip("References either a prefab or a GameObject in the scene that will be used to visualize the right hand.")]
