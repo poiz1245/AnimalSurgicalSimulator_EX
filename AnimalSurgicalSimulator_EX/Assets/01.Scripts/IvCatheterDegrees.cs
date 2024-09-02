@@ -15,7 +15,7 @@ public class IvCatheterDegrees : MonoBehaviour
     [SerializeField] Transform bloodStartPos;
     [SerializeField] Transform bloodEndPos;
 
-    [SerializeField] TextMeshProUGUI[] cartheterAngleText;
+    public  TextMeshProUGUI[] cartheterAngleText;
 
     public float angle { get; private set; }
     public bool isCatheterShot { get; private set; } = false;
@@ -40,6 +40,8 @@ public class IvCatheterDegrees : MonoBehaviour
             angle = Vector3.Angle(catheterDirection, bloodDirection);
             cartheterAngleText[1].text = "Success";
             cartheterAngleText[1].color = Color.green;
+
+                       
         }
         else 
         {
@@ -47,5 +49,4 @@ public class IvCatheterDegrees : MonoBehaviour
             cartheterAngleText[1].color = Color.red;
         }
     }
-
 }
