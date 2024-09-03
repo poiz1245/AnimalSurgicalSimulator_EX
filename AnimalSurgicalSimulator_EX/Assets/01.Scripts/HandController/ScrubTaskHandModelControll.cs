@@ -140,7 +140,7 @@ public class ScrubTaskHandModelControll : MonoBehaviour
                 Detach();
                 SetPositionAndRotation(indicator, fingerWashAttach[0]);
                 indicator.SetActive(true);
-                dollyCart.ChangePath(washPath[1]);
+                ChangePath(washPath[1]);
             }
             else if (isNextWash)
             {
@@ -148,7 +148,7 @@ public class ScrubTaskHandModelControll : MonoBehaviour
                 if (washFinger == 2 && isRightFinger)
                 {
                     Detach();
-                    dollyCart.ChangePath(washPath[2]); // 경로 변경
+                    ChangePath(washPath[2]); // 경로 변경
                     SetPositionAndRotation(indicator, fingerWashAttach[1]);
                     indicator.SetActive(true);
                     washFinger = 0;
@@ -165,7 +165,12 @@ public class ScrubTaskHandModelControll : MonoBehaviour
             
         }
     }
-   
+    public void ChangePath(CinemachinePathBase newPath)
+    {
+        dollyCart.m_Path.gameObject.SetActive(false);
+        dollyCart.m_Path = newPath;
+        dollyCart.m_Position = 0;
+    }
     void TaskComplete(bool taskComplete)
     {
         //TaskManager.instance.scrubComplete.TaskComplete();
