@@ -11,6 +11,7 @@ public class CrossSectionPlaneMove : MonoBehaviour
     [SerializeField] GameObject playerHand;
     [SerializeField] GameObject dog;
     [SerializeField] XRGrabInteractable dogInteractable;
+
     XRGrabInteractable grabInteractable;
 
     bool firstSelected = false;
@@ -77,12 +78,12 @@ public class CrossSectionPlaneMove : MonoBehaviour
 
     IEnumerator FollowMove()
     {
-        Vector3 targetPosition = dogInteractable.gameObject.transform.position;
+        Vector3 targetPosition = dog.transform.position;
         Vector3 offset = transform.position - targetPosition;
 
         while (dogInteractable.isSelected)
         {
-            targetPosition = dogInteractable.gameObject.transform.position;
+            targetPosition = dog.transform.position;
             transform.position = targetPosition + offset;
 
             yield return null;
