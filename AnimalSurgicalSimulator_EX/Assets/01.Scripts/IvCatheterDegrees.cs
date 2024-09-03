@@ -18,7 +18,7 @@ public class IvCatheterDegrees : MonoBehaviour
     public  TextMeshProUGUI[] cartheterAngleText;
 
     public float angle { get; private set; }
-    public bool isCatheterShot { get; private set; } = false;
+    public bool isCatheterShot = false;
 
     private void Update()
     {
@@ -35,16 +35,15 @@ public class IvCatheterDegrees : MonoBehaviour
 
         if (Mathf.Abs(angle - 45f) < 5f && bloodVessel)
         {
-            print("aa");
             Vector3 bloodDirection = bloodEndPos.position - bloodStartPos.position;
             angle = Vector3.Angle(catheterDirection, bloodDirection);
             cartheterAngleText[1].text = "Success";
             cartheterAngleText[1].color = Color.green;
-
-                       
+            isCatheterShot = true;
         }
         else 
         {
+            isCatheterShot = false;
             cartheterAngleText[1].text = "Fail";
             cartheterAngleText[1].color = Color.red;
         }

@@ -8,15 +8,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class IvCatheterHandModelControll : MonoBehaviour
 {
-    /*[SerializeField] GameObject bloodVessel;
-
-    [SerializeField] Transform catheter;
-    [SerializeField] Transform catheterStartPos;
-    [SerializeField] Transform catheterEndPos;
-
-    [SerializeField] Transform skinStartPos;
-    [SerializeField] Transform skinEndPos;*/
-
+    [SerializeField] GameObject catheter;
+    [SerializeField] IvCatheterDegrees catheterSucess;
 
     public XRSocketInteractor socketInteractor;
     public XRGrabInteractable grabInteractor;
@@ -28,24 +21,19 @@ public class IvCatheterHandModelControll : MonoBehaviour
     public event TaskCompleted IsTaskCompleted;
 
 
-    private void Start()
+    void Start()
     {
         IsTaskCompleted += TaskComplete;
     }
-    private void Update()
+    public void catheterShot()
     {
-        if (grabInteractor.isSelected)
+        if (catheterSucess.isCatheterShot && grabInteractor.isSelected)
         {
-            print("주사기 그랩 상태 " + isGrab);
-            isGrab = true;
+            print("Shot");
+            catheter.transform.SetParent(null);
         }
-        else
-        {
-            print("주사기 그랩 상태 " + isGrab);
-            isGrab = false;
-        }
-        
     }
+
 
     void TaskComplete(bool taskComplete)
     {

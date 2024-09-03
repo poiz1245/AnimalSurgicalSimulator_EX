@@ -10,7 +10,6 @@ public class BloodVesselGrabModelControll : MonoBehaviour
 {
     [SerializeField] GameObject indicator;
     [SerializeField] GameObject handModel;
-    [SerializeField] TextMeshProUGUI distanceText;
 
     [SerializeField] IvCatheterHandModelControll ivCatheter;
     [SerializeField] HandVisualizer handVisualizer;
@@ -20,7 +19,6 @@ public class BloodVesselGrabModelControll : MonoBehaviour
     private void Update()
     {
         float distance = Vector3.Distance(indicator.transform.position, gameObject.transform.position);
-        distanceText.text = distance.ToString();
 
         if (/*!ivCatheter.currentTaskComplete &&ivCatheter.isGrab &&*/  !isAttach && distance <= 0.2f)
         {
@@ -36,8 +34,6 @@ public class BloodVesselGrabModelControll : MonoBehaviour
 
     private void Attach()
     {
-       
-        print("¤±¤±");
         handVisualizer.SetLeftHandMeshVisibility(false);
         handModel.SetActive(true);
         isAttach = true;
@@ -45,7 +41,6 @@ public class BloodVesselGrabModelControll : MonoBehaviour
 
     private void Detach()
     {
-        print("oo");
         handVisualizer.SetLeftHandMeshVisibility(true);
         handModel.SetActive(false);
         isAttach = false;

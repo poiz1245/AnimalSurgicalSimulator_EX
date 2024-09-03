@@ -6,11 +6,12 @@ public class BloodThrough : MonoBehaviour
 {
     [SerializeField] IvCatheterDegrees ivCatheter;
 
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("catheter"))
         {
-            Invoke("ThroughBlood", 3f);
+            ThroughBlood();
         }
     }
 
@@ -18,7 +19,7 @@ public class BloodThrough : MonoBehaviour
     {
         ivCatheter.cartheterAngleText[1].text = "It's too deep.";
         ivCatheter.cartheterAngleText[1].color = Color.red;
-
+        ivCatheter.isCatheterShot = false;
     }
 }
 
