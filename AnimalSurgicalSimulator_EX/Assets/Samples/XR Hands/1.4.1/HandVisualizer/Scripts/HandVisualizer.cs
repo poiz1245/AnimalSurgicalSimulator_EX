@@ -76,7 +76,20 @@ namespace UnityEngine.XR.Hands.Samples.VisualizerSample
             get => m_DebugDrawJoints;
             set => m_DebugDrawJoints = value;
         }
-
+        public void SetLeftHandMeshVisibility(bool visible)
+        {
+            if (m_LeftHandGameObjects != null)
+            {
+                m_LeftHandGameObjects.ToggleDrawMesh(visible);
+            }
+        }
+        public void SetRightHandMeshVisibility(bool visible)
+        {
+            if (m_RightHandGameObjects != null)
+            {
+                m_RightHandGameObjects.ToggleDrawMesh(visible);
+            }
+        }
         [SerializeField]
         [Tooltip("Prefab to use for visualizing the velocity.")]
         GameObject m_VelocityPrefab;
@@ -107,10 +120,10 @@ namespace UnityEngine.XR.Hands.Samples.VisualizerSample
         /// </summary>
         protected void Awake()
         {
-#if ENABLE_INPUT_SYSTEM
+        #if ENABLE_INPUT_SYSTEM
             if (m_UseOptimizedControls)
                 InputSystem.InputSystem.settings.SetInternalFeatureFlag("USE_OPTIMIZED_CONTROLS", true);
-#endif // ENABLE_INPUT_SYSTEM
+        #endif // ENABLE_INPUT_SYSTEM
         }
 
         /// <summary>
