@@ -53,14 +53,17 @@ Material:
     - _PlaneDirectionX: 0
     - _PlaneDirectionY: 0
     - _PlaneDirectionZ: 0
-    - _PlanePositionX: 1
-    - _PlanePositionY: 1
-    - _PlanePositionZ: 1
+    - _PlanePositionX: -1.25
+    - _PlanePositionY: 2.5
+    - _PlanePositionZ: 1.25
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _PlaneDirection: {r: 0, g: 1, b: 0, a: 0}
+    - _PlaneDirectionX: {r: 0, g: 0, b: 0, a: 0}
+    - _PlaneDirectionY: {r: 0, g: 0, b: 0, a: 0}
+    - _PlaneDirectionZ: {r: 0, g: 0, b: 0, a: 0}
     - _PlaneNormal: {r: 0, g: 0, b: 0, a: 0}
     - _PlanePosition: {r: 0, g: 2, b: 0, a: 0}
   m_BuildTextureStacks: []
