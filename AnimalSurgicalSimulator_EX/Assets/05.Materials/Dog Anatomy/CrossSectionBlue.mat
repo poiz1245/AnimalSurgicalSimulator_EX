@@ -10,12 +10,12 @@ Material:
   m_Name: CrossSectionBlue
   m_Shader: {fileID: -6465566751694194690, guid: 2c52fa717a0cb0441b77cb957506e931,
     type: 3}
-  m_Parent: {fileID: 2100000, guid: bbc5cab6099828540a3db0e2dd3681a3, type: 2}
+  m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _AXIS_A
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -29,10 +29,47 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 62ac8f1760d8e0248a6854245ccf284c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats: []
+    m_Floats:
+    - _AXIS: 0
+    - _Flow: 0
+    - _Invers: 0
+    - _Inverse: 0
+    - _InverseX: 0
+    - _InverseY: 0
+    - _InverseZ: 0
+    - _PlaneDirectionX: 1
+    - _PlaneDirectionY: 1
+    - _PlaneDirectionZ: 1
+    - _PlanePositionX: 1.25
+    - _PlanePositionY: 2.5
+    - _PlanePositionZ: 1.25
+    - _QueueControl: 0
+    - _QueueOffset: 0
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0, g: 0.040804863, b: 1, a: 1}
+    - _PlaneDirection: {r: 0, g: 1, b: 0, a: 0}
+    - _PlaneDirectionX: {r: 1, g: 0, b: 0, a: 0}
+    - _PlaneDirectionY: {r: 0, g: 1, b: 0, a: 0}
+    - _PlaneDirectionZ: {r: 0, g: 0, b: 1, a: 0}
+    - _PlaneNormal: {r: 0, g: 0, b: 0, a: 0}
+    - _PlanePosition: {r: 0, g: 2, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &787481581262207232
 MonoBehaviour:

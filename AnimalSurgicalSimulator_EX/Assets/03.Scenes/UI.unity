@@ -1172,7 +1172,7 @@ RectTransform:
   m_Father: {fileID: 1432334727}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.21274392}
-  m_AnchorMax: {x: 1, y: 0.9999554}
+  m_AnchorMax: {x: 1, y: 0.99995524}
   m_AnchoredPosition: {x: -0.00000047683716, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -14960,7 +14960,7 @@ MonoBehaviour:
     features intuitive navigation tools, enabling users to dissect layers and examine
     organs, muscles, and skeletal components in a three-dimensional space.
 
-    
+
 
     Through
     realistic visualizations and informative annotations, learners can enhance their
