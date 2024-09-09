@@ -2,26 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BloodThrough : MonoBehaviour
+public class BloodTrigger : MonoBehaviour
 {
     [SerializeField] IvCatheterDegrees ivCatheter;
-
-
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("catheter"))
         {
-            ivCatheter.isDeepCatheter = true;
+            ivCatheter.isCatheterContact = true;
+            ivCatheter.isDeepCatheter = false;
         }
     }
 
-   /* void OnTriggerExit(Collider other)
+    void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("catheter"))
         {
-            ivCatheter.isDeepCatheter = false;
+            ivCatheter.isCatheterContact = false;
         }
-    }*/
+    }
 }
-
-
