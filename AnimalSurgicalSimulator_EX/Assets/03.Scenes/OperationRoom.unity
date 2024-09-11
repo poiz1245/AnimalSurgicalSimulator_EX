@@ -16468,6 +16468,18 @@ PrefabInstance:
       propertyPath: indicatorAttach
       value: 
       objectReference: {fileID: 1934359310672518083}
+    - target: {fileID: 4380394157789535958, guid: bedc9eacc6f7a6946bcef183aa89151e,
+        type: 3}
+      propertyPath: m_SelectAction.m_Reference
+      value: 
+      objectReference: {fileID: -219654700903230779, guid: c348712bda248c246b8c49b3db54643f,
+        type: 3}
+    - target: {fileID: 4380394157789535958, guid: bedc9eacc6f7a6946bcef183aa89151e,
+        type: 3}
+      propertyPath: m_SelectActionValue.m_Reference
+      value: 
+      objectReference: {fileID: 7240138625659572913, guid: c348712bda248c246b8c49b3db54643f,
+        type: 3}
     - target: {fileID: 5087452565861012726, guid: bedc9eacc6f7a6946bcef183aa89151e,
         type: 3}
       propertyPath: indicator

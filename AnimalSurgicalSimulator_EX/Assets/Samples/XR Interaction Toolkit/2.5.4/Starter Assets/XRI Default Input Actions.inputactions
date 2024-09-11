@@ -1549,9 +1549,27 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "Select1",
+                    "type": "Button",
+                    "id": "964a824b-a246-458e-894b-6664f6bed744",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "Select Value",
                     "type": "Value",
                     "id": "39bbf1ac-21a3-413d-90f6-6dbf6efeaabe",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Select Value1",
+                    "type": "Value",
+                    "id": "e1b62bfa-0c53-4202-9bb1-ec1cc2829af9",
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
@@ -1802,6 +1820,28 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Select Value",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "04211b11-2437-44e8-8a34-bc231cf50460",
+                    "path": "<XRController>{RightHand}/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Select1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "19395c71-8ea4-4528-ad90-13dd15e8e003",
+                    "path": "<XRController>{RightHand}/{Grip}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Select Value1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
