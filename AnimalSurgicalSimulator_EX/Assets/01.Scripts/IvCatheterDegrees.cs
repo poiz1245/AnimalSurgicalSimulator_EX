@@ -79,12 +79,14 @@ public class IvCatheterDegrees : MonoBehaviour
                 }
             }
         }
-        else if (!isCatheterShot)
+        else if (!isCatheterShot && isBloodContact)
         {
             cartheterAngleText[0].text = bloodAngle.ToString("F2") + "¡Æ";
         }
         else if (!isBloodContact)
         {
+            cartheterAngleText[1].text = "Fail";
+            cartheterAngleText[1].color = Color.red;
             cartheterAngleText[0].text = "0¡Æ";
         }
     }
