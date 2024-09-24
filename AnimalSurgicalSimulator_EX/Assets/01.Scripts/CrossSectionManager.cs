@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CrossSectionManager : MonoBehaviour
 {
-    [SerializeField] Renderer[] crossSection;
-    [SerializeField] Transform crossSectionPlaneX;
-    [SerializeField] Transform crossSectionPlaneY;
-    [SerializeField] Transform crossSectionPlaneZ;
+    public Renderer[] crossSection;
+    public Transform crossSectionPlaneX;
+    public Transform crossSectionPlaneY;
+    public Transform crossSectionPlaneZ;
 
     void Update()
     {
@@ -29,4 +29,10 @@ public class CrossSectionManager : MonoBehaviour
             crossSection[i].material.SetVector("_PlaneDirectionZ", crossSectionPlaneZ.TransformDirection(transform.forward));
         }
     }
+}
+
+
+public class asdf
+{
+
 }

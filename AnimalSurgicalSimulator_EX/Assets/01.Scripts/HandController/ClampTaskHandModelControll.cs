@@ -45,7 +45,7 @@ public class ClampTaskHandModelControll : MonoBehaviour
             }
             else if (isAttach && grabInteractor.isSelected && distance <= 0.2f)
             {
-                if (clampTrigger.clampOpen)
+                if (!clampTrigger.clampOpen)
                 {
                     Move();
                 }
