@@ -6,15 +6,16 @@ public class MesComplete : MonoBehaviour
 {
     [SerializeField] GameObject taskObject;
 
-    Animator anim;
+    //Animator anim;
 
     private void Start()
     {
-        anim = taskObject.GetComponent<Animator>();
+        //anim = taskObject.GetComponent<Animator>();
     }
     public void TaskComplete()
     {
+        taskObject.SetActive(false);
         //애니메이션 실행
-        anim.SetBool("incision", true);
+        //anim.SetBool("incision", true);
     }
 }

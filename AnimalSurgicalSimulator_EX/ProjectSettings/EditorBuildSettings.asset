@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/03.Scenes/WashHand.unity
     guid: 4a41b87ac45b87e478b1be9b6834f7f8
   - enabled: 1
-    path: Assets/03.Scenes/WashHandDev.unity
-    guid: 2af0a6c887f90114ea1b2a20846f8984
+    path: Assets/03.Scenes/AnatomyStudy.unity
+    guid: 2153d874ffa6ec14cabba27964e61f5a
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 00092b2c72cc78246b658e16a38b07ef,
       type: 2}
