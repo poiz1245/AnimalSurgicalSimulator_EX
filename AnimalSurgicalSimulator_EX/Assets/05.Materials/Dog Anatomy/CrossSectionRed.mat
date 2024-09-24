@@ -57,16 +57,16 @@ Material:
     - _PlaneDirectionX: 1
     - _PlaneDirectionY: 1
     - _PlaneDirectionZ: 1
-    - _PlanePositionX: 1.25
-    - _PlanePositionY: 2.5
-    - _PlanePositionZ: 1.25
+    - _PlanePositionX: -1.459
+    - _PlanePositionY: 1.343
+    - _PlanePositionZ: 2.2773924
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
     - _Color: {r: 1, g: 0, b: 0, a: 1}
     - _PlaneDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _PlaneDirectionX: {r: 1, g: 0, b: 0, a: 0}
-    - _PlaneDirectionY: {r: 0, g: 1, b: 0, a: 0}
+    - _PlaneDirectionX: {r: -1.0000001, g: 0, b: -0.00000011920929, a: 0}
+    - _PlaneDirectionY: {r: 0, g: 1.0000001, b: -0.00000011920929, a: 0}
     - _PlaneDirectionZ: {r: 0, g: 0, b: 1, a: 0}
     - _PlaneNormal: {r: 0, g: 0, b: 0, a: 0}
     - _PlanePosition: {r: 0, g: 2, b: 0, a: 0}
