@@ -57,9 +57,9 @@ Material:
     - _PlaneDirectionX: 1
     - _PlaneDirectionY: 1
     - _PlaneDirectionZ: 1
-    - _PlanePositionX: -1.459
-    - _PlanePositionY: 1.343
-    - _PlanePositionZ: 2.2773924
+    - _PlanePositionX: -0.5124
+    - _PlanePositionY: 0.7399999
+    - _PlanePositionZ: 0.6000001
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
