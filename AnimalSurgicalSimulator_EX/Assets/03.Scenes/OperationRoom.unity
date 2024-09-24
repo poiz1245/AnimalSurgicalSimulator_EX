@@ -16390,6 +16390,11 @@ PrefabInstance:
       objectReference: {fileID: 844125663}
     - target: {fileID: 193775971926197655, guid: bedc9eacc6f7a6946bcef183aa89151e,
         type: 3}
+      propertyPath: moveSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 193775971926197655, guid: bedc9eacc6f7a6946bcef183aa89151e,
+        type: 3}
       propertyPath: grabObject
       value: 
       objectReference: {fileID: 919132148916590743}
