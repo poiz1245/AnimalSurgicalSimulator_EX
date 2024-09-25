@@ -9,14 +9,10 @@ public class UIPositionReset : MonoBehaviour
 
     Transform originalDogTransform;
     Transform[] originalCrossSectionTransform;
-    
-    /*Vector3 originalDogPosition;
-    Vector3[] originalCrossSectionPositions;
-    Quaternion originalDogRotation;
-    Quaternion[] originalCrossSectionRotations;*/
 
     void Start()
     {
+        if (originalDogTransform == null) { print("aa")};
         originalDogTransform.position = dogModel.position;
         originalDogTransform.rotation = dogModel.rotation;
 
@@ -25,16 +21,6 @@ public class UIPositionReset : MonoBehaviour
             originalCrossSectionTransform[i].position = crossSections[i].transform.position;
             originalCrossSectionTransform[i].rotation = crossSections[i].transform.rotation;
         }
-        /* originalDogPosition = dogModel.transform.position;
-         originalDogRotation = dogModel.transform.rotation;
-
-         originalCrossSectionPositions = new Vector3[crossSections.Length];
-         originalCrossSectionRotations = new Quaternion[crossSections.Length];
-         for (int i = 0; i < crossSections.Length; i++)
-         {
-             originalCrossSectionPositions[i] = crossSections[i].transform.position;
-             originalCrossSectionRotations[i] = crossSections[i].transform.rotation;
-         }*/
     }
 
     public void ResetPosition()
