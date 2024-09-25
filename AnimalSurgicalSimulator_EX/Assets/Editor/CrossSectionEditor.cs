@@ -45,13 +45,21 @@ public class CrossSectionEditor : Editor
         {
             for (int i = 0; i < crossSection.Length; i++)
             {
-                crossSection[i].sharedMaterial.SetFloat("_PlanePositionX", crossSectionPlaneX.localPosition.x);
-                crossSection[i].sharedMaterial.SetFloat("_PlanePositionY", crossSectionPlaneY.localPosition.y);
-                crossSection[i].sharedMaterial.SetFloat("_PlanePositionZ", crossSectionPlaneZ.localPosition.z);
+                crossSection[i].sharedMaterial.SetFloat("_PlanePositionX", crossSectionPlaneX.position.x);
+                crossSection[i].sharedMaterial.SetFloat("_PlanePositionY", crossSectionPlaneY.position.y);
+                crossSection[i].sharedMaterial.SetFloat("_PlanePositionZ", crossSectionPlaneZ.position.z);
 
-                crossSection[i].sharedMaterial.SetVector("_PlaneDirectionX", crossSectionPlaneX.TransformDirection(crossSectionManager.transform.forward));
+                /*crossSection[i].sharedMaterial.SetVector("_PlaneDirectionX", crossSectionPlaneX.TransformDirection(crossSectionManager.transform.forward));
                 crossSection[i].sharedMaterial.SetVector("_PlaneDirectionY", crossSectionPlaneY.TransformDirection(crossSectionManager.transform.forward));
-                crossSection[i].sharedMaterial.SetVector("_PlaneDirectionZ", crossSectionPlaneZ.TransformDirection(crossSectionManager.transform.forward));
+                crossSection[i].sharedMaterial.SetVector("_PlaneDirectionZ", crossSectionPlaneZ.TransformDirection(crossSectionManager.transform.forward));*/
+
+                /*crossSection[i].sharedMaterial.SetVector("_PlaneDirectionX", crossSectionPlaneX.transform.forward);
+                crossSection[i].sharedMaterial.SetVector("_PlaneDirectionY", crossSectionPlaneY.transform.forward);
+                crossSection[i].sharedMaterial.SetVector("_PlaneDirectionZ", crossSectionPlaneZ.transform.forward);*/
+
+                crossSection[i].sharedMaterial.SetVector("_PlaneDirectionX", new Vector3(-1,0,0));
+                crossSection[i].sharedMaterial.SetVector("_PlaneDirectionY", new Vector3(0,1,0));
+                crossSection[i].sharedMaterial.SetVector("_PlaneDirectionZ", new Vector3(0,0,1));
             }
         }
     }

@@ -21,12 +21,9 @@ public class CrossSectionManager : MonoBehaviour
             crossSection[i].material.SetFloat("_PlanePositionY", crossSectionPlaneY.position.y);
             crossSection[i].material.SetFloat("_PlanePositionZ", crossSectionPlaneZ.position.z);
 
-            /*crossSection[i].material.SetVector("_PlaneDirectionX", crossSectionPlaneX.transform.forward);
+            crossSection[i].material.SetVector("_PlaneDirectionX", crossSectionPlaneX.transform.forward);
             crossSection[i].material.SetVector("_PlaneDirectionY", crossSectionPlaneY.transform.forward);
-            crossSection[i].material.SetVector("_PlaneDirectionZ", crossSectionPlaneZ.transform.forward);*/
-            crossSection[i].material.SetVector("_PlaneDirectionX", crossSectionPlaneX.TransformDirection(transform.forward));
-            crossSection[i].material.SetVector("_PlaneDirectionY", crossSectionPlaneY.TransformDirection(transform.forward));
-            crossSection[i].material.SetVector("_PlaneDirectionZ", crossSectionPlaneZ.TransformDirection(transform.forward));
+            crossSection[i].material.SetVector("_PlaneDirectionZ", crossSectionPlaneZ.transform.forward);
         }
     }
 }
