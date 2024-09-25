@@ -9,47 +9,32 @@ public class UIPositionReset : MonoBehaviour
 
     Transform originalDogTransform;
     Transform[] originalCrossSectionTransform;
-    
-    /*Vector3 originalDogPosition;
-    Vector3[] originalCrossSectionPositions;
-    Quaternion originalDogRotation;
-    Quaternion[] originalCrossSectionRotations;*/
 
+    private void Awake()
+    {
+        originalDogTransform = transform;
+        originalCrossSectionTransform = new Transform[crossSections.Length];
+    }
     void Start()
     {
-        originalDogTransform = dogModel;
-        //originalDogTransform.position = dogModel.position;
-        //originalDogTransform.rotation = dogModel.rotation;
+        originalDogTransform.position = dogModel.position;
+        originalDogTransform.rotation = dogModel.rotation;
 
         for (int i = 0; i < crossSections.Length; i++)
         {
             originalCrossSectionTransform[i] = crossSections[i];
-            /*originalCrossSectionTransform[i].position = crossSections[i].transform.position;
-            originalCrossSectionTransform[i].rotation = crossSections[i].transform.rotation;*/
         }
-        /* originalDogPosition = dogModel.transform.position;
-         originalDogRotation = dogModel.transform.rotation;
-
-         originalCrossSectionPositions = new Vector3[crossSections.Length];
-         originalCrossSectionRotations = new Quaternion[crossSections.Length];
-         for (int i = 0; i < crossSections.Length; i++)
-         {
-             originalCrossSectionPositions[i] = crossSections[i].transform.position;
-             originalCrossSectionRotations[i] = crossSections[i].transform.rotation;
-         }*/
     }
 
     public void ResetPosition()
     {
-        dogModel = originalDogTransform;
-        /*dogModel.position = originalDogTransform.position;
-        dogModel.rotation = originalDogTransform.rotation;*/
+        dogModel.position = originalDogTransform.position;
+        dogModel.rotation = originalDogTransform.rotation;
 
         for (int i = 0; i < crossSections.Length; i++)
         {
-            crossSections[i] = originalCrossSectionTransform[i];
-            /*crossSections[i].transform.position = originalCrossSectionTransform[i].position;
-            crossSections[i].transform.rotation = originalCrossSectionTransform[i].rotation;*/
+            crossSections[i].transform.position = originalCrossSectionTransform[i].position;
+            crossSections[i].transform.rotation = originalCrossSectionTransform[i].rotation;
         }
     }
 }
