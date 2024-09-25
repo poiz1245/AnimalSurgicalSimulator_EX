@@ -4,40 +4,37 @@ using UnityEngine;
 
 public class UIPositionReset : MonoBehaviour
 {
-    [SerializeField] Transform dogModel;
-    [SerializeField] Transform[] crossSections;
+    [SerializeField] GameObject dogModel;
+    [SerializeField] GameObject[] crossSections;
 
-    Transform originalDogTransform;
-    Transform[] originalCrossSectionTransform;
+    private Vector3 originalDogPosition;
+    private Quaternion originalDogRotation;
+    private Vector3[] originalCrossSectionPositions;
+    private Quaternion[] originalCrossSectionRotations;
 
-    private void Awake()
-    {
-        originalCrossSectionTransform = new Transform[crossSections.Length];
-        originalDogTransform = new Vector3(0,0,0);
-    }
     void Start()
     {
-        originalDogTransform.position = dogModel.position;
-        originalDogTransform.rotation = dogModel.rotation;
+        originalDogPosition = dogModel.transform.position;
+        originalDogRotation = dogModel.transform.rotation;
 
+        originalCrossSectionPositions = new Vector3[crossSections.Length];
+        originalCrossSectionRotations = new Quaternion[crossSections.Length];
         for (int i = 0; i < crossSections.Length; i++)
         {
-            originalCrossSectionTransform[i].position = crossSections[i].transform.position;
-            originalCrossSectionTransform[i].rotation = crossSections[i].transform.rotation;
+            originalCrossSectionPositions[i] = crossSections[i].transform.position;
+            originalCrossSectionRotations[i] = crossSections[i].transform.rotation;
         }
     }
 
     public void ResetPosition()
     {
-        //dogModel = originalDogTransform;
-        dogModel.position = originalDogTransform.position;
-        dogModel.rotation = originalDogTransform.rotation;
+        dogModel.transform.position = originalDogPosition;
+        dogModel.transform.rotation = originalDogRotation;
 
         for (int i = 0; i < crossSections.Length; i++)
         {
-            //crossSections[i] = originalCrossSectionTransform[i];
-            crossSections[i].transform.position = originalCrossSectionTransform[i].position;
-            crossSections[i].transform.rotation = originalCrossSectionTransform[i].rotation;
+            crossSections[i].transform.position = originalCrossSectionPositions[i];
+            crossSections[i].transform.rotation = originalCrossSectionRotations[i];
         }
     }
 }
