@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class UIPositionReset : MonoBehaviour
 {
-    [SerializeField] GameObject dogModel;
-    [SerializeField] GameObject[] crossSections;
+    [SerializeField] Transform dogModel;
+    [SerializeField] Transform[] crossSections;
 
     private Vector3 originalDogPosition;
     private Quaternion originalDogRotation;
