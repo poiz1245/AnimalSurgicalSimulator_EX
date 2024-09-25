@@ -12,7 +12,6 @@ public class UIPositionReset : MonoBehaviour
 
     void Start()
     {
-        if (originalDogTransform == null) { print("aa")};
         originalDogTransform.position = dogModel.position;
         originalDogTransform.rotation = dogModel.rotation;
 
