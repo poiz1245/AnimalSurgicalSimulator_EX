@@ -23918,7 +23918,7 @@ MonoBehaviour:
   m_MaxFollowDistance: 0.005
   m_MinToMaxDelaySeconds: 1
   m_HideMenuWhenGazeDiverges: 1
-  m_MenuVisibleGazeAngleDivergenceThreshold: 35
+  m_MenuVisibleGazeAngleDivergenceThreshold: 30
   m_AnimateMenuHideAndReveal: 1
   m_RevealHideAnimationDuration: 0.1
   m_HandTrackingFollowPreset:
