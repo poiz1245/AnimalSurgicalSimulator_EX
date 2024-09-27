@@ -2,12 +2,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using static TaskManager;
 
 public abstract class BaseTask : MonoBehaviour
 {
     [SerializeField] protected TextMeshProUGUI uiText;
     [SerializeField] protected TextMeshProUGUI subUiText;
-    [SerializeField] protected List<Transform> targets;
 
     public delegate void TaskStateChanged(TaskManager.TaskName task);
     public event TaskStateChanged OnTaskStateChanged;
@@ -16,11 +16,9 @@ public abstract class BaseTask : MonoBehaviour
     {
         TaskManager.instance.OnMainTaskChanged += OnMainTaskChanged;
         OnTaskStateChanged += UpdateUIText;
-        OnTaskStateChanged += UpdateTargets;
-        // 초기 타겟 설정 및 UI 텍스트 업데이트
+
         if (TaskManager.instance.currentMainTask == GetMainTaskType())
         {
-            UpdateTargets(TaskManager.instance.task);
             UpdateUIText(TaskManager.instance.task);
         }
     }
@@ -29,7 +27,6 @@ public abstract class BaseTask : MonoBehaviour
     {
         TaskManager.instance.OnMainTaskChanged -= OnMainTaskChanged;
         OnTaskStateChanged -= UpdateUIText;
-        OnTaskStateChanged -= UpdateTargets;
     }
 
     protected void TaskStateChange(TaskManager.TaskName taskName)
@@ -41,7 +38,6 @@ public abstract class BaseTask : MonoBehaviour
 
     protected abstract TaskManager.MainTask GetMainTaskType();
     protected abstract void UpdateUIText(TaskManager.TaskName taskName);
-    protected abstract void UpdateTargets(TaskManager.TaskName taskName);
 
     private void OnMainTaskChanged(TaskManager.MainTask newMainTask)
     {
@@ -49,7 +45,6 @@ public abstract class BaseTask : MonoBehaviour
         if (enabled)
         {
             UpdateUIText(TaskManager.instance.task);
-            UpdateTargets(TaskManager.instance.task);
         }
     }
 }
