@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static TaskManager;
@@ -78,29 +78,5 @@ public class ReplacementTask : BaseTask
                 break;
         }
     }
-
-    protected override void UpdateTargets(TaskName taskName)
-    {
-        List<Transform> newTargets = new List<Transform>();
-
-        // TaskName에 따라 타겟 오브젝트를 변경
-        switch (taskName)
-        {
-            case TaskName.Start:
-                newTargets.Add(targets[0]);
-                break;
-            case TaskName.Attach:
-                newTargets.Add(targets[1]);
-                break;
-            case TaskName.Process:
-                newTargets.Add(targets[2]);
-                break;
-            case TaskName.Complete:
-                newTargets.Add(targets[3]);
-                break;
-
-        }
-
-        TaskArrow.Instance.SetTargets(newTargets); // 타겟 업데이트
-    }
 }
+*/

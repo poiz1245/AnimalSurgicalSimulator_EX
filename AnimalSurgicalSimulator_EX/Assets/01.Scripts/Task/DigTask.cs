@@ -15,7 +15,7 @@ public class DigTask : BaseTask
 
         switch (TaskManager.instance.task)
         {
-            
+
             case TaskName.Start:
                 if (grab.isSelected)
                 {
@@ -47,7 +47,6 @@ public class DigTask : BaseTask
             case TaskName.Complete:
                 if (TaskManager.instance.isNextTask)
                     TaskManager.instance.UpdateTask(TaskName.Complete); // 다음 태스크로 전환
-                    TaskArrow.Instance.isCompleteArrow = true; // 마지막 Task에만 추가
                 break;
         }
     }
@@ -78,27 +77,10 @@ public class DigTask : BaseTask
                 break;
         }
     }
-
-    protected override void UpdateTargets(TaskManager.TaskName taskName)
-    {
-        List<Transform> newTargets = new List<Transform>();
-
-        switch (taskName)
-        {
-            case TaskName.Start:
-                newTargets.Add(targets[0]);
-                break;
-            case TaskName.Attach:
-                newTargets.Add(targets[1]);
-                break;
-            case TaskName.Process:
-                newTargets.Add(targets[2]);
-                break;
-            case TaskName.Complete:
-                newTargets.Add(targets[3]);
-                break;
-        }
-
-        TaskArrow.Instance.SetTargets(newTargets);
-    }
 }
+
+
+
+
+
+

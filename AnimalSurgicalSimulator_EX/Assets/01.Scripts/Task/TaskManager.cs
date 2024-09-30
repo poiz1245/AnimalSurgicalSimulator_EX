@@ -13,6 +13,8 @@ public class TaskManager : MonoBehaviour
     public ClampComplete clampComplete;
     public bool isNextTask = false;
 
+    //private TaskStateMachine stateMachine;
+
     [SerializeField] DigTask digTask;
     [SerializeField] ClampTask clampTask;
     [SerializeField] MesTask mesTask;
@@ -30,7 +32,7 @@ public class TaskManager : MonoBehaviour
         Attach,
         Process,
         Complete
-        ,Next
+        , Next
     }
 
     public MainTask currentMainTask = MainTask.Mes;
@@ -120,3 +122,4 @@ public class TaskManager : MonoBehaviour
 
     }
 }
+
