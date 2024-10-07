@@ -53,13 +53,13 @@ public class CrossSectionEditor : Editor
                 crossSection[i].sharedMaterial.SetVector("_PlaneDirectionY", crossSectionPlaneY.TransformDirection(crossSectionManager.transform.forward));
                 crossSection[i].sharedMaterial.SetVector("_PlaneDirectionZ", crossSectionPlaneZ.TransformDirection(crossSectionManager.transform.forward));*/
 
-                /*crossSection[i].sharedMaterial.SetVector("_PlaneDirectionX", crossSectionPlaneX.transform.forward);
+                crossSection[i].sharedMaterial.SetVector("_PlaneDirectionX", crossSectionPlaneX.transform.forward);
                 crossSection[i].sharedMaterial.SetVector("_PlaneDirectionY", crossSectionPlaneY.transform.forward);
-                crossSection[i].sharedMaterial.SetVector("_PlaneDirectionZ", crossSectionPlaneZ.transform.forward);*/
+                crossSection[i].sharedMaterial.SetVector("_PlaneDirectionZ", crossSectionPlaneZ.transform.forward);
 
-                crossSection[i].sharedMaterial.SetVector("_PlaneDirectionX", new Vector3(-1,0,0));
+                /*crossSection[i].sharedMaterial.SetVector("_PlaneDirectionX", new Vector3(-1,0,0));
                 crossSection[i].sharedMaterial.SetVector("_PlaneDirectionY", new Vector3(0,1,0));
-                crossSection[i].sharedMaterial.SetVector("_PlaneDirectionZ", new Vector3(0,0,1));
+                crossSection[i].sharedMaterial.SetVector("_PlaneDirectionZ", new Vector3(0,0,1));*/
             }
         }
     }
